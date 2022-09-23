@@ -1,0 +1,10 @@
+/* 
+  Localizable.strings
+  NbaApp
+
+  Created by Miguel Ferrer Fornali on 24/9/22.
+  
+*/
+
+/* Common */
+"common_example" = "Ejemplo";
