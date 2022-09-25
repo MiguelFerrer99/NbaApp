@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 protocol Localizable: CustomStringConvertible {
     var rawValue: String { get }
@@ -31,7 +32,17 @@ extension Localizable {
 }
 
 extension String {
-    enum common: String, Localizable {
-        case example = "common_example"
+    enum home: String, Localizable {
+        case title = "home_title"
+        case teams = "home_teams"
+        case players = "home_players"
+    }
+    
+    enum teams: String, Localizable {
+        case title = "teams_title"
+    }
+    
+    enum players: String, Localizable {
+        case title = "players_title"
     }
 }

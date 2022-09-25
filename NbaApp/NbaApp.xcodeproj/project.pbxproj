@@ -8,8 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4100B63728DE5893001328CC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100B63628DE5893001328CC /* Configuration.swift */; };
+		4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE528DDE22E00F0C59C /* HomeView.swift */; };
+		4123CAB128DF3315009FF971 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB028DF3315009FF971 /* LinkView.swift */; };
+		4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB328DF4985009FF971 /* TeamsView.swift */; };
+		4123CAB728DF4B31009FF971 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB628DF4B31009FF971 /* PlayersView.swift */; };
 		4137AAE428DDE22E00F0C59C /* NbaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE328DDE22E00F0C59C /* NbaAppApp.swift */; };
-		4137AAE628DDE22E00F0C59C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE528DDE22E00F0C59C /* HomeView.swift */; };
 		4137AAE828DDE22F00F0C59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4137AAE728DDE22F00F0C59C /* Assets.xcassets */; };
 		415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 415B544028DE140000A336A3 /* IQKeyboardManagerSwift */; };
 		41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */; };
@@ -21,6 +24,9 @@
 		4100B63428DE5678001328CC /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4100B63528DE5684001328CC /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4100B63628DE5893001328CC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		4123CAB028DF3315009FF971 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
+		4123CAB328DF4985009FF971 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
+		4123CAB628DF4B31009FF971 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NbaApp Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4137AAE328DDE22E00F0C59C /* NbaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbaAppApp.swift; sourceTree = "<group>"; };
 		4137AAE528DDE22E00F0C59C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -43,6 +49,46 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4123CA8728DF2318009FF971 /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+				41D73FEF28DE6F1800B9BA75 /* Localizable.strings */,
+				41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */,
+			);
+			path = Localizables;
+			sourceTree = "<group>";
+		};
+		4123CAAC28DF2CCC009FF971 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		4123CAAF28DF32E5009FF971 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4123CAB028DF3315009FF971 /* LinkView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4123CAB228DF494A009FF971 /* Teams */ = {
+			isa = PBXGroup;
+			children = (
+				4123CAB328DF4985009FF971 /* TeamsView.swift */,
+			);
+			path = Teams;
+			sourceTree = "<group>";
+		};
+		4123CAB528DF4B24009FF971 /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				4123CAB628DF4B31009FF971 /* PlayersView.swift */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
 		4137AAD728DDE22E00F0C59C = {
 			isa = PBXGroup;
 			children = (
@@ -109,8 +155,7 @@
 			isa = PBXGroup;
 			children = (
 				4137AAE728DDE22F00F0C59C /* Assets.xcassets */,
-				41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */,
-				41D73FEF28DE6F1800B9BA75 /* Localizable.strings */,
+				4123CA8728DF2318009FF971 /* Localizables */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -128,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				41D73FFB28DE73D800B9BA75 /* Home */,
+				4123CAB228DF494A009FF971 /* Teams */,
+				4123CAB528DF4B24009FF971 /* Players */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -136,6 +183,8 @@
 			isa = PBXGroup;
 			children = (
 				41D73FF028DE6F6800B9BA75 /* App */,
+				4123CAAC28DF2CCC009FF971 /* Utils */,
+				4123CAAF28DF32E5009FF971 /* Views */,
 				41D73FF128DE6F7400B9BA75 /* Modules */,
 			);
 			path = Presentation;
@@ -266,9 +315,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				4100B63728DE5893001328CC /* Configuration.swift in Sources */,
-				4137AAE628DDE22E00F0C59C /* HomeView.swift in Sources */,
+				4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */,
 				4137AAE428DDE22E00F0C59C /* NbaAppApp.swift in Sources */,
+				4123CAB728DF4B31009FF971 /* PlayersView.swift in Sources */,
+				4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */,
 				41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */,
+				4123CAB128DF3315009FF971 /* LinkView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +395,7 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_MODULE_NAME = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -398,6 +451,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				PRODUCT_MODULE_NAME = "";
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -431,8 +485,10 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.miguelferrerfornali.nbaapp.dev;
+				PRODUCT_MODULE_NAME = NbaApp;
 				PRODUCT_NAME = "$(TARGET_NAME) Dev";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -464,8 +520,11 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.miguelferrerfornali.nbaapp;
+				PRODUCT_MODULE_NAME = NbaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_INCLUDE_PATHS = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

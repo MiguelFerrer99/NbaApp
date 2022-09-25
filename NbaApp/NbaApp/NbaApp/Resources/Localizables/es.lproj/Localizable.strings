@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  NbaApp
+
+  Created by Miguel Ferrer Fornali on 24/9/22.
+  
+*/
+
+/* Home */
+"home_title" = "Home";
+"home_teams" = "Equipos NBA";
+"home_players" = "Jugadores NBA";
+
+/* Teams */
+"teams_title" = "Equipos";
+
+/* Players */
+"players_title" = "Jugadores";

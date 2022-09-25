@@ -2,10 +2,10 @@
   "colors" : [
     {
       "color" : {
-        "platform" : "ios",
-        "reference" : "linkColor"
+        "platform" : "universal",
+        "reference" : "labelColor"
       },
-      "idiom" : "iphone"
+      "idiom" : "universal"
     }
   ],
   "info" : {
