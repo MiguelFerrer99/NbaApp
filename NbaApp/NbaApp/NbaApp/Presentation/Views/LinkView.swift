@@ -12,26 +12,27 @@ struct LinkView: View {
     @Binding var isPressed: Bool
     
     var body: some View {
-        VStack(spacing: 20) {
-            HStack {
-                Text(title)
-                    .foregroundColor(.black)
-                    .font(.body)
-                    .lineLimit(1)
-                    .frame(alignment: .leading)
-                Spacer()
-                Image(systemName: "arrow.right")
-                    .resizable()
-                    .frame(width: 22, height: 18, alignment: .trailing)
-                    .foregroundColor(.black)
-            }
-            Divider()
-                .frame(height: 2)
-                .overlay(.black)
+        VStack {
+            VStack(spacing: 20) {
+                HStack {
+                    Text(title)
+                        .foregroundColor(.black)
+                        .font(.body)
+                        .lineLimit(1)
+                        .frame(alignment: .leading)
+                    Spacer()
+                    Image(systemName: "arrow.right")
+                        .resizable()
+                        .frame(width: 22, height: 18, alignment: .trailing)
+                        .foregroundColor(.black)
+                }
+                Divider()
+                    .frame(height: 2)
+                    .overlay(.black)
+            }.contentShape(Rectangle())
+            .onTapGesture { isPressed = true }
         }.padding(.leading, 20)
         .padding(.trailing, 20)
-        .contentShape(Rectangle())
-        .onTapGesture { isPressed = true }
     }
 }
 

@@ -12,20 +12,14 @@ struct HomeView: View {
     @State private var isShowingPlayers = false
     
     var body: some View {
-        NavigationView {
-            VStack(spacing: 50) {
-                Spacer().frame(height: 10)
-                LinkView(title: .home.teams.localized, isPressed: $isShowingTeams)
-                LinkView(title: .home.players.localized, isPressed: $isShowingPlayers)
-                Spacer()
-                
-                // MARK: NavigationLinks
-                NavigationLink(destination: TeamsView(), isActive: $isShowingTeams) {}
-                NavigationLink(destination: PlayersView(), isActive: $isShowingPlayers) {}
-            }
-            .navigationTitle(String.home.title.localized)
-            .navigationBarTitleDisplayMode(.inline)
-        }
+        VStack(spacing: 50) {
+            Spacer().frame(height: 10)
+            LinkView(title: .home.teams.localized, isPressed: $isShowingTeams)
+            LinkView(title: .home.players.localized, isPressed: $isShowingPlayers)
+            Spacer()
+        }.navigationDestination(isPresented: $isShowingTeams, destination: { TeamsView() })
+        .navigationDestination(isPresented: $isShowingPlayers, destination: { PlayersView() })
+        .embedInNavigationStack(with: .home.title.localized)
     }
 }
 

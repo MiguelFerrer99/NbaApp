@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4100B63728DE5893001328CC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100B63628DE5893001328CC /* Configuration.swift */; };
+		410CD25328E341A60004CD94 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 410CD25228E341A60004CD94 /* Lottie */; };
 		4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE528DDE22E00F0C59C /* HomeView.swift */; };
 		4123CAB128DF3315009FF971 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB028DF3315009FF971 /* LinkView.swift */; };
 		4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB328DF4985009FF971 /* TeamsView.swift */; };
@@ -15,6 +16,11 @@
 		4137AAE428DDE22E00F0C59C /* NbaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE328DDE22E00F0C59C /* NbaAppApp.swift */; };
 		4137AAE828DDE22F00F0C59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4137AAE728DDE22F00F0C59C /* Assets.xcassets */; };
 		415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 415B544028DE140000A336A3 /* IQKeyboardManagerSwift */; };
+		4194C39928F0E95B00C0FB06 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C39828F0E95B00C0FB06 /* LoadingView.swift */; };
+		4194C39B28F0EFA400C0FB06 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C39A28F0EFA400C0FB06 /* LottieView.swift */; };
+		4194C39D28F0F05100C0FB06 /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 4194C39C28F0F05100C0FB06 /* Loader.json */; };
+		4194C3A128F0F7D500C0FB06 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3A028F0F7D500C0FB06 /* View+Extension.swift */; };
+		4194C3A328F1093E00C0FB06 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3A228F1093E00C0FB06 /* UINavigationController+Extension.swift */; };
 		41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */; };
 		41D73FED28DE6F1800B9BA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D73FEF28DE6F1800B9BA75 /* Localizable.strings */; };
 		41D73FF628DE711700B9BA75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D73FF528DE711700B9BA75 /* LaunchScreen.storyboard */; };
@@ -31,6 +37,11 @@
 		4137AAE328DDE22E00F0C59C /* NbaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbaAppApp.swift; sourceTree = "<group>"; };
 		4137AAE528DDE22E00F0C59C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4137AAE728DDE22F00F0C59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4194C39828F0E95B00C0FB06 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		4194C39A28F0EFA400C0FB06 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		4194C39C28F0F05100C0FB06 /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
+		4194C3A028F0F7D500C0FB06 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		4194C3A228F1093E00C0FB06 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
 		41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		41D73FEE28DE6F1800B9BA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41D73FF228DE6FB000B9BA75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -43,6 +54,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */,
+				410CD25328E341A60004CD94 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +73,9 @@
 		4123CAAC28DF2CCC009FF971 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4194C39A28F0EFA400C0FB06 /* LottieView.swift */,
+				4194C3A028F0F7D500C0FB06 /* View+Extension.swift */,
+				4194C3A228F1093E00C0FB06 /* UINavigationController+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -69,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				4123CAB028DF3315009FF971 /* LinkView.swift */,
+				4194C39828F0E95B00C0FB06 /* LoadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				4137AAE728DDE22F00F0C59C /* Assets.xcassets */,
+				4194C39C28F0F05100C0FB06 /* Loader.json */,
 				4123CA8728DF2318009FF971 /* Localizables */,
 			);
 			path = Resources;
@@ -254,6 +271,7 @@
 			name = NbaApp;
 			packageProductDependencies = (
 				415B544028DE140000A336A3 /* IQKeyboardManagerSwift */,
+				410CD25228E341A60004CD94 /* Lottie */,
 			);
 			productName = NbaApp;
 			productReference = 4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */;
@@ -286,6 +304,7 @@
 			mainGroup = 4137AAD728DDE22E00F0C59C;
 			packageReferences = (
 				415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 4137AAE128DDE22E00F0C59C /* Products */;
 			projectDirPath = "";
@@ -303,6 +322,7 @@
 			files = (
 				41D73FF628DE711700B9BA75 /* LaunchScreen.storyboard in Resources */,
 				4137AAE828DDE22F00F0C59C /* Assets.xcassets in Resources */,
+				4194C39D28F0F05100C0FB06 /* Loader.json in Resources */,
 				41D73FED28DE6F1800B9BA75 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,9 +336,13 @@
 			files = (
 				4100B63728DE5893001328CC /* Configuration.swift in Sources */,
 				4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */,
+				4194C3A328F1093E00C0FB06 /* UINavigationController+Extension.swift in Sources */,
+				4194C3A128F0F7D500C0FB06 /* View+Extension.swift in Sources */,
+				4194C39B28F0EFA400C0FB06 /* LottieView.swift in Sources */,
 				4137AAE428DDE22E00F0C59C /* NbaAppApp.swift in Sources */,
 				4123CAB728DF4B31009FF971 /* PlayersView.swift in Sources */,
 				4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */,
+				4194C39928F0E95B00C0FB06 /* LoadingView.swift in Sources */,
 				41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */,
 				4123CAB128DF3315009FF971 /* LinkView.swift in Sources */,
 			);
@@ -391,7 +415,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -448,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_MODULE_NAME = "";
@@ -472,13 +496,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NbaApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "NbaApp Dev";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -487,6 +513,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.miguelferrerfornali.nbaapp.dev;
 				PRODUCT_MODULE_NAME = NbaApp;
 				PRODUCT_NAME = "$(TARGET_NAME) Dev";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
@@ -507,13 +536,15 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NbaApp/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "NbaApp Dev";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,6 +553,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.miguelferrerfornali.nbaapp;
 				PRODUCT_MODULE_NAME = NbaApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -554,6 +588,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
 		415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -565,6 +607,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		410CD25228E341A60004CD94 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		415B544028DE140000A336A3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;

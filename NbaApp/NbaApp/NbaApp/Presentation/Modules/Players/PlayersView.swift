@@ -9,25 +9,14 @@ import SwiftUI
 
 struct PlayersView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var isLoading = true
     
     var body: some View {
         VStack {
             EmptyView()
         }
-        .navigationTitle(String.players.title.localized)
-        .navigationBarBackButtonHidden(true)
-        .toolbar {
-            ToolbarItem(placement: .navigationBarLeading) {
-                Button {
-                    dismiss()
-                } label: {
-                    Image(systemName: "arrow.left")
-                        .resizable()
-                        .frame(width: 22, height: 18, alignment: .trailing)
-                        .foregroundColor(.black)
-                }
-            }
-        }
+        .configureNavBar(with: .players.title.localized, and: dismiss)
+        .isLoading(isLoading)
     }
 }
 

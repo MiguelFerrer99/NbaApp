@@ -38,6 +38,11 @@ extension String {
         case players = "home_players"
     }
     
+    enum loading: String, Localizable {
+        case title = "loading_title"
+        case subtitle = "loading_subtitle"
+    }
+    
     enum teams: String, Localizable {
         case title = "teams_title"
     }
