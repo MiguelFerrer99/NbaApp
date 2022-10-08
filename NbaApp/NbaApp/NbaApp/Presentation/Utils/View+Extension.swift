@@ -34,7 +34,7 @@ extension View {
             }
     }
     
-    func isLoading(_ isLoading: Bool, hideNavBar: Bool = false) -> some View {
+    func showLoader(_ isLoading: Bool, hideNavBar: Bool = false) -> some View {
         Group {
             if isLoading {
                 ZStack {

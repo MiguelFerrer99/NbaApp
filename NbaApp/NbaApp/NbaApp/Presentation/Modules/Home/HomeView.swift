@@ -17,7 +17,8 @@ struct HomeView: View {
             LinkView(title: .home.teams.localized, isPressed: $isShowingTeams)
             LinkView(title: .home.players.localized, isPressed: $isShowingPlayers)
             Spacer()
-        }.navigationDestination(isPresented: $isShowingTeams, destination: { TeamsView() })
+        }
+        .navigationDestination(isPresented: $isShowingTeams, destination: { TeamsView() })
         .navigationDestination(isPresented: $isShowingPlayers, destination: { PlayersView() })
         .embedInNavigationStack(with: .home.title.localized)
     }

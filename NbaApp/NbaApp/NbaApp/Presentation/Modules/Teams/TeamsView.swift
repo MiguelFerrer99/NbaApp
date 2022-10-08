@@ -17,7 +17,7 @@ struct TeamsView: View {
             EmptyView()
         }
         .configureNavBar(with: .teams.title.localized, and: dismiss)
-        .isLoading(isLoading)
+        .showLoader(isLoading)
     }
 }
 

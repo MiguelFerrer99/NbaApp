@@ -16,7 +16,7 @@ struct PlayersView: View {
             EmptyView()
         }
         .configureNavBar(with: .players.title.localized, and: dismiss)
-        .isLoading(isLoading)
+        .showLoader(isLoading)
     }
 }
 
