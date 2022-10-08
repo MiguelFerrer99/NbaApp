@@ -11,13 +11,19 @@ import SwiftUI
 final class Configuration {
     static let shared = Configuration()
     
-    let CLIENT_ID: String
-    let CLIENT_SECRET: String
+    let API_HOST: String
+    let API_KEY: String
     let BASE_URL: String
     
     init() {
-        CLIENT_ID = Bundle.main.object(forInfoDictionaryKey: "CLIENT_ID") as! String
-        CLIENT_SECRET = Bundle.main.object(forInfoDictionaryKey: "CLIENT_SECRET") as! String
-        BASE_URL = Bundle.main.object(forInfoDictionaryKey: "BASE_URL") as! String
+        #if Develop
+            API_HOST = "free-nba.p.rapidapi.com"
+            API_KEY = "6712888557mshc76b1cc5f41bccdp1ac5b5jsn800eedeb2545"
+            BASE_URL = "https://free-nba.p.rapidapi.com"
+        #elseif Production
+            API_HOST = "free-nba.p.rapidapi.com"
+            API_KEY = "6712888557mshc76b1cc5f41bccdp1ac5b5jsn800eedeb2545"
+            BASE_URL = "https://free-nba.p.rapidapi.com"
+        #endif
     }
 }

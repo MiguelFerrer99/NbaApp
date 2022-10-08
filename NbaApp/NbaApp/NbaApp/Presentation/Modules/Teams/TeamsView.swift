@@ -9,15 +9,15 @@ import SwiftUI
 
 struct TeamsView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var isLoading = true
-    @GestureState private var dragOffset = CGSize.zero
+    @StateObject private var viewModel = TeamsViewModel()
     
     var body: some View {
         VStack {
             EmptyView()
         }
         .configureNavBar(with: .teams.title.localized, and: dismiss)
-        .showLoader(isLoading)
+        .showLoader(viewModel.isLoading)
+        .task { await viewModel.getAllTeams() }
     }
 }
 

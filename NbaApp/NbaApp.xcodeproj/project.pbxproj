@@ -13,35 +13,71 @@
 		4123CAB128DF3315009FF971 /* LinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB028DF3315009FF971 /* LinkView.swift */; };
 		4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB328DF4985009FF971 /* TeamsView.swift */; };
 		4123CAB728DF4B31009FF971 /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB628DF4B31009FF971 /* PlayersView.swift */; };
-		4137AAE428DDE22E00F0C59C /* NbaAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE328DDE22E00F0C59C /* NbaAppApp.swift */; };
+		4137AAE428DDE22E00F0C59C /* NbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE328DDE22E00F0C59C /* NbaApp.swift */; };
 		4137AAE828DDE22F00F0C59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4137AAE728DDE22F00F0C59C /* Assets.xcassets */; };
 		415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 415B544028DE140000A336A3 /* IQKeyboardManagerSwift */; };
+		4187893428F1864000974AF5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893328F1864000974AF5 /* Cache.swift */; };
+		4187893628F1877500974AF5 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893528F1877500974AF5 /* TokenDTO.swift */; };
+		4187893828F1881000974AF5 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893728F1881000974AF5 /* Auth.swift */; };
+		4187893B28F18A4E00974AF5 /* NoReplyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893A28F18A4E00974AF5 /* NoReplyDTO.swift */; };
+		4187893D28F18A9500974AF5 /* ErrorDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893C28F18A9500974AF5 /* ErrorDTO.swift */; };
+		4187893F28F18B1D00974AF5 /* UserDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893E28F18B1D00974AF5 /* UserDTO.swift */; };
+		4187894128F18B3C00974AF5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894028F18B3C00974AF5 /* User.swift */; };
+		4187894328F18CDF00974AF5 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894228F18CDF00974AF5 /* HomeViewModel.swift */; };
+		4187894528F1906C00974AF5 /* TeamsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894428F1906C00974AF5 /* TeamsViewModel.swift */; };
+		4187894728F1967100974AF5 /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894628F1967100974AF5 /* PlayersViewModel.swift */; };
+		4187894928F1AEA900974AF5 /* TeamDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894828F1AEA900974AF5 /* TeamDTO.swift */; };
+		4187894B28F1B02E00974AF5 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894A28F1B02E00974AF5 /* Team.swift */; };
+		4187895128F1B7E600974AF5 /* PaginationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187895028F1B7E600974AF5 /* PaginationDTO.swift */; };
 		4194C39928F0E95B00C0FB06 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C39828F0E95B00C0FB06 /* LoadingView.swift */; };
 		4194C39B28F0EFA400C0FB06 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C39A28F0EFA400C0FB06 /* LottieView.swift */; };
 		4194C39D28F0F05100C0FB06 /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 4194C39C28F0F05100C0FB06 /* Loader.json */; };
 		4194C3A128F0F7D500C0FB06 /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3A028F0F7D500C0FB06 /* View+Extension.swift */; };
 		4194C3A328F1093E00C0FB06 /* UINavigationController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3A228F1093E00C0FB06 /* UINavigationController+Extension.swift */; };
+		4194C3A528F117C500C0FB06 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3A428F117C500C0FB06 /* Endpoint.swift */; };
+		4194C3A828F1187100C0FB06 /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3A728F1187100C0FB06 /* Log.swift */; };
+		4194C3AA28F118B000C0FB06 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3A928F118B000C0FB06 /* Network.swift */; };
+		4194C3AC28F11A0B00C0FB06 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AB28F11A0B00C0FB06 /* Teams.swift */; };
+		4194C3AE28F11AB500C0FB06 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AD28F11AB500C0FB06 /* Players.swift */; };
+		4194C3B028F11BE600C0FB06 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AF28F11BE600C0FB06 /* AuthManager.swift */; };
 		41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */; };
 		41D73FED28DE6F1800B9BA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D73FEF28DE6F1800B9BA75 /* Localizable.strings */; };
 		41D73FF628DE711700B9BA75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D73FF528DE711700B9BA75 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4100B63428DE5678001328CC /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
-		4100B63528DE5684001328CC /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		4100B63628DE5893001328CC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		4123CAB028DF3315009FF971 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		4123CAB328DF4985009FF971 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
 		4123CAB628DF4B31009FF971 /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NbaApp Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4137AAE328DDE22E00F0C59C /* NbaAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbaAppApp.swift; sourceTree = "<group>"; };
+		4137AAE328DDE22E00F0C59C /* NbaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbaApp.swift; sourceTree = "<group>"; };
 		4137AAE528DDE22E00F0C59C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4137AAE728DDE22F00F0C59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4187893328F1864000974AF5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		4187893528F1877500974AF5 /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
+		4187893728F1881000974AF5 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		4187893A28F18A4E00974AF5 /* NoReplyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoReplyDTO.swift; sourceTree = "<group>"; };
+		4187893C28F18A9500974AF5 /* ErrorDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorDTO.swift; sourceTree = "<group>"; };
+		4187893E28F18B1D00974AF5 /* UserDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDTO.swift; sourceTree = "<group>"; };
+		4187894028F18B3C00974AF5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		4187894228F18CDF00974AF5 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		4187894428F1906C00974AF5 /* TeamsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsViewModel.swift; sourceTree = "<group>"; };
+		4187894628F1967100974AF5 /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
+		4187894828F1AEA900974AF5 /* TeamDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDTO.swift; sourceTree = "<group>"; };
+		4187894A28F1B02E00974AF5 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
+		4187895028F1B7E600974AF5 /* PaginationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationDTO.swift; sourceTree = "<group>"; };
 		4194C39828F0E95B00C0FB06 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4194C39A28F0EFA400C0FB06 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		4194C39C28F0F05100C0FB06 /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
 		4194C3A028F0F7D500C0FB06 /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		4194C3A228F1093E00C0FB06 /* UINavigationController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController+Extension.swift"; sourceTree = "<group>"; };
+		4194C3A428F117C500C0FB06 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		4194C3A728F1187100C0FB06 /* Log.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		4194C3A928F118B000C0FB06 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
+		4194C3AB28F11A0B00C0FB06 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
+		4194C3AD28F11AB500C0FB06 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
+		4194C3AF28F11BE600C0FB06 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		41D73FEE28DE6F1800B9BA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41D73FF228DE6FB000B9BA75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -73,9 +109,11 @@
 		4123CAAC28DF2CCC009FF971 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				4187893328F1864000974AF5 /* Cache.swift */,
+				4194C3A728F1187100C0FB06 /* Log.swift */,
 				4194C39A28F0EFA400C0FB06 /* LottieView.swift */,
-				4194C3A028F0F7D500C0FB06 /* View+Extension.swift */,
 				4194C3A228F1093E00C0FB06 /* UINavigationController+Extension.swift */,
+				4194C3A028F0F7D500C0FB06 /* View+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -93,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				4123CAB328DF4985009FF971 /* TeamsView.swift */,
+				4187894428F1906C00974AF5 /* TeamsViewModel.swift */,
 			);
 			path = Teams;
 			sourceTree = "<group>";
@@ -101,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				4123CAB628DF4B31009FF971 /* PlayersView.swift */,
+				4187894628F1967100974AF5 /* PlayersViewModel.swift */,
 			);
 			path = Players;
 			sourceTree = "<group>";
@@ -130,30 +170,52 @@
 			path = NbaApp;
 			sourceTree = "<group>";
 		};
+		4187893928F1898900974AF5 /* Basics */ = {
+			isa = PBXGroup;
+			children = (
+				4137AAE328DDE22E00F0C59C /* NbaApp.swift */,
+				41D73FF528DE711700B9BA75 /* LaunchScreen.storyboard */,
+			);
+			path = Basics;
+			sourceTree = "<group>";
+		};
+		4187894C28F1B16100974AF5 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				4187893728F1881000974AF5 /* Auth.swift */,
+				4194C3AD28F11AB500C0FB06 /* Players.swift */,
+				4194C3AB28F11A0B00C0FB06 /* Teams.swift */,
+			);
+			path = Endpoints;
+			sourceTree = "<group>";
+		};
+		4187894F28F1B79400974AF5 /* Basics */ = {
+			isa = PBXGroup;
+			children = (
+				4187893C28F18A9500974AF5 /* ErrorDTO.swift */,
+				4187893A28F18A4E00974AF5 /* NoReplyDTO.swift */,
+				4187895028F1B7E600974AF5 /* PaginationDTO.swift */,
+				4187893528F1877500974AF5 /* TokenDTO.swift */,
+			);
+			path = Basics;
+			sourceTree = "<group>";
+		};
+		4194C3A628F1186200C0FB06 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				4194C3A428F117C500C0FB06 /* Endpoint.swift */,
+				4194C3A928F118B000C0FB06 /* Network.swift */,
+				4194C3AF28F11BE600C0FB06 /* AuthManager.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
 		41B4CAF428DE540300ACAE57 /* Configuration */ = {
 			isa = PBXGroup;
 			children = (
-				41B4CAF528DE551F00ACAE57 /* Develop */,
-				41B4CAF628DE552700ACAE57 /* Production */,
 				4100B63628DE5893001328CC /* Configuration.swift */,
 			);
 			path = Configuration;
-			sourceTree = "<group>";
-		};
-		41B4CAF528DE551F00ACAE57 /* Develop */ = {
-			isa = PBXGroup;
-			children = (
-				4100B63428DE5678001328CC /* Config.xcconfig */,
-			);
-			path = Develop;
-			sourceTree = "<group>";
-		};
-		41B4CAF628DE552700ACAE57 /* Production */ = {
-			isa = PBXGroup;
-			children = (
-				4100B63528DE5684001328CC /* Config.xcconfig */,
-			);
-			path = Production;
 			sourceTree = "<group>";
 		};
 		41D73FE728DE6DBD00B9BA75 /* NbaApp */ = {
@@ -180,8 +242,8 @@
 		41D73FF028DE6F6800B9BA75 /* App */ = {
 			isa = PBXGroup;
 			children = (
-				4137AAE328DDE22E00F0C59C /* NbaAppApp.swift */,
-				41D73FF528DE711700B9BA75 /* LaunchScreen.storyboard */,
+				4187893928F1898900974AF5 /* Basics */,
+				4123CAAC28DF2CCC009FF971 /* Utils */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -200,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				41D73FF028DE6F6800B9BA75 /* App */,
-				4123CAAC28DF2CCC009FF971 /* Utils */,
 				4123CAAF28DF32E5009FF971 /* Views */,
 				41D73FF128DE6F7400B9BA75 /* Modules */,
 			);
@@ -219,6 +280,9 @@
 		41D73FF828DE736200B9BA75 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
+				4187894F28F1B79400974AF5 /* Basics */,
+				4187893E28F18B1D00974AF5 /* UserDTO.swift */,
+				4187894828F1AEA900974AF5 /* TeamDTO.swift */,
 			);
 			path = DTOs;
 			sourceTree = "<group>";
@@ -226,6 +290,8 @@
 		41D73FF928DE736F00B9BA75 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4187894028F18B3C00974AF5 /* User.swift */,
+				4187894A28F1B02E00974AF5 /* Team.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -233,7 +299,8 @@
 		41D73FFA28DE739A00B9BA75 /* API */ = {
 			isa = PBXGroup;
 			children = (
-				41D73FFC28DE74E900B9BA75 /* Home */,
+				4187894C28F1B16100974AF5 /* Endpoints */,
+				4194C3A628F1186200C0FB06 /* Network */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -242,13 +309,7 @@
 			isa = PBXGroup;
 			children = (
 				4137AAE528DDE22E00F0C59C /* HomeView.swift */,
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		41D73FFC28DE74E900B9BA75 /* Home */ = {
-			isa = PBXGroup;
-			children = (
+				4187894228F18CDF00974AF5 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -336,15 +397,34 @@
 			files = (
 				4100B63728DE5893001328CC /* Configuration.swift in Sources */,
 				4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */,
+				4187894B28F1B02E00974AF5 /* Team.swift in Sources */,
+				4187894928F1AEA900974AF5 /* TeamDTO.swift in Sources */,
+				4194C3A828F1187100C0FB06 /* Log.swift in Sources */,
+				4187894728F1967100974AF5 /* PlayersViewModel.swift in Sources */,
+				4187894328F18CDF00974AF5 /* HomeViewModel.swift in Sources */,
 				4194C3A328F1093E00C0FB06 /* UINavigationController+Extension.swift in Sources */,
+				4187894528F1906C00974AF5 /* TeamsViewModel.swift in Sources */,
 				4194C3A128F0F7D500C0FB06 /* View+Extension.swift in Sources */,
 				4194C39B28F0EFA400C0FB06 /* LottieView.swift in Sources */,
-				4137AAE428DDE22E00F0C59C /* NbaAppApp.swift in Sources */,
+				4194C3AC28F11A0B00C0FB06 /* Teams.swift in Sources */,
+				4194C3B028F11BE600C0FB06 /* AuthManager.swift in Sources */,
+				4187893D28F18A9500974AF5 /* ErrorDTO.swift in Sources */,
+				4137AAE428DDE22E00F0C59C /* NbaApp.swift in Sources */,
+				4187893B28F18A4E00974AF5 /* NoReplyDTO.swift in Sources */,
+				4194C3AE28F11AB500C0FB06 /* Players.swift in Sources */,
+				4187893428F1864000974AF5 /* Cache.swift in Sources */,
+				4187893628F1877500974AF5 /* TokenDTO.swift in Sources */,
 				4123CAB728DF4B31009FF971 /* PlayersView.swift in Sources */,
 				4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */,
 				4194C39928F0E95B00C0FB06 /* LoadingView.swift in Sources */,
+				4187893828F1881000974AF5 /* Auth.swift in Sources */,
+				4187893F28F18B1D00974AF5 /* UserDTO.swift in Sources */,
 				41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */,
+				4187894128F18B3C00974AF5 /* User.swift in Sources */,
+				4194C3A528F117C500C0FB06 /* Endpoint.swift in Sources */,
+				4194C3AA28F118B000C0FB06 /* Network.swift in Sources */,
 				4123CAB128DF3315009FF971 /* LinkView.swift in Sources */,
+				4187895128F1B7E600974AF5 /* PaginationDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +445,6 @@
 /* Begin XCBuildConfiguration section */
 		4137AAEC28DDE22F00F0C59C /* Develop */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4100B63428DE5678001328CC /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -428,7 +507,6 @@
 		};
 		4137AAED28DDE22F00F0C59C /* Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4100B63528DE5684001328CC /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -500,7 +578,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -516,6 +594,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Develop;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_VERSION = 5.0;
@@ -535,12 +614,12 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NbaApp/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "NbaApp Dev";
+				INFOPLIST_KEY_CFBundleDisplayName = NbaApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -556,6 +635,7 @@
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = Production;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_INCLUDE_PATHS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";

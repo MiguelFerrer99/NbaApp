@@ -9,14 +9,15 @@ import SwiftUI
 
 struct PlayersView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var isLoading = true
+    @StateObject private var viewModel = PlayersViewModel()
     
     var body: some View {
         VStack {
             EmptyView()
         }
         .configureNavBar(with: .players.title.localized, and: dismiss)
-        .showLoader(isLoading)
+        .showLoader(viewModel.isLoading)
+        .task { await viewModel.hideLoaderWithDelay() }
     }
 }
 
