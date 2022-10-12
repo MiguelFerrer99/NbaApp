@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct PaginationDTO<T: Codable>: Codable {
+struct PaginationDTO<T: Decodable>: Decodable {
     let data: [T]
     let meta: MetaDTO
     
-    struct MetaDTO: Codable {
+    struct MetaDTO: Decodable {
         let current_page: Int
         let next_page: Int?
         let count: Int

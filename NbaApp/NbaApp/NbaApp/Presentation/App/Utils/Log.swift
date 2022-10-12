@@ -46,7 +46,7 @@ struct Log {
         let params  = String(data: call.httpBody ?? Data(), encoding: .utf8)
         
         print("------------------------------------------")
-        print("➡️ \(method) \(url) ")
+        print("➡️ \(method) \(url)")
         print("HEADERS: \(headers)")
         print("PARAMETERS: \(params ?? "")")
         print("------------------------------------------")
@@ -66,6 +66,7 @@ struct Log {
     
     static func thisError(_ error : Error) {
         print("🤬 ERROR: \(error.localizedDescription)")
+        print("🤬 Description: \(error)")
         print("------------------------------------------")
     }
     

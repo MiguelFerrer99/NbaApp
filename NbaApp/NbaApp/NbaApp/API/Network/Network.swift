@@ -46,7 +46,7 @@ class Network {
     func loadAuthorized<T: Decodable>(endpoint: Endpoint, of type: T.Type, allowRetry: Bool = true) async throws -> T {
         var request = endpoint.request
         endpoint.headers.forEach {
-            request.setValue($0.key, forHTTPHeaderField: $0.value)
+            request.setValue($0.value, forHTTPHeaderField: $0.key)
         }
         let token = try await authManager.validToken()
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
@@ -82,16 +82,20 @@ class Network {
     func load<T: Decodable>(endpoint: Endpoint, of type: T.Type) async throws -> T {
         var request = endpoint.request
         endpoint.headers.forEach {
-            request.setValue($0.key, forHTTPHeaderField: $0.value)
+            request.setValue($0.value, forHTTPHeaderField: $0.key)
         }
         Log.thisCall(request)
         let (data, urlResponse) = try await URLSession.shared.data(for: request)
         guard let response = urlResponse as? HTTPURLResponse else {
             throw NetworkError.invalidResponse
         }
-        Log.thisResponse(response, data: data)
-        let decoder = JSONDecoder()
-        let parseData = try decoder.decode(T.self, from: data)
-        return parseData
+        do {
+            let parseData = try JSONDecoder().decode(T.self, from: data)
+            Log.thisResponse(response, data: data)
+            return parseData
+        } catch {
+            Log.thisError(error)
+            throw NetworkError.errorDecodable
+        }
     }
 }

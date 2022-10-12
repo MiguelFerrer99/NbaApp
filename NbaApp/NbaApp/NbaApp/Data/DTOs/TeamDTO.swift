@@ -7,8 +7,8 @@
 
 import Foundation
 
-struct TeamDTO: Codable {
-    let id: String
+struct TeamDTO: Decodable {
+    let id: Int
     let abbreviation: String
     let city: String
     let conference: String
@@ -27,7 +27,7 @@ struct TeamDTO: Codable {
     }
     
     func toBO() -> Team {
-        return Team(id: id,
+        return Team(id: "\(id)",
                     abbreviation: abbreviation,
                     city: city,
                     conference: conference,
