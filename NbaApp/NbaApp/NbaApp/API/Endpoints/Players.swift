@@ -8,16 +8,17 @@
 import Foundation
 
 enum PlayersEndpoint {
-    case getAllPlayers(page: Int)
+    case getPlayers(page: Int)
     
     var endpoint: Endpoint {
         get {
             switch self {
-            case .getAllPlayers(let page):
+            case .getPlayers(let page):
                 return Endpoint(path: "/players?page=\(page)",
                                 httpMethod: .get,
                                 headers: ["X-RapidAPI-Key": Configuration.shared.API_KEY,
-                                          "X-RapidAPI-Host": Configuration.shared.API_HOST])
+                                          "X-RapidAPI-Host": Configuration.shared.API_HOST],
+                                demoFileName: "Players")
             }
         }
     }

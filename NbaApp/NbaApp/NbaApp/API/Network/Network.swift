@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 enum NetworkError: Error {
+    case mockNotFound
     case missingToken
     case invalidToken
     case invalidResponse
@@ -16,7 +17,8 @@ enum NetworkError: Error {
     case errorData(Data)
     
     var localizedDescription: String {
-        switch self{
+        switch self {
+        case .mockNotFound: return "Mock not found"
         case .missingToken: return "Access Token not found"
         case .invalidToken: return "Access Token not valid"
         case .invalidResponse: return "Response not expected"
@@ -51,31 +53,35 @@ class Network {
         let token = try await authManager.validToken()
         request.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         Log.thisCall(request)
-        let (data, urlResponse) = try await URLSession.shared.data(for: request)
-        guard let response = urlResponse as? HTTPURLResponse else {
-            throw NetworkError.invalidResponse
-        }
-        if response.statusCode == 401 {
-            if allowRetry {
-                _ = try await authManager.refreshToken()
-                return try await loadAuthorized(endpoint: endpoint, of: type, allowRetry: false)
+        #if Demo
+            return try await loadDemo(endpoint: endpoint, of: T.self)
+        #else
+            let (data, urlResponse) = try await URLSession.shared.data(for: request)
+            guard let response = urlResponse as? HTTPURLResponse else {
+                throw NetworkError.invalidResponse
             }
-        }
-        Log.thisResponse(response, data: data)
-        let decoder = JSONDecoder()
-        var parseData: T!
-        do {
-            parseData = try decoder.decode(T.self, from: data)
-        } catch {
-            if (200..<300).contains(response.statusCode) {
-                Log.thisError(NetworkError.errorDecodable)
-                throw NetworkError.errorDecodable
-            } else {
-                Log.thisError(NetworkError.errorData(data))
-                throw NetworkError.errorData(data)
+            if response.statusCode == 401 {
+                if allowRetry {
+                    _ = try await authManager.refreshToken()
+                    return try await loadAuthorized(endpoint: endpoint, of: type, allowRetry: false)
+                }
             }
-        }
-        return parseData
+            Log.thisResponse(response, data: data)
+            let decoder = JSONDecoder()
+            var parsedData: T!
+            do {
+                parsedData = try decoder.decode(T.self, from: data)
+            } catch {
+                if (200..<300).contains(response.statusCode) {
+                    Log.thisError(NetworkError.errorDecodable)
+                    throw NetworkError.errorDecodable
+                } else {
+                    Log.thisError(NetworkError.errorData(data))
+                    throw NetworkError.errorData(data)
+                }
+            }
+            return parsedData
+        #endif
     }
     
     // MARK: - load - Call unprotected API
@@ -85,14 +91,39 @@ class Network {
             request.setValue($0.value, forHTTPHeaderField: $0.key)
         }
         Log.thisCall(request)
-        let (data, urlResponse) = try await URLSession.shared.data(for: request)
-        guard let response = urlResponse as? HTTPURLResponse else {
-            throw NetworkError.invalidResponse
+        #if Demo
+            return try await loadDemo(endpoint: endpoint, of: T.self)
+        #else
+            let (data, urlResponse) = try await URLSession.shared.data(for: request)
+            guard let response = urlResponse as? HTTPURLResponse else {
+                throw NetworkError.invalidResponse
+            }
+            do {
+                let parsedData = try JSONDecoder().decode(T.self, from: data)
+                Log.thisResponse(response, data: data)
+                return parsedData
+            } catch {
+                Log.thisError(error)
+                throw NetworkError.errorDecodable
+            }
+        #endif
+    }
+}
+
+private extension Network {
+    func loadDemo<T: Decodable>(endpoint: Endpoint, of type: T.Type) async throws -> T {
+        guard let url = Bundle.main.url(forResource: endpoint.mock, withExtension: "json"),
+              let data = try? Data(contentsOf: url) else {
+            throw NetworkError.mockNotFound
         }
         do {
-            let parseData = try JSONDecoder().decode(T.self, from: data)
+            let parsedData = try JSONDecoder().decode(T.self, from: data)
+            guard let url = URL(string: "\(endpoint.mock)_Mock"),
+                  let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil) else {
+                throw NetworkError.invalidResponse
+            }
             Log.thisResponse(response, data: data)
-            return parseData
+            return parsedData
         } catch {
             Log.thisError(error)
             throw NetworkError.errorDecodable

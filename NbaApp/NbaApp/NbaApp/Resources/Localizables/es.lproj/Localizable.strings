@@ -11,12 +11,16 @@
 "home_teams" = "Equipos NBA";
 "home_players" = "Jugadores NBA";
 
-/* Loading */
-"loading_title" = "Estamos recopilando toda la información";
-"loading_subtitle" = "Estará disponible pronto";
-
 /* Teams */
 "teams_title" = "Equipos";
 
 /* Players */
 "players_title" = "Jugadores";
+
+/* Loading */
+"loading_title" = "Estamos recopilando toda la información";
+"loading_subtitle" = "Estará disponible pronto";
+
+/* GenericError */
+"genericError_title" = "Ha ocurrido un error. Por favor, inténtelo de nuevo más tarde";
+"genericError_linkTitle" = "Volver atrás";

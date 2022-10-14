@@ -44,9 +44,10 @@ struct Endpoint {
     var headers: [String: String]
     var images: [String: UIImage]
     var videos: [String: String]
+    var mock: String
     var request: URLRequest {
         get {
-            let url = getURL(path: self.path)
+            let url = Endpoint.getURL(path: self.path)
             var request = URLRequest(url: url)
             request.httpMethod = self.httpMethod.rawValue
             
@@ -75,7 +76,8 @@ struct Endpoint {
          encoding: Encoding = .json,
          headers: [String: String] = [:],
          images: [String: UIImage] = [:],
-         videos: [String: String] = [:]) {
+         videos: [String: String] = [:],
+         demoFileName: String = "") {
         self.path = path
         self.httpMethod = httpMethod
         self.parameters = parameters
@@ -83,10 +85,11 @@ struct Endpoint {
         self.headers = headers
         self.videos = videos
         self.images = images
+        self.mock = demoFileName
     }
     
     // MARK: Get URL with BASE_URL
-    func getURL(path: String) -> URL {
+    static func getURL(path: String) -> URL {
         guard let url = URL(string: Configuration.shared.BASE_URL
         )?.appendingPathComponent(path) else {
             Log.this(path, type: .error)

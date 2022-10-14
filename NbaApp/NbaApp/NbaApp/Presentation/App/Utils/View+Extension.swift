@@ -41,7 +41,20 @@ extension View {
                     self
                         .toolbar(hideNavBar ? .hidden : .visible, for: .navigationBar)
                         .blur(radius: 20)
-                    LoadingView(title: .loading.title.localized, subtitle: .loading.subtitle.localized)
+                    LoadingView()
+                }
+            } else {
+                self
+            }
+        }
+    }
+    
+    func showGenericError(_ isGenericError: Bool, _ isPressed: Binding<Bool>) -> some View {
+        Group {
+            if isGenericError {
+                ZStack {
+                    self
+                    GenericErrorView(isPressed: isPressed)
                 }
             } else {
                 self

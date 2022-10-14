@@ -11,12 +11,16 @@
 "home_teams" = "NBA Teams";
 "home_players" = "NBA Players";
 
-/* Loading */
-"loading_title" = "We are collection all the information";
-"loading_subtitle" = "It will be available soon";
-
 /* Teams */
 "teams_title" = "Teams";
 
 /* Players */
 "players_title" = "Players";
+
+/* Loading */
+"loading_title" = "We are collection all the information";
+"loading_subtitle" = "It will be available soon";
+
+/* GenericError */
+"genericError_title" = "An error has occured. Please, try again later";
+"genericError_linkTitle" = "Go back";

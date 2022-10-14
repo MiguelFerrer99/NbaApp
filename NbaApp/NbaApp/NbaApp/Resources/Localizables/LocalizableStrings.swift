@@ -38,16 +38,23 @@ extension String {
         case players = "home_players"
     }
     
+    enum teams: String, Localizable {
+        case title = "teams_title"
+        case genericErrorTitle = "teams_genericErrorTitle"
+        case genericError
+    }
+    
+    enum players: String, Localizable {
+        case title = "players_title"
+    }
+    
     enum loading: String, Localizable {
         case title = "loading_title"
         case subtitle = "loading_subtitle"
     }
     
-    enum teams: String, Localizable {
-        case title = "teams_title"
-    }
-    
-    enum players: String, Localizable {
-        case title = "players_title"
+    enum genericError: String, Localizable {
+        case title = "genericError_title"
+        case linkTitle = "genericError_linkTitle"
     }
 }

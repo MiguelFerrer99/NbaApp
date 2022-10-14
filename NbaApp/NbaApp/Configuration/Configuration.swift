@@ -16,7 +16,11 @@ final class Configuration {
     let BASE_URL: String
     
     init() {
-        #if Develop
+        #if Demo
+            API_HOST = "free-nba.p.rapidapi.com"
+            API_KEY = "6712888557mshc76b1cc5f41bccdp1ac5b5jsn800eedeb2545"
+            BASE_URL = "https://free-nba.p.rapidapi.com"
+        #elseif Develop
             API_HOST = "free-nba.p.rapidapi.com"
             API_KEY = "6712888557mshc76b1cc5f41bccdp1ac5b5jsn800eedeb2545"
             BASE_URL = "https://free-nba.p.rapidapi.com"

@@ -9,22 +9,19 @@ import SwiftUI
 import Lottie
 
 struct LoadingView: View {
-    let title: String
-    let subtitle: String
-    
     var body: some View {
         GeometryReader { proxy in
             VStack(spacing: 35) {
                 Spacer().frame(height: 100)
                 LottieView(lottieFile: "Loader")
                     .frame(width: 50, height: 50)
-                Text(verbatim: title)
+                Text(verbatim: .loading.title.localized)
                     .font(.title3)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding(.leading, 20)
                     .padding(.trailing, 20)
-                Text(verbatim: subtitle)
+                Text(verbatim: .loading.subtitle.localized)
                     .font(.title3)
                     .fontWeight(.light)
                     .multilineTextAlignment(.center)
@@ -38,7 +35,7 @@ struct LoadingView: View {
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingView(title: "Title", subtitle: "Subtitle")
+        LoadingView()
             .previewLayout(.sizeThatFits)
     }
 }

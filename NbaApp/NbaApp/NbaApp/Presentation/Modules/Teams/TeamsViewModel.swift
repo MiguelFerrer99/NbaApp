@@ -15,7 +15,7 @@ import SwiftUI
     func getAllTeams() async {
         Task {
             do {
-                let teamsDTOs = try await Network.shared.load(endpoint: TeamsEndpoint.getAllTeams(page: 1).endpoint, of: PaginationDTO<TeamDTO>.self)
+                let teamsDTOs = try await Network.shared.load(endpoint: TeamsEndpoint.getTeams(page: 1).endpoint, of: PaginationDTO<TeamDTO>.self)
                 let teams = teamsDTOs.data.compactMap { $0.toBO() }
                 self.teams = teams
                 isLoading = false

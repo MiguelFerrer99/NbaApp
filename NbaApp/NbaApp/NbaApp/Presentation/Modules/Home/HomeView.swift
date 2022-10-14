@@ -15,8 +15,8 @@ struct HomeView: View {
     var body: some View {
         VStack(spacing: 50) {
             Spacer().frame(height: 10)
-            LinkView(title: .home.teams.localized, isPressed: $isShowingTeams)
-            LinkView(title: .home.players.localized, isPressed: $isShowingPlayers)
+            LinkView(title: .home.teams.localized, color: .black, style: .leftToRight, isPressed: $isShowingTeams)
+            LinkView(title: .home.players.localized, color: .black, style: .leftToRight, isPressed: $isShowingPlayers)
             Spacer()
         }
         .navigationDestination(isPresented: $isShowingTeams, destination: { TeamsView() })

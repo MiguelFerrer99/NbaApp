@@ -9,6 +9,9 @@ import SwiftUI
 
 struct LinkView: View {
     let title: String
+    let color: Color
+    let style: LayoutDirection
+    
     @Binding var isPressed: Bool
     
     var body: some View {
@@ -16,19 +19,19 @@ struct LinkView: View {
             VStack(spacing: 20) {
                 HStack {
                     Text(title)
-                        .foregroundColor(.black)
+                        .foregroundColor(color)
                         .font(.body)
                         .lineLimit(1)
                         .frame(alignment: .leading)
                     Spacer()
-                    Image(systemName: "arrow.right")
+                    Image(systemName: style == .leftToRight ? "arrow.right" : "arrow.left")
                         .resizable()
                         .frame(width: 22, height: 18, alignment: .trailing)
-                        .foregroundColor(.black)
-                }
+                        .foregroundColor(color)
+                }.environment(\.layoutDirection, style)
                 Divider()
                     .frame(height: 2)
-                    .overlay(.black)
+                    .overlay(color)
             }.contentShape(Rectangle())
             .onTapGesture { isPressed = true }
         }.padding(.leading, 20)
@@ -38,7 +41,7 @@ struct LinkView: View {
 
 struct LinkView_Previews: PreviewProvider {
     static var previews: some View {
-        LinkView(title: "Title", isPressed: .constant(false))
+        LinkView(title: "Title", color: .black, style: .leftToRight, isPressed: .constant(false))
             .previewLayout(.sizeThatFits)
     }
 }

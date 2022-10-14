@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TeamsView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var goBack = false
     @StateObject private var viewModel = TeamsViewModel()
     
     var body: some View {
@@ -17,6 +18,8 @@ struct TeamsView: View {
         }
         .configureNavBar(with: .teams.title.localized, and: dismiss)
         .showLoader(viewModel.isLoading)
+        .showGenericError(viewModel.isGenericError, $goBack)
+        .onChange(of: goBack, perform: { _ in dismiss() })
         .task { await viewModel.getAllTeams() }
     }
 }

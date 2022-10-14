@@ -8,17 +8,18 @@
 import Foundation
 
 enum TeamsEndpoint {
-    case getAllTeams(page: Int)
+    case getTeams(page: Int)
     
     var endpoint: Endpoint {
         get {
             switch self {
-            case .getAllTeams(let page):
+            case .getTeams(let page):
                 return Endpoint(path: "/teams",
                                 httpMethod: .get,
                                 parameters: ["page": "\(page)"],
                                 headers: ["X-RapidAPI-Key": Configuration.shared.API_KEY,
-                                          "X-RapidAPI-Host": Configuration.shared.API_HOST])
+                                          "X-RapidAPI-Host": Configuration.shared.API_HOST],
+                                demoFileName: "Teams")
             }
         }
     }
