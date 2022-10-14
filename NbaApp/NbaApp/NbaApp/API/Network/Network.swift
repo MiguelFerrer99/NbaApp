@@ -58,6 +58,7 @@ class Network {
         #else
             let (data, urlResponse) = try await URLSession.shared.data(for: request)
             guard let response = urlResponse as? HTTPURLResponse else {
+                Log.thisError(NetworkError.invalidResponse)
                 throw NetworkError.invalidResponse
             }
             if response.statusCode == 401 {
@@ -96,6 +97,7 @@ class Network {
         #else
             let (data, urlResponse) = try await URLSession.shared.data(for: request)
             guard let response = urlResponse as? HTTPURLResponse else {
+                Log.thisError(NetworkError.invalidResponse)
                 throw NetworkError.invalidResponse
             }
             do {
@@ -114,12 +116,14 @@ private extension Network {
     func loadDemo<T: Decodable>(endpoint: Endpoint, of type: T.Type) async throws -> T {
         guard let url = Bundle.main.url(forResource: endpoint.mock, withExtension: "json"),
               let data = try? Data(contentsOf: url) else {
+            Log.thisError(NetworkError.mockNotFound)
             throw NetworkError.mockNotFound
         }
         do {
             let parsedData = try JSONDecoder().decode(T.self, from: data)
             guard let url = URL(string: "\(endpoint.mock)_Mock"),
                   let response = HTTPURLResponse(url: url, statusCode: 200, httpVersion: nil, headerFields: nil) else {
+                Log.thisError(NetworkError.invalidResponse)
                 throw NetworkError.invalidResponse
             }
             Log.thisResponse(response, data: data)

@@ -18,7 +18,7 @@ enum PlayersEndpoint {
                                 httpMethod: .get,
                                 headers: ["X-RapidAPI-Key": Configuration.shared.API_KEY,
                                           "X-RapidAPI-Host": Configuration.shared.API_HOST],
-                                demoFileName: "Players")
+                                mock: "Players")
             }
         }
     }

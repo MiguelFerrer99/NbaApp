@@ -77,7 +77,7 @@ struct Endpoint {
          headers: [String: String] = [:],
          images: [String: UIImage] = [:],
          videos: [String: String] = [:],
-         demoFileName: String = "") {
+         mock: String = "") {
         self.path = path
         self.httpMethod = httpMethod
         self.parameters = parameters
@@ -85,7 +85,7 @@ struct Endpoint {
         self.headers = headers
         self.videos = videos
         self.images = images
-        self.mock = demoFileName
+        self.mock = mock
     }
     
     // MARK: Get URL with BASE_URL

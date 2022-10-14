@@ -19,7 +19,7 @@ enum TeamsEndpoint {
                                 parameters: ["page": "\(page)"],
                                 headers: ["X-RapidAPI-Key": Configuration.shared.API_KEY,
                                           "X-RapidAPI-Host": Configuration.shared.API_HOST],
-                                demoFileName: "Teams")
+                                mock: "Teams")
             }
         }
     }

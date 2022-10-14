@@ -15,9 +15,9 @@ enum AuthEndpoint {
         get {
             switch self {
             case .login(let parameters):
-                return Endpoint(path: "/login", httpMethod: .post, parameters: parameters, demoFileName: "Login")
+                return Endpoint(path: "/login", httpMethod: .post, parameters: parameters, mock: "Login")
             case .refreshToken(let parameters):
-                return Endpoint(path: "/refresh_token", httpMethod: .post, parameters: parameters, demoFileName: "RefreshToken")
+                return Endpoint(path: "/refresh_token", httpMethod: .post, parameters: parameters, mock: "RefreshToken")
             }
         }
     }

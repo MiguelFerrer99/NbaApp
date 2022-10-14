@@ -72,6 +72,7 @@ struct Log {
     
     static func thisError(_ error : NetworkError) {
         print("🤬 ERROR: \(error.localizedDescription)")
+        print("🤬 Description: \(error)")
         print("------------------------------------------")
     }
 }
