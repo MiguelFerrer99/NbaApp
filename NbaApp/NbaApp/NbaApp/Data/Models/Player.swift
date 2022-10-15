@@ -7,10 +7,11 @@
 
 import Foundation
 
-struct Player {
+struct Player: Identifiable {
     let id: String
     let firstname: String
     let lastname: String
     let position: PlayerPosition
     let team: Team
+    var fullname: String { "\(firstname) \(lastname)" }
 }

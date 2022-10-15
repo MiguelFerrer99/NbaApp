@@ -32,7 +32,7 @@ struct TeamDTO: Decodable {
                     city: city,
                     conference: conference,
                     division: division,
-                    full_name: full_name,
+                    fullname: full_name,
                     name: name)
     }
 }

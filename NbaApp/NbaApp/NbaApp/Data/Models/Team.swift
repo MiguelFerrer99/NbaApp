@@ -7,12 +7,12 @@
 
 import Foundation
 
-struct Team {
+struct Team: Identifiable {
     let id: String
     let abbreviation: String
     let city: String
     let conference: String
     let division: String
-    let full_name: String
+    let fullname: String
     let name: String
 }

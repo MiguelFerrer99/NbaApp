@@ -15,7 +15,11 @@ struct PlayersView: View {
     var body: some View {
         ZStack {
             VStack {
-                EmptyView()
+                List(viewModel.players) { player in
+                    TeamCard(title: player.fullname, isPressed: .constant(false))
+                        .listRowSeparator(.hidden)
+                        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                }.listStyle(.plain)
             }.configureNavBar(with: .players.title.localized, and: dismiss)
             
             LoadingView(isLoading: viewModel.isLoading)
