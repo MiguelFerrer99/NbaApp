@@ -10,8 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State private var isShowingTeams = false
     @State private var isShowingPlayers = false
-    @StateObject private var viewModel = HomeViewModel()
-    
+        
     var body: some View {
         VStack(spacing: 50) {
             Spacer().frame(height: 10)
