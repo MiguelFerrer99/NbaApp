@@ -9,11 +9,19 @@ import SwiftUI
 
 @MainActor class PlayersViewModel: ObservableObject {
     @Published var isLoading = true
+    @Published var isGenericError = false
+    @Published var players: [Player] = []
     
-    func hideLoaderWithDelay() async {
+    func getPlayers() async {
         Task {
-            try await Task.sleep(nanoseconds: 3000000000)
-            isLoading = false
+            do {
+                let playersDTOs = try await Network.shared.load(endpoint: PlayersEndpoint.getPlayers(page: 1).endpoint, of: PaginationDTO<PlayerDTO>.self)
+                let players = playersDTOs.data.compactMap { $0.toBO() }
+                self.players = players
+                isLoading = false
+            } catch {
+                isGenericError = true
+            }
         }
     }
 }

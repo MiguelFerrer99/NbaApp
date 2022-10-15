@@ -33,32 +33,4 @@ extension View {
                 }
             }
     }
-    
-    func showLoader(_ isLoading: Bool, hideNavBar: Bool = false) -> some View {
-        Group {
-            if isLoading {
-                ZStack {
-                    self
-                        .toolbar(hideNavBar ? .hidden : .visible, for: .navigationBar)
-                        .blur(radius: 20)
-                    LoadingView()
-                }
-            } else {
-                self
-            }
-        }
-    }
-    
-    func showGenericError(_ isGenericError: Bool, _ isPressed: Binding<Bool>) -> some View {
-        Group {
-            if isGenericError {
-                ZStack {
-                    self
-                    GenericErrorView(isPressed: isPressed)
-                }
-            } else {
-                self
-            }
-        }
-    }
 }

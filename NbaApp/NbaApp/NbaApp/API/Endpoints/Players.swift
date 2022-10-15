@@ -14,8 +14,9 @@ enum PlayersEndpoint {
         get {
             switch self {
             case .getPlayers(let page):
-                return Endpoint(path: "/players?page=\(page)",
+                return Endpoint(path: "/players",
                                 httpMethod: .get,
+                                parameters: ["page": "\(page)"],
                                 headers: ["X-RapidAPI-Key": Configuration.shared.API_KEY,
                                           "X-RapidAPI-Host": Configuration.shared.API_HOST],
                                 mock: "Players")

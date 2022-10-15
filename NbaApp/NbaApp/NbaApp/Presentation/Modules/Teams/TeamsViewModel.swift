@@ -12,7 +12,7 @@ import SwiftUI
     @Published var isGenericError = false
     @Published var teams: [Team] = []
     
-    func getAllTeams() async {
+    func getTeams() async {
         Task {
             do {
                 let teamsDTOs = try await Network.shared.load(endpoint: TeamsEndpoint.getTeams(page: 1).endpoint, of: PaginationDTO<TeamDTO>.self)

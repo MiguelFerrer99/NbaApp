@@ -13,14 +13,16 @@ struct TeamsView: View {
     @StateObject private var viewModel = TeamsViewModel()
     
     var body: some View {
-        VStack {
-            EmptyView()
+        ZStack {
+            VStack {
+                EmptyView()
+            }.configureNavBar(with: .teams.title.localized, and: dismiss)
+            
+            LoadingView(isLoading: viewModel.isLoading)
+            GenericErrorView(isGenericError: viewModel.isGenericError, isPressed: $goBack)
         }
-        .configureNavBar(with: .teams.title.localized, and: dismiss)
-        .showLoader(viewModel.isLoading)
-        .showGenericError(viewModel.isGenericError, $goBack)
         .onChange(of: goBack, perform: { _ in dismiss() })
-        .task { await viewModel.getAllTeams() }
+        .task { await viewModel.getTeams() }
     }
 }
 

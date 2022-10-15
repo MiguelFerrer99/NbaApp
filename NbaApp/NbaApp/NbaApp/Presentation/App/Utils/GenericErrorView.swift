@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GenericErrorView: View {
+    let isGenericError: Bool
     @Binding var isPressed: Bool
     
     var body: some View {
@@ -30,13 +31,13 @@ struct GenericErrorView: View {
             .shadow(color: .customBlack, radius: 15, x: 0, y: 10)
             .padding([.leading, .trailing, .bottom], 40)
             .padding(.top, 10)
-        }
+        }.opacity(isGenericError ? 1 : 0)
     }
 }
 
 struct GenericErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        GenericErrorView(isPressed: .constant(false))
+        GenericErrorView(isGenericError: false, isPressed: .constant(false))
             .previewLayout(.sizeThatFits)
     }
 }

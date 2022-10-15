@@ -9,15 +9,20 @@ import SwiftUI
 
 struct PlayersView: View {
     @Environment(\.dismiss) var dismiss
+    @State private var goBack = false
     @StateObject private var viewModel = PlayersViewModel()
     
     var body: some View {
-        VStack {
-            EmptyView()
+        ZStack {
+            VStack {
+                EmptyView()
+            }.configureNavBar(with: .players.title.localized, and: dismiss)
+            
+            LoadingView(isLoading: viewModel.isLoading)
+            GenericErrorView(isGenericError: viewModel.isGenericError, isPressed: $goBack)
         }
-        .configureNavBar(with: .players.title.localized, and: dismiss)
-        .showLoader(viewModel.isLoading)
-        .task { await viewModel.hideLoaderWithDelay() }
+        .onChange(of: goBack, perform: { _ in dismiss() })
+        .task { await viewModel.getPlayers() }
     }
 }
 
