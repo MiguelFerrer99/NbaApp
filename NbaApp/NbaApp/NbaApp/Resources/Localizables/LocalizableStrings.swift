@@ -40,8 +40,6 @@ extension String {
     
     enum teams: String, Localizable {
         case title = "teams_title"
-        case genericErrorTitle = "teams_genericErrorTitle"
-        case genericError
     }
     
     enum players: String, Localizable {

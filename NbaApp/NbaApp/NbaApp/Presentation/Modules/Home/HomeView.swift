@@ -10,7 +10,6 @@ import SwiftUI
 struct HomeView: View {
     @State private var isShowingTeams = false
     @State private var isShowingPlayers = false
-    @StateObject private var viewModel = HomeViewModel()
     
     var body: some View {
         VStack(spacing: 50) {
@@ -19,8 +18,8 @@ struct HomeView: View {
             LinkView(title: .home.players.localized, color: .black, style: .leftToRight, isPressed: $isShowingPlayers)
             Spacer()
         }
-        .navigationDestination(isPresented: $isShowingTeams, destination: { TeamsView() })
-        .navigationDestination(isPresented: $isShowingPlayers, destination: { PlayersView() })
+        .navigationDestination(isPresented: $isShowingTeams, destination: { TeamsPlayersView(style: .teams) })
+        .navigationDestination(isPresented: $isShowingPlayers, destination: { TeamsPlayersView(style: .players) })
         .embedInNavigationStack(with: .home.title.localized)
     }
 }
