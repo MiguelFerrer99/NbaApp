@@ -34,7 +34,7 @@
 		4191C5A228FA232100E59875 /* Players.json in Resources */ = {isa = PBXBuildFile; fileRef = 4191C5A128FA232100E59875 /* Players.json */; };
 		4191C5A428FA234400E59875 /* PlayerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C5A328FA234400E59875 /* PlayerDTO.swift */; };
 		4191C5A628FA23BE00E59875 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C5A528FA23BE00E59875 /* Player.swift */; };
-		4191C5C128FA541E00E59875 /* TeamCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C5C028FA541E00E59875 /* TeamCard.swift */; };
+		4191C5C128FA541E00E59875 /* TeamCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C5C028FA541E00E59875 /* TeamCardView.swift */; };
 		4194C39928F0E95B00C0FB06 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C39828F0E95B00C0FB06 /* LoadingView.swift */; };
 		4194C39B28F0EFA400C0FB06 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C39A28F0EFA400C0FB06 /* LottieView.swift */; };
 		4194C39D28F0F05100C0FB06 /* Loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 4194C39C28F0F05100C0FB06 /* Loader.json */; };
@@ -52,6 +52,8 @@
 		41E8747C28FB77AA00E07DD5 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8747B28FB77AA00E07DD5 /* Pagination.swift */; };
 		41E8747E28FB78A700E07DD5 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */; };
 		41E8748028FB78DD00E07DD5 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8747F28FB78DD00E07DD5 /* Optional+Extension.swift */; };
+		41E8748228FB893D00E07DD5 /* LoadingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8748128FB893D00E07DD5 /* LoadingFooterView.swift */; };
+		41E8748428FB89F400E07DD5 /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8748328FB89F400E07DD5 /* PlayerCardView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,7 +83,7 @@
 		4191C5A128FA232100E59875 /* Players.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Players.json; sourceTree = "<group>"; };
 		4191C5A328FA234400E59875 /* PlayerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDTO.swift; sourceTree = "<group>"; };
 		4191C5A528FA23BE00E59875 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		4191C5C028FA541E00E59875 /* TeamCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCard.swift; sourceTree = "<group>"; };
+		4191C5C028FA541E00E59875 /* TeamCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamCardView.swift; sourceTree = "<group>"; };
 		4194C39828F0E95B00C0FB06 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		4194C39A28F0EFA400C0FB06 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		4194C39C28F0F05100C0FB06 /* Loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Loader.json; sourceTree = "<group>"; };
@@ -100,6 +102,8 @@
 		41E8747B28FB77AA00E07DD5 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		41E8747F28FB78DD00E07DD5 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
+		41E8748128FB893D00E07DD5 /* LoadingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingFooterView.swift; sourceTree = "<group>"; };
+		41E8748328FB89F400E07DD5 /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,9 +147,11 @@
 			isa = PBXGroup;
 			children = (
 				4191C59528F9CD6500E59875 /* GenericErrorView.swift */,
-				4194C39828F0E95B00C0FB06 /* LoadingView.swift */,
 				4123CAB028DF3315009FF971 /* LinkView.swift */,
-				4191C5C028FA541E00E59875 /* TeamCard.swift */,
+				41E8748128FB893D00E07DD5 /* LoadingFooterView.swift */,
+				4194C39828F0E95B00C0FB06 /* LoadingView.swift */,
+				41E8748328FB89F400E07DD5 /* PlayerCardView.swift */,
+				4191C5C028FA541E00E59875 /* TeamCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -461,16 +467,18 @@
 				4194C3AE28F11AB500C0FB06 /* Players.swift in Sources */,
 				4187893428F1864000974AF5 /* Cache.swift in Sources */,
 				4187893628F1877500974AF5 /* TokenDTO.swift in Sources */,
+				41E8748428FB89F400E07DD5 /* PlayerCardView.swift in Sources */,
 				4123CAB728DF4B31009FF971 /* PlayersView.swift in Sources */,
 				4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */,
 				4194C39928F0E95B00C0FB06 /* LoadingView.swift in Sources */,
 				4191C59828F9CF4A00E59875 /* Color+Extension.swift in Sources */,
 				41E8747E28FB78A700E07DD5 /* Collection+Extension.swift in Sources */,
+				41E8748228FB893D00E07DD5 /* LoadingFooterView.swift in Sources */,
 				4187893828F1881000974AF5 /* Auth.swift in Sources */,
 				4187893F28F18B1D00974AF5 /* UserDTO.swift in Sources */,
 				41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */,
 				4187894128F18B3C00974AF5 /* User.swift in Sources */,
-				4191C5C128FA541E00E59875 /* TeamCard.swift in Sources */,
+				4191C5C128FA541E00E59875 /* TeamCardView.swift in Sources */,
 				4194C3A528F117C500C0FB06 /* Endpoint.swift in Sources */,
 				4194C3AA28F118B000C0FB06 /* Network.swift in Sources */,
 				4123CAB128DF3315009FF971 /* LinkView.swift in Sources */,

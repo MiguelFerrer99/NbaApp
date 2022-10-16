@@ -19,10 +19,11 @@ struct PlayersView: View {
             case .error:
                 GenericErrorView(dismiss: dismiss)
             case .received(let playersPager):
-                List(playersPager.getItems()) { player in
-                    TeamCard(title: player.fullname, isPressed: .constant(false))
-                        .listRowSeparator(.hidden)
-                        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                List {
+                    ForEach(playersPager.getItems()) { player in
+                        PlayerCardView(title: player.fullname, isPressed: .constant(false))
+                    }
+                    LoadingFooterView()
                 }.listStyle(.plain)
             }
         }.configureNavBar(with: .players.title.localized, and: dismiss)

@@ -19,14 +19,15 @@ struct TeamsView: View {
             case .error:
                 GenericErrorView(dismiss: dismiss)
             case .received(let teamsPager):
-                List(teamsPager.getItems()) { team in
-                    TeamCard(title: team.fullname, isPressed: .constant(false))
-                        .listRowSeparator(.hidden)
-                        .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
+                List {
+                    ForEach(teamsPager.getItems()) { team in
+                        TeamCardView(title: team.fullname, isPressed: .constant(false))
+                    }
+                    LoadingFooterView()
                 }.listStyle(.plain)
             }
         }.configureNavBar(with: .teams.title.localized, and: dismiss)
-        .task { await viewModel.getTeams() }
+            .task { await viewModel.getTeams() }
     }
 }
 
