@@ -6,11 +6,8 @@
 //
 
 import SwiftUI
-import Lottie
 
 struct LoadingView: View {
-    let isLoading: Bool
-    
     var body: some View {
         GeometryReader { proxy in
             VStack(spacing: 35) {
@@ -31,13 +28,13 @@ struct LoadingView: View {
                     .padding(.trailing, 20)
                 Spacer()
             }.frame(width: proxy.size.width, height: proxy.size.height)
-        }.opacity(isLoading ? 1 : 0)
+        }
     }
 }
 
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
-        LoadingView(isLoading: false)
+        LoadingView()
             .previewLayout(.sizeThatFits)
     }
 }

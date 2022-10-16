@@ -9,23 +9,23 @@ import SwiftUI
 
 struct PlayersView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var goBack = false
     @StateObject private var viewModel = PlayersViewModel()
     
     var body: some View {
-        ZStack {
-            VStack {
-                List(viewModel.players) { player in
+        VStack {
+            switch viewModel.state {
+            case .loading:
+                LoadingView()
+            case .error:
+                GenericErrorView(dismiss: dismiss)
+            case .received(let playersPager):
+                List(playersPager.getItems()) { player in
                     TeamCard(title: player.fullname, isPressed: .constant(false))
                         .listRowSeparator(.hidden)
                         .listRowInsets(.init(top: 0, leading: 0, bottom: 0, trailing: 0))
                 }.listStyle(.plain)
-            }.configureNavBar(with: .players.title.localized, and: dismiss)
-            
-            LoadingView(isLoading: viewModel.isLoading)
-            GenericErrorView(isGenericError: viewModel.isGenericError, isPressed: $goBack)
-        }
-        .onChange(of: goBack, perform: { _ in dismiss() })
+            }
+        }.configureNavBar(with: .players.title.localized, and: dismiss)
         .task { await viewModel.getPlayers() }
     }
 }

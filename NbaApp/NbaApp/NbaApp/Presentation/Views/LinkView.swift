@@ -11,6 +11,7 @@ struct LinkView: View {
     let title: String
     let color: Color
     let style: LayoutDirection
+    let dismiss: DismissAction?
     
     @Binding var isPressed: Bool
     
@@ -33,7 +34,10 @@ struct LinkView: View {
                     .frame(height: 2)
                     .overlay(color)
             }.contentShape(Rectangle())
-            .onTapGesture { isPressed = true }
+            .onTapGesture {
+                if let dismiss = dismiss { dismiss() }
+                else { isPressed = true }
+            }
         }.padding(.leading, 20)
         .padding(.trailing, 20)
     }
@@ -41,7 +45,7 @@ struct LinkView: View {
 
 struct LinkView_Previews: PreviewProvider {
     static var previews: some View {
-        LinkView(title: "Title", color: .black, style: .leftToRight, isPressed: .constant(false))
+        LinkView(title: "Title", color: .black, style: .leftToRight, dismiss: nil, isPressed: .constant(false))
             .previewLayout(.sizeThatFits)
     }
 }

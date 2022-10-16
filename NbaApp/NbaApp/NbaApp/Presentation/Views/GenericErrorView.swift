@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct GenericErrorView: View {
-    let isGenericError: Bool
-    @Binding var isPressed: Bool
+    let dismiss: DismissAction?
     
     var body: some View {
         GeometryReader { _ in
@@ -23,7 +22,7 @@ struct GenericErrorView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 20)
                 Spacer().frame(height: 20)
-                LinkView(title: .genericError.linkTitle.localized, color: .white, style: .rightToLeft, isPressed: $isPressed)
+                LinkView(title: .genericError.linkTitle.localized, color: .white, style: .rightToLeft, dismiss: dismiss, isPressed: .constant(false))
             }.padding(.vertical, 50)
             .padding(.horizontal)
             .background { Color.customBlack }
@@ -31,13 +30,13 @@ struct GenericErrorView: View {
             .shadow(color: .customBlack, radius: 15, x: 0, y: 10)
             .padding([.leading, .trailing, .bottom], 40)
             .padding(.top, 10)
-        }.opacity(isGenericError ? 1 : 0)
+        }
     }
 }
 
 struct GenericErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        GenericErrorView(isGenericError: false, isPressed: .constant(false))
+        GenericErrorView(dismiss: nil)
             .previewLayout(.sizeThatFits)
     }
 }

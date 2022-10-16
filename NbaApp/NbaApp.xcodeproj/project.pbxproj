@@ -27,7 +27,7 @@
 		4187894728F1967100974AF5 /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894628F1967100974AF5 /* PlayersViewModel.swift */; };
 		4187894928F1AEA900974AF5 /* TeamDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894828F1AEA900974AF5 /* TeamDTO.swift */; };
 		4187894B28F1B02E00974AF5 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894A28F1B02E00974AF5 /* Team.swift */; };
-		4187895128F1B7E600974AF5 /* PaginationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187895028F1B7E600974AF5 /* PaginationDTO.swift */; };
+		4187895128F1B7E600974AF5 /* Paginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187895028F1B7E600974AF5 /* Paginable.swift */; };
 		4191C59628F9CD6500E59875 /* GenericErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C59528F9CD6500E59875 /* GenericErrorView.swift */; };
 		4191C59828F9CF4A00E59875 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C59728F9CF4A00E59875 /* Color+Extension.swift */; };
 		4191C59E28FA11EC00E59875 /* Teams.json in Resources */ = {isa = PBXBuildFile; fileRef = 4191C59D28FA11EC00E59875 /* Teams.json */; };
@@ -49,6 +49,9 @@
 		41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */; };
 		41D73FED28DE6F1800B9BA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D73FEF28DE6F1800B9BA75 /* Localizable.strings */; };
 		41D73FF628DE711700B9BA75 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D73FF528DE711700B9BA75 /* LaunchScreen.storyboard */; };
+		41E8747C28FB77AA00E07DD5 /* Pagination.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8747B28FB77AA00E07DD5 /* Pagination.swift */; };
+		41E8747E28FB78A700E07DD5 /* Collection+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */; };
+		41E8748028FB78DD00E07DD5 /* Optional+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E8747F28FB78DD00E07DD5 /* Optional+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,7 +74,7 @@
 		4187894628F1967100974AF5 /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
 		4187894828F1AEA900974AF5 /* TeamDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDTO.swift; sourceTree = "<group>"; };
 		4187894A28F1B02E00974AF5 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
-		4187895028F1B7E600974AF5 /* PaginationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationDTO.swift; sourceTree = "<group>"; };
+		4187895028F1B7E600974AF5 /* Paginable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginable.swift; sourceTree = "<group>"; };
 		4191C59528F9CD6500E59875 /* GenericErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorView.swift; sourceTree = "<group>"; };
 		4191C59728F9CF4A00E59875 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		4191C59D28FA11EC00E59875 /* Teams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Teams.json; sourceTree = "<group>"; };
@@ -94,6 +97,9 @@
 		41D73FEE28DE6F1800B9BA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41D73FF228DE6FB000B9BA75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41D73FF528DE711700B9BA75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		41E8747B28FB77AA00E07DD5 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
+		41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
+		41E8747F28FB78DD00E07DD5 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,8 @@
 				4194C39A28F0EFA400C0FB06 /* LottieView.swift */,
 				4194C3A228F1093E00C0FB06 /* UINavigationController+Extension.swift */,
 				4194C3A028F0F7D500C0FB06 /* View+Extension.swift */,
+				41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */,
+				41E8747F28FB78DD00E07DD5 /* Optional+Extension.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -209,8 +217,8 @@
 			children = (
 				4187893C28F18A9500974AF5 /* ErrorDTO.swift */,
 				4187893A28F18A4E00974AF5 /* NoReplyDTO.swift */,
-				4187895028F1B7E600974AF5 /* PaginationDTO.swift */,
 				4187893528F1877500974AF5 /* TokenDTO.swift */,
+				4187895028F1B7E600974AF5 /* Paginable.swift */,
 			);
 			path = Basics;
 			sourceTree = "<group>";
@@ -235,9 +243,10 @@
 		4194C3A628F1186200C0FB06 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				4194C3AF28F11BE600C0FB06 /* AuthManager.swift */,
 				4194C3A428F117C500C0FB06 /* Endpoint.swift */,
 				4194C3A928F118B000C0FB06 /* Network.swift */,
-				4194C3AF28F11BE600C0FB06 /* AuthManager.swift */,
+				41E8747B28FB77AA00E07DD5 /* Pagination.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -448,6 +457,7 @@
 				4187893D28F18A9500974AF5 /* ErrorDTO.swift in Sources */,
 				4137AAE428DDE22E00F0C59C /* NbaApp.swift in Sources */,
 				4187893B28F18A4E00974AF5 /* NoReplyDTO.swift in Sources */,
+				41E8747C28FB77AA00E07DD5 /* Pagination.swift in Sources */,
 				4194C3AE28F11AB500C0FB06 /* Players.swift in Sources */,
 				4187893428F1864000974AF5 /* Cache.swift in Sources */,
 				4187893628F1877500974AF5 /* TokenDTO.swift in Sources */,
@@ -455,6 +465,7 @@
 				4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */,
 				4194C39928F0E95B00C0FB06 /* LoadingView.swift in Sources */,
 				4191C59828F9CF4A00E59875 /* Color+Extension.swift in Sources */,
+				41E8747E28FB78A700E07DD5 /* Collection+Extension.swift in Sources */,
 				4187893828F1881000974AF5 /* Auth.swift in Sources */,
 				4187893F28F18B1D00974AF5 /* UserDTO.swift in Sources */,
 				41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */,
@@ -464,7 +475,8 @@
 				4194C3AA28F118B000C0FB06 /* Network.swift in Sources */,
 				4123CAB128DF3315009FF971 /* LinkView.swift in Sources */,
 				4191C5A628FA23BE00E59875 /* Player.swift in Sources */,
-				4187895128F1B7E600974AF5 /* PaginationDTO.swift in Sources */,
+				4187895128F1B7E600974AF5 /* Paginable.swift in Sources */,
+				41E8748028FB78DD00E07DD5 /* Optional+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

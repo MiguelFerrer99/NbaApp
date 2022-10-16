@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TeamCard: View {
     let title: String
+    
     @Binding var isPressed: Bool
     
     var body: some View {

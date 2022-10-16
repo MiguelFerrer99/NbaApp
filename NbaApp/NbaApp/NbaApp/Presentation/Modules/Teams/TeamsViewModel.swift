@@ -7,20 +7,28 @@
 
 import SwiftUI
 
+enum TeamsState {
+    case loading
+    case error
+    case received(Pagination<Team>)
+}
+
 @MainActor class TeamsViewModel: ObservableObject {
-    @Published var isLoading = true
-    @Published var isGenericError = false
-    @Published var teams: [Team] = []
+    private var teamsPager = Pagination<Team>()
+    
+    @Published private(set) var state: TeamsState = .loading
     
     func getTeams() async {
         Task {
             do {
-                let teamsDTOs = try await Network.shared.load(endpoint: TeamsEndpoint.getTeams(page: 1).endpoint, of: PaginationDTO<TeamDTO>.self)
-                let teams = teamsDTOs.data.compactMap { $0.toBO() }
-                self.teams = teams
-                isLoading = false
+                let paginatedTeams = try await Network.shared.load(endpoint: TeamsEndpoint.getTeams(page: teamsPager.currentPage).endpoint, of: Paginable<TeamDTO>.self)
+                let teams = paginatedTeams.data.compactMap { $0.toBO() }
+                teamsPager.setCurrentPage(paginatedTeams.meta.currentPage)
+                teamsPager.setItems(teams)
+                teamsPager.setNextPage(paginatedTeams.meta.nextPage)
+                state = .received(teamsPager)
             } catch {
-                isGenericError = true
+                state = .error
             }
         }
     }
