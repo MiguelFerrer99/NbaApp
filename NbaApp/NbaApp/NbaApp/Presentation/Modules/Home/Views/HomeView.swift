@@ -10,13 +10,16 @@ import SwiftUI
 struct HomeView: View {
     @State private var isShowingTeams = false
     @State private var isShowingPlayers = false
-        
+    @StateObject private var viewModel = HomeViewModel()
+    
     var body: some View {
-        VStack(spacing: 50) {
-            Spacer().frame(height: 10)
-            LinkView(title: .home.teams.localized, color: .black, style: .leftToRight, dismiss: nil, isPressed: $isShowingTeams)
-            LinkView(title: .home.players.localized, color: .black, style: .leftToRight, dismiss: nil, isPressed: $isShowingPlayers)
-            Spacer()
+        VStack {
+            switch viewModel.state {
+            case .idle:
+                LinksView(representable: .init(
+                    isShowingTeams: $isShowingTeams,
+                    isShowingPlayers: $isShowingPlayers))
+            }
         }
         .navigationDestination(isPresented: $isShowingTeams, destination: { TeamsView() })
         .navigationDestination(isPresented: $isShowingPlayers, destination: { PlayersView() })

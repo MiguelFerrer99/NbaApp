@@ -13,5 +13,4 @@ struct Player: Identifiable {
     let lastname: String
     let position: PlayerPosition
     let team: Team
-    var fullname: String { "\(firstname) \(lastname)" }
 }

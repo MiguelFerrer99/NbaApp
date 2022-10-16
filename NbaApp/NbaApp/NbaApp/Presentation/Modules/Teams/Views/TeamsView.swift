@@ -18,16 +18,11 @@ struct TeamsView: View {
                 LoadingView()
             case .error:
                 GenericErrorView(dismiss: dismiss)
-            case .received(let teamsPager):
-                List {
-                    ForEach(teamsPager.getItems()) { team in
-                        TeamCardView(title: team.fullname, isPressed: .constant(false))
-                    }
-                    LoadingFooterView()
-                }.listStyle(.plain)
+            case .received(let representable):
+                TeamsListView(representable: .init(pager: representable.pager))
             }
         }.configureNavBar(with: .teams.title.localized, and: dismiss)
-            .task { await viewModel.getTeams() }
+        .task { await viewModel.getTeams() }
     }
 }
 

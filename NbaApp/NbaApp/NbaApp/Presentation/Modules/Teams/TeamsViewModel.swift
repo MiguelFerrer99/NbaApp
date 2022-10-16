@@ -10,7 +10,7 @@ import SwiftUI
 enum TeamsState {
     case loading
     case error
-    case received(Pagination<Team>)
+    case received(TeamsViewReceivedRepresentable)
 }
 
 @MainActor class TeamsViewModel: ObservableObject {
@@ -26,7 +26,8 @@ enum TeamsState {
                 teamsPager.setCurrentPage(paginatedTeams.meta.currentPage)
                 teamsPager.setItems(teams)
                 teamsPager.setNextPage(paginatedTeams.meta.nextPage)
-                state = .received(teamsPager)
+                let representable = TeamsViewReceivedRepresentable(pager: teamsPager)
+                state = .received(representable)
             } catch {
                 state = .error
             }

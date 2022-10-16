@@ -10,7 +10,7 @@ import SwiftUI
 enum PlayersState {
     case loading
     case error
-    case received(Pagination<Player>)
+    case received(PlayersViewReceivedRepresentable)
 }
 
 @MainActor class PlayersViewModel: ObservableObject {
@@ -26,7 +26,8 @@ enum PlayersState {
                 playersPager.setCurrentPage(paginatedPlayers.meta.currentPage)
                 playersPager.setItems(players)
                 playersPager.setNextPage(paginatedPlayers.meta.nextPage)
-                state = .received(playersPager)
+                let representable = PlayersViewReceivedRepresentable(pager: playersPager)
+                state = .received(representable)
             } catch {
                 state = .error
             }

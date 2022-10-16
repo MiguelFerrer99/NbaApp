@@ -18,13 +18,8 @@ struct PlayersView: View {
                 LoadingView()
             case .error:
                 GenericErrorView(dismiss: dismiss)
-            case .received(let playersPager):
-                List {
-                    ForEach(playersPager.getItems()) { player in
-                        PlayerCardView(title: player.fullname, isPressed: .constant(false))
-                    }
-                    LoadingFooterView()
-                }.listStyle(.plain)
+            case .received(let representable):
+                PlayersListView(representable: .init(pager: representable.pager))
             }
         }.configureNavBar(with: .players.title.localized, and: dismiss)
         .task { await viewModel.getPlayers() }

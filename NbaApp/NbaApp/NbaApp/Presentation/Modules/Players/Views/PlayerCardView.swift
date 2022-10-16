@@ -1,16 +1,14 @@
 //
-//  TeamCardView.swift
+//  PlayerCardView.swift
 //  NbaApp
 //
-//  Created by Miguel Ferrer Fornali on 15/10/22.
+//  Created by Miguel Ferrer Fornali on 16/10/22.
 //
 
 import SwiftUI
 
-struct TeamCardView: View {
-    let title: String
-    
-    @Binding var isPressed: Bool
+struct PlayerCardView: View {
+    let representable: PlayerCardViewRepresentable
     
     var body: some View {
         HStack(spacing: 0) {
@@ -18,7 +16,7 @@ struct TeamCardView: View {
                 .foregroundColor(.customGray)
                 .frame(width: 40, height: 40)
                 .padding(.horizontal)
-            Text(verbatim: title)
+            Text(verbatim: representable.title)
                 .lineLimit(1)
                 .font(.headline)
                 .bold()
@@ -28,7 +26,7 @@ struct TeamCardView: View {
         .background { Color.customLightGray }
         .cornerRadius(10)
         .shadow(color: .customGray, radius: 3, x: 0, y: 4)
-        .onTapGesture { isPressed = true }
+        .onTapGesture { representable.isPressed = true }
         .padding(.horizontal)
         .padding(.vertical, 10)
         .listRowSeparator(.hidden)
@@ -36,9 +34,11 @@ struct TeamCardView: View {
     }
 }
 
-struct TeamCardView_Previews: PreviewProvider {
+struct PlayerCardView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamCardView(title: "Title", isPressed: .constant(false))
-            .previewLayout(.sizeThatFits)
+        PlayerCardView(representable: .init(
+            title: "Title",
+            isPressed: .constant(false)
+        )).previewLayout(.sizeThatFits)
     }
 }
