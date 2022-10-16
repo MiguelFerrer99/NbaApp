@@ -7,8 +7,16 @@
 
 import SwiftUI
 
+// MARK: - States
+enum GenericErrorViewState {
+    case idle
+    case didTapLink
+}
+
+// MARK: - Main view
 struct GenericErrorView: View {
-    let dismiss: DismissAction?
+    @State private var linkViewState: LinkViewState = .idle
+    @Binding var state: GenericErrorViewState
     
     var body: some View {
         GeometryReader { _ in
@@ -22,7 +30,7 @@ struct GenericErrorView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 20)
                 Spacer().frame(height: 20)
-                LinkView(title: .genericError.linkTitle.localized, color: .white, style: .rightToLeft, dismiss: dismiss, isPressed: .constant(false))
+                LinkView(representable: .init(title: .genericError.linkTitle.localized, color: .white, style: .rightToLeft), state: $linkViewState)
             }.padding(.vertical, 50)
             .padding(.horizontal)
             .background { Color.customBlack }
@@ -31,12 +39,26 @@ struct GenericErrorView: View {
             .padding([.leading, .trailing, .bottom], 40)
             .padding(.top, 10)
         }
+        
+        // MARK: - Subviews events listeners
+        .onChange(of: linkViewState) { _ in didChangeLinkViewState() }
+    }
+    
+    // MARK: - Subviews events performers
+    func didChangeLinkViewState() {
+        switch linkViewState {
+        case .idle:
+            break
+        case .didTap:
+            state = .didTapLink
+        }
     }
 }
 
+// MARK: - Canvas preview
 struct GenericErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        GenericErrorView(dismiss: nil)
+        GenericErrorView(state: .constant(.idle))
             .previewLayout(.sizeThatFits)
     }
 }

@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - Main view
 struct LoadingFooterView: View {
     var body: some View {
         LottieView(lottieFile: "Loader")
@@ -16,8 +17,10 @@ struct LoadingFooterView: View {
     }
 }
 
+// MARK: - Canvas preview
 struct LoadingFooterView_Previews: PreviewProvider {
     static var previews: some View {
         LoadingFooterView()
+            .previewLayout(.sizeThatFits)
     }
 }

@@ -15,22 +15,4 @@ extension View {
                 .navigationBarTitleDisplayMode(.inline)
         }
     }
-    
-    func configureNavBar(with title: String, and dismiss: DismissAction) -> some View {
-        self
-            .navigationTitle(title)
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Image(systemName: "arrow.left")
-                            .resizable()
-                            .frame(width: 22, height: 18, alignment: .leading)
-                            .foregroundColor(.black)
-                    }
-                }
-            }
-    }
 }

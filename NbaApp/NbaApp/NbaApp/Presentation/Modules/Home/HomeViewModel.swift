@@ -7,12 +7,12 @@
 
 import SwiftUI
 
+// MARK: - States
 enum HomeState {
     case idle
 }
 
+// MARK: - ViewModel
 @MainActor class HomeViewModel: ObservableObject {
-    private var teamsPager = Pagination<Team>()
-    
     @Published private(set) var state: HomeState = .idle
 }

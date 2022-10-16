@@ -7,26 +7,27 @@
 
 import SwiftUI
 
+// MARK: - Main view
 struct HomeView: View {
-    @State private var isShowingTeams = false
-    @State private var isShowingPlayers = false
+    @State private var linksViewState: LinksViewState = .idle
     @StateObject private var viewModel = HomeViewModel()
     
     var body: some View {
         VStack {
             switch viewModel.state {
             case .idle:
-                LinksView(representable: .init(
-                    isShowingTeams: $isShowingTeams,
-                    isShowingPlayers: $isShowingPlayers))
+                LinksView(state: $linksViewState)
             }
         }
-        .navigationDestination(isPresented: $isShowingTeams, destination: { TeamsView() })
-        .navigationDestination(isPresented: $isShowingPlayers, destination: { PlayersView() })
+        
+        // MARK: - Navigation destinations
+        .navigationDestination(isPresented: .constant(linksViewState == .didTapTopLink), destination: { TeamsView() })
+        .navigationDestination(isPresented: .constant(linksViewState == .didTapBottomLink), destination: { PlayersView() })
         .embedInNavigationStack(with: .home.title.localized)
     }
 }
 
+// MARK: - Canvas preview
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()

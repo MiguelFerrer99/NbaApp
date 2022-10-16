@@ -7,15 +7,21 @@
 
 import SwiftUI
 
+// MARK: - Representables
+struct TeamsViewReceivedRepresentable {
+    let pager: Pagination<Team>
+}
+
+// MARK: - States
 enum TeamsState {
     case loading
     case error
     case received(TeamsViewReceivedRepresentable)
 }
 
+// MARK: - ViewModel
 @MainActor class TeamsViewModel: ObservableObject {
     private var teamsPager = Pagination<Team>()
-    
     @Published private(set) var state: TeamsState = .loading
     
     func getTeams() async {

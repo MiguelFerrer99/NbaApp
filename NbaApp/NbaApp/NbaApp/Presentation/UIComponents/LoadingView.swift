@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// MARK: - Main view
 struct LoadingView: View {
     var body: some View {
         GeometryReader { proxy in
@@ -32,6 +33,7 @@ struct LoadingView: View {
     }
 }
 
+// MARK: - Canvas preview
 struct LoadingView_Previews: PreviewProvider {
     static var previews: some View {
         LoadingView()
