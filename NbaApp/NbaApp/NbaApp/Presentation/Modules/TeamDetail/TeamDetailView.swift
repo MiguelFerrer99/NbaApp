@@ -7,16 +7,23 @@
 
 import SwiftUI
 
+// MARK: - Representables
+struct TeamDetailViewRepresentable {
+    let team: Team
+}
+
 // MARK: - Main view
 struct TeamDetailView: View {
+    let representable: TeamDetailViewRepresentable
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Text(representable.team.fullname)
     }
 }
 
 // MARK: - Canvas preview
 struct TeamDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamDetailView()
+        TeamDetailView(representable: .init(team: .previewInit()))
     }
 }
