@@ -11,22 +11,21 @@ import SwiftUI
 struct LoadingView: View {
     var body: some View {
         GeometryReader { proxy in
-            VStack(spacing: 35) {
-                Spacer().frame(height: 100)
+            VStack(spacing: 15) {
                 LottieView(lottieFile: "Loader")
                     .frame(width: 50, height: 50)
+                    .padding(.top, 80)
+                    .padding(.bottom)
                 Text(verbatim: .loading.title.localized)
                     .font(.title3)
                     .fontWeight(.bold)
                     .multilineTextAlignment(.center)
-                    .padding(.leading, 20)
-                    .padding(.trailing, 20)
+                    .padding(.horizontal, 20)
                 Text(verbatim: .loading.subtitle.localized)
                     .font(.title3)
                     .fontWeight(.light)
                     .multilineTextAlignment(.center)
-                    .padding(.leading, 20)
-                    .padding(.trailing, 20)
+                    .padding(.horizontal, 20)
                 Spacer()
             }.frame(width: proxy.size.width, height: proxy.size.height)
         }

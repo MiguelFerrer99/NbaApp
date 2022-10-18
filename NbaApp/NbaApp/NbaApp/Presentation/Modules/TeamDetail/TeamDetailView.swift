@@ -14,10 +14,16 @@ struct TeamDetailViewRepresentable {
 
 // MARK: - Main view
 struct TeamDetailView: View {
+    @Environment(\.dismiss) var dismiss
+    @State private var didTapNavBarBackButton = false
     let representable: TeamDetailViewRepresentable
     
     var body: some View {
-        Text(representable.team.fullname)
+        EmptyView()
+            .modifier(NavBarConfiguration(representable: .init(title: representable.team.fullname), didTapBackButton: $didTapNavBarBackButton))
+            
+        // MARK: - Subviews events listeners
+        .onChange(of: didTapNavBarBackButton) { _ in dismiss() }
     }
 }
 

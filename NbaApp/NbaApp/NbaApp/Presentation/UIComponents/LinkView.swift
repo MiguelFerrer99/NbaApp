@@ -14,16 +14,10 @@ struct LinkViewRepresentable {
     let style: LayoutDirection
 }
 
-// MARK: - States
-enum LinkViewState {
-    case idle
-    case didTap
-}
-
 // MARK: - Main view
 struct LinkView: View {
     let representable: LinkViewRepresentable
-    @Binding var state: LinkViewState
+    @Binding var isPressed: Bool
     
     var body: some View {
         VStack {
@@ -44,7 +38,7 @@ struct LinkView: View {
                     .frame(height: 2)
                     .overlay(representable.color)
             }.contentShape(Rectangle())
-            .onTapGesture { state = .didTap }
+            .onTapGesture { isPressed = true }
         }.padding(.leading, 20)
         .padding(.trailing, 20)
     }
@@ -57,7 +51,7 @@ struct LinkView_Previews: PreviewProvider {
             title: "Title",
             color: .black,
             style: .leftToRight
-        ), state: .constant(.idle))
+        ), isPressed: .constant(false))
         .previewLayout(.sizeThatFits)
     }
 }

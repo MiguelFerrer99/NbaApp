@@ -10,9 +10,10 @@ import SwiftUI
 // MARK: - Main view
 struct TeamsView: View {
     @Environment(\.dismiss) var dismiss
-    @State private var navBarState: NavBarConfiguration.NavBarState = .idle
-    @State private var genericErrorViewState: GenericErrorViewState = .idle
-    @State private var teamsListViewState: TeamsListViewState = .idle
+    @State private var didTapNavBarBackButton = false
+    @State private var didTapGenericErrorViewLink = false
+    @State private var didTapTeam = false
+    @State private var selectedTeam: Team = .previewInit()
     @StateObject private var viewModel = TeamsViewModel()
     
     var body: some View {
@@ -21,38 +22,19 @@ struct TeamsView: View {
             case .loading:
                 LoadingView()
             case .error:
-                GenericErrorView(state: $genericErrorViewState)
+                GenericErrorView(didTapLink: $didTapGenericErrorViewLink)
             case .received(let representable):
-                TeamsListView(representable: .init(pager: representable.pager), state: $teamsListViewState)
+                TeamsListView(representable: .init(pager: representable.pager), didTapTeam: $didTapTeam, selectedTeam: $selectedTeam)
             }
-        }.modifier(NavBarConfiguration(representable: .init(title: .teams.title.localized), state: $navBarState))
+        }.modifier(NavBarConfiguration(representable: .init(title: .teams.title.localized), didTapBackButton: $didTapNavBarBackButton))
         .task { await viewModel.getTeams() }
         
         // MARK: - Navigation destinations
-        // TODO: Add navigation to TeamDetailView()
+        .navigateToDestination(if: $didTapTeam) { TeamDetailView(representable: .init(team: selectedTeam)) }
         
         // MARK: - Subviews events listeners
-        .onChange(of: navBarState) { _ in didChangeNavBarState() }
-        .onChange(of: genericErrorViewState) { _ in didChangeGenericErrorViewState() }
-    }
-    
-    // MARK: - Subviews events performers
-    func didChangeNavBarState() {
-        switch navBarState {
-        case .idle:
-            break
-        case .didTapBack:
-            dismiss()
-        }
-    }
-    
-    func didChangeGenericErrorViewState() {
-        switch genericErrorViewState {
-        case .idle:
-            break
-        case .didTapLink:
-            dismiss()
-        }
+        .onChange(of: didTapNavBarBackButton) { _ in dismiss() }
+        .onChange(of: didTapGenericErrorViewLink) { _ in dismiss() }
     }
 }
 

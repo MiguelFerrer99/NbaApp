@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Team: Identifiable, Equatable {
+struct Team: Identifiable {
     let id: String
     let abbreviation: String
     let city: String
@@ -24,9 +24,5 @@ struct Team: Identifiable, Equatable {
              division: "Division",
              fullname: "Fullname",
              name: "Name")
-    }
-    
-    static func ==(lhs: Team, rhs: Team) -> Bool {
-        return lhs.id == rhs.id
     }
 }

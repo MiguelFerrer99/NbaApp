@@ -9,21 +9,21 @@ import SwiftUI
 
 // MARK: - Main view
 struct HomeView: View {
-    @State private var linksViewState: LinksViewState = .idle
+    @State private var didTapTeamsLink = false
+    @State private var didTapPlayersLink = false
     @StateObject private var viewModel = HomeViewModel()
     
     var body: some View {
         VStack {
             switch viewModel.state {
             case .idle:
-                LinksView(state: $linksViewState)
+                LinksView(didTapTopLinkView: $didTapTeamsLink, didTapBottomLinkView: $didTapPlayersLink)
             }
         }
         
         // MARK: - Navigation destinations
-        .navigationDestination(isPresented: .constant(linksViewState == .didTapTopLink), destination: { TeamsView() })
-        .navigationDestination(isPresented: .constant(linksViewState == .didTapBottomLink), destination: { PlayersView() })
-        .embedInNavigationStack(with: .home.title.localized)
+        .navigateToDestination(if: $didTapTeamsLink) { TeamsView() }
+        .embedInNavigation(with: .home.title.localized)
     }
 }
 

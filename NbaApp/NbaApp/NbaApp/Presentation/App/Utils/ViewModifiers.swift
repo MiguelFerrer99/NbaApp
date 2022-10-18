@@ -7,22 +7,17 @@
 
 import SwiftUI
 
-// MARK: - NavBarConfiguration Representable and States
+// MARK: - NavBarConfiguration Representable
 extension NavBarConfiguration {
     struct NavBarRepresentable {
         let title: String
-    }
-    
-    enum NavBarState {
-        case idle
-        case didTapBack
     }
 }
 
 // MARK: - NavBarConfiguration ViewModifier
 struct NavBarConfiguration: ViewModifier {
     let representable: NavBarRepresentable
-    @Binding var state: NavBarState
+    @Binding var didTapBackButton: Bool
     
     func body(content: Content) -> some View {
         content
@@ -31,7 +26,7 @@ struct NavBarConfiguration: ViewModifier {
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
                     Button {
-                        state = .didTapBack
+                        didTapBackButton = true
                     } label: {
                         Image(systemName: "arrow.left")
                             .resizable()
