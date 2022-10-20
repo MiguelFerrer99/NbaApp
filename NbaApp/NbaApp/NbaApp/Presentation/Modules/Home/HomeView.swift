@@ -22,7 +22,8 @@ struct HomeView: View {
         }
         
         // MARK: - Navigation destinations
-        .navigateToDestination(if: $didTapTeamsLink) { TeamsView() }
+        .navigationDestination(isPresented: $didTapTeamsLink, destination: { TeamsView() })
+        .navigationDestination(isPresented: $didTapPlayersLink, destination: { PlayersView() })
         .embedInNavigation(with: .home.title.localized)
     }
 }

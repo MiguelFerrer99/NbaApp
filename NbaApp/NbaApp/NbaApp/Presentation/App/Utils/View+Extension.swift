@@ -9,20 +9,14 @@ import SwiftUI
 
 extension View {
     func embedInNavigation(with title: String) -> some View {
-        CustomNavigationView(title: title) {
+        NavigationStack {
             self
+                .navigationTitle(title)
+                .navigationBarTitleDisplayMode(.inline)
         }
     }
     
-    func navigateToDestination<V>(if isPresented: Binding<Bool>, destination: () -> V) -> some View where V : View {
-        if #available(iOS 16.0, *) {
-            return self
-                .navigationDestination(isPresented: isPresented, destination: destination)
-        } else {
-            return VStack {
-                self
-                NavigationLink(isActive: isPresented, destination: destination) { EmptyView() }
-            }
-        }
+    func onLoad(perform action: (() -> Void)? = nil) -> some View {
+        modifier(ViewDidLoadModifier(perform: action))
     }
 }

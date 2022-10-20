@@ -7,21 +7,16 @@
 
 import SwiftUI
 
-// MARK: - NavBarConfiguration Representable
-extension NavBarConfiguration {
+struct NavBarConfiguration: ViewModifier {
     struct NavBarRepresentable {
         let title: String
     }
-}
-
-// MARK: - NavBarConfiguration ViewModifier
-struct NavBarConfiguration: ViewModifier {
+    
     let representable: NavBarRepresentable
     @Binding var didTapBackButton: Bool
     
     func body(content: Content) -> some View {
         content
-            .navigationTitle(representable.title)
             .navigationBarBackButtonHidden(true)
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
@@ -34,6 +29,28 @@ struct NavBarConfiguration: ViewModifier {
                             .foregroundColor(.black)
                     }
                 }
+                ToolbarItem(placement: .principal) {
+                    Text(representable.title)
+                        .bold()
+                }
             }
+    }
+}
+
+struct ViewDidLoadModifier: ViewModifier {
+    @State private var didLoad = false
+    private let action: (() -> Void)?
+    
+    init(perform action: (() -> Void)? = nil) {
+        self.action = action
+    }
+    
+    func body(content: Content) -> some View {
+        content.onAppear {
+            if didLoad == false {
+                didLoad = true
+                action?()
+            }
+        }
     }
 }

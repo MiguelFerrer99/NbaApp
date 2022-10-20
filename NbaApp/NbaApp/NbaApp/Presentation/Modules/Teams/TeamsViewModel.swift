@@ -13,7 +13,7 @@ struct TeamsViewReceivedRepresentable {
 }
 
 // MARK: - States
-enum TeamsState {
+enum TeamsViewState {
     case loading
     case error
     case received(TeamsViewReceivedRepresentable)
@@ -22,7 +22,7 @@ enum TeamsState {
 // MARK: - ViewModel
 @MainActor class TeamsViewModel: ObservableObject {
     private var teamsPager = Pagination<Team>()
-    @Published private(set) var state: TeamsState = .loading
+    @Published private(set) var state: TeamsViewState = .loading
     
     func getTeams() async {
         Task {

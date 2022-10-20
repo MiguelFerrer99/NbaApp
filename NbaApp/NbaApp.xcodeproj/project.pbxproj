@@ -17,7 +17,6 @@
 		4137AAE428DDE22E00F0C59C /* NbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE328DDE22E00F0C59C /* NbaApp.swift */; };
 		4137AAE828DDE22F00F0C59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4137AAE728DDE22F00F0C59C /* Assets.xcassets */; };
 		415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 415B544028DE140000A336A3 /* IQKeyboardManagerSwift */; };
-		41694FB828FF0B2300DFD9D2 /* CustomNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41694FB728FF0B2300DFD9D2 /* CustomNavigationView.swift */; };
 		4187893428F1864000974AF5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893328F1864000974AF5 /* Cache.swift */; };
 		4187893628F1877500974AF5 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893528F1877500974AF5 /* TokenDTO.swift */; };
 		4187893828F1881000974AF5 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893728F1881000974AF5 /* Auth.swift */; };
@@ -29,6 +28,11 @@
 		4187894928F1AEA900974AF5 /* TeamDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894828F1AEA900974AF5 /* TeamDTO.swift */; };
 		4187894B28F1B02E00974AF5 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187894A28F1B02E00974AF5 /* Team.swift */; };
 		4187895128F1B7E600974AF5 /* Paginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187895028F1B7E600974AF5 /* Paginable.swift */; };
+		418A36DC29013BB00039CA9E /* PlayersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A36DB29013BB00039CA9E /* PlayersViewModel.swift */; };
+		418A36DE29013C6E0039CA9E /* PlayersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A36DD29013C6E0039CA9E /* PlayersView.swift */; };
+		418A36E129013D350039CA9E /* PlayersListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A36E029013D350039CA9E /* PlayersListView.swift */; };
+		418A36E329013DFE0039CA9E /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A36E229013DFE0039CA9E /* PlayerCardView.swift */; };
+		418A36E529013F2C0039CA9E /* PlayerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A36E429013F2C0039CA9E /* PlayerDetailView.swift */; };
 		4191C59628F9CD6500E59875 /* GenericErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C59528F9CD6500E59875 /* GenericErrorView.swift */; };
 		4191C59828F9CF4A00E59875 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C59728F9CF4A00E59875 /* Color+Extension.swift */; };
 		4191C59E28FA11EC00E59875 /* Teams.json in Resources */ = {isa = PBXBuildFile; fileRef = 4191C59D28FA11EC00E59875 /* Teams.json */; };
@@ -69,7 +73,6 @@
 		4137AAE328DDE22E00F0C59C /* NbaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbaApp.swift; sourceTree = "<group>"; };
 		4137AAE528DDE22E00F0C59C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4137AAE728DDE22F00F0C59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		41694FB728FF0B2300DFD9D2 /* CustomNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationView.swift; sourceTree = "<group>"; };
 		4187893328F1864000974AF5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		4187893528F1877500974AF5 /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
 		4187893728F1881000974AF5 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
@@ -81,6 +84,11 @@
 		4187894828F1AEA900974AF5 /* TeamDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDTO.swift; sourceTree = "<group>"; };
 		4187894A28F1B02E00974AF5 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		4187895028F1B7E600974AF5 /* Paginable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginable.swift; sourceTree = "<group>"; };
+		418A36DB29013BB00039CA9E /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
+		418A36DD29013C6E0039CA9E /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
+		418A36E029013D350039CA9E /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
+		418A36E229013DFE0039CA9E /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
+		418A36E429013F2C0039CA9E /* PlayerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailView.swift; sourceTree = "<group>"; };
 		4191C59528F9CD6500E59875 /* GenericErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorView.swift; sourceTree = "<group>"; };
 		4191C59728F9CF4A00E59875 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
 		4191C59D28FA11EC00E59875 /* Teams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Teams.json; sourceTree = "<group>"; };
@@ -154,7 +162,6 @@
 				4194C3A228F1093E00C0FB06 /* UINavigationController+Extension.swift */,
 				4194C3A028F0F7D500C0FB06 /* View+Extension.swift */,
 				411CF91628FC89A900F5E92F /* ViewModifiers.swift */,
-				41694FB728FF0B2300DFD9D2 /* CustomNavigationView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -235,6 +242,33 @@
 			path = Basics;
 			sourceTree = "<group>";
 		};
+		418A36D929013B7D0039CA9E /* Players */ = {
+			isa = PBXGroup;
+			children = (
+				418A36DB29013BB00039CA9E /* PlayersViewModel.swift */,
+				418A36DD29013C6E0039CA9E /* PlayersView.swift */,
+				418A36DF29013D180039CA9E /* Views */,
+			);
+			path = Players;
+			sourceTree = "<group>";
+		};
+		418A36DA29013B8B0039CA9E /* PlayerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				418A36E429013F2C0039CA9E /* PlayerDetailView.swift */,
+			);
+			path = PlayerDetail;
+			sourceTree = "<group>";
+		};
+		418A36DF29013D180039CA9E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				418A36E029013D350039CA9E /* PlayersListView.swift */,
+				418A36E229013DFE0039CA9E /* PlayerCardView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		4191C59928F9DEFE00E59875 /* Lotties */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,7 +340,9 @@
 			children = (
 				41D73FFB28DE73D800B9BA75 /* Home */,
 				4123CAB228DF494A009FF971 /* Teams */,
+				418A36D929013B7D0039CA9E /* Players */,
 				411CF91828FC8D8B00F5E92F /* TeamDetail */,
+				418A36DA29013B8B0039CA9E /* PlayerDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -478,7 +514,9 @@
 				4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */,
 				4187894B28F1B02E00974AF5 /* Team.swift in Sources */,
 				4187894928F1AEA900974AF5 /* TeamDTO.swift in Sources */,
+				418A36E129013D350039CA9E /* PlayersListView.swift in Sources */,
 				4194C3A828F1187100C0FB06 /* Log.swift in Sources */,
+				418A36E329013DFE0039CA9E /* PlayerCardView.swift in Sources */,
 				4194C3A328F1093E00C0FB06 /* UINavigationController+Extension.swift in Sources */,
 				4187894528F1906C00974AF5 /* TeamsViewModel.swift in Sources */,
 				4194C3A128F0F7D500C0FB06 /* View+Extension.swift in Sources */,
@@ -492,14 +530,16 @@
 				4194C3AE28F11AB500C0FB06 /* Players.swift in Sources */,
 				4187893428F1864000974AF5 /* Cache.swift in Sources */,
 				4187893628F1877500974AF5 /* TokenDTO.swift in Sources */,
+				418A36DE29013C6E0039CA9E /* PlayersView.swift in Sources */,
+				418A36DC29013BB00039CA9E /* PlayersViewModel.swift in Sources */,
 				4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */,
+				418A36E529013F2C0039CA9E /* PlayerDetailView.swift in Sources */,
 				4194C39928F0E95B00C0FB06 /* LoadingView.swift in Sources */,
 				4191C59828F9CF4A00E59875 /* Color+Extension.swift in Sources */,
 				41E8747E28FB78A700E07DD5 /* Collection+Extension.swift in Sources */,
 				41E8748228FB893D00E07DD5 /* LoadingFooterView.swift in Sources */,
 				4187893828F1881000974AF5 /* Auth.swift in Sources */,
 				4187893F28F18B1D00974AF5 /* UserDTO.swift in Sources */,
-				41694FB828FF0B2300DFD9D2 /* CustomNavigationView.swift in Sources */,
 				41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */,
 				41E8749228FB92CE00E07DD5 /* LinksView.swift in Sources */,
 				4187894128F18B3C00974AF5 /* User.swift in Sources */,
@@ -582,7 +622,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -638,7 +678,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_MODULE_NAME = "";
@@ -670,7 +710,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -711,7 +751,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -783,7 +823,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -815,7 +855,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -14,7 +14,7 @@ struct TeamDetailViewRepresentable {
 
 // MARK: - Main view
 struct TeamDetailView: View {
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.dismiss) private var dismiss
     @State private var didTapNavBarBackButton = false
     let representable: TeamDetailViewRepresentable
     

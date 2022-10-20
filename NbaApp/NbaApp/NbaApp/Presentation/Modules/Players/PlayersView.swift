@@ -1,20 +1,20 @@
 //
-//  TeamsView.swift
+//  PlayersView.swift
 //  NbaApp
 //
-//  Created by Miguel Ferrer Fornali on 24/9/22.
+//  Created by Miguel Ferrer Fornali on 20/10/22.
 //
 
 import SwiftUI
 
 // MARK: - Main view
-struct TeamsView: View {
+struct PlayersView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var didTapNavBarBackButton = false
     @State private var didTapGenericErrorViewLink = false
-    @State private var didTapTeam = false
-    @State private var selectedTeam: Team = .previewInit()
-    @StateObject private var viewModel = TeamsViewModel()
+    @State private var didTapPlayer = false
+    @State private var selectedPlayer: Player = .previewInit()
+    @StateObject private var viewModel = PlayersViewModel()
     
     var body: some View {
         VStack {
@@ -24,13 +24,13 @@ struct TeamsView: View {
             case .error:
                 GenericErrorView(didTapLink: $didTapGenericErrorViewLink)
             case .received(let representable):
-                TeamsListView(representable: .init(pager: representable.pager), didTapTeam: $didTapTeam, selectedTeam: $selectedTeam)
+                PlayersListView(representable: .init(pager: representable.pager), didTapPlayer: $didTapPlayer, selectedPlayer: $selectedPlayer)
             }
-        }.modifier(NavBarConfiguration(representable: .init(title: .teams.title.localized), didTapBackButton: $didTapNavBarBackButton))
-        .onLoad { Task { await viewModel.getTeams() } }
+        }.modifier(NavBarConfiguration(representable: .init(title: .players.title.localized), didTapBackButton: $didTapNavBarBackButton))
+        .onLoad { Task { await viewModel.getPlayers() } }
         
         // MARK: - Navigation destinations
-        .navigationDestination(isPresented: $didTapTeam, destination: { TeamDetailView(representable: .init(team: selectedTeam)) })
+        .navigationDestination(isPresented: $didTapPlayer, destination: { PlayerDetailView(representable: .init(player: selectedPlayer)) })
         
         // MARK: - Subviews events listeners
         .onChange(of: didTapNavBarBackButton) { _ in dismiss() }
@@ -39,8 +39,8 @@ struct TeamsView: View {
 }
 
 // MARK: - Canvas preview
-struct TeamsView_Previews: PreviewProvider {
+struct PlayersView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamsView()
+        PlayersView()
     }
 }
