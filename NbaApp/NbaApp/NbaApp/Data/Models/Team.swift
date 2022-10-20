@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Team: Identifiable {
+struct Team: Identifiable, Equatable {
     let id: String
     let abbreviation: String
     let city: String
@@ -15,6 +15,10 @@ struct Team: Identifiable {
     let division: String
     let fullname: String
     let name: String
+    
+    func isLast(of teams: [Team]) -> Bool {
+        self == teams.last
+    }
     
     static func previewInit() -> Team {
         Team(id: "ID",

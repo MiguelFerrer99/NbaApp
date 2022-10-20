@@ -20,7 +20,7 @@ struct TeamDetailView: View {
     
     var body: some View {
         EmptyView()
-            .modifier(NavBarConfiguration(representable: .init(title: representable.team.fullname), didTapBackButton: $didTapNavBarBackButton))
+            .configureNavBar(with: .init(title: representable.team.fullname), and: $didTapNavBarBackButton)
             
         // MARK: - Subviews events listeners
         .onChange(of: didTapNavBarBackButton) { _ in dismiss() }

@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+struct NavBarRepresentable {
+    let title: String
+}
+
 extension View {
     func embedInNavigation(with title: String) -> some View {
         NavigationStack {
@@ -16,7 +20,29 @@ extension View {
         }
     }
     
+    func configureNavBar(with representable: NavBarRepresentable, and didTapBackButton: Binding<Bool>) -> some View {
+        self
+            .navigationBarBackButtonHidden(true)
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    Button {
+                        didTapBackButton.wrappedValue = true
+                    } label: {
+                        Image(systemName: "arrow.left")
+                            .resizable()
+                            .frame(width: 22, height: 18, alignment: .leading)
+                            .foregroundColor(.black)
+                    }
+                }
+                ToolbarItem(placement: .principal) {
+                    Text(representable.title)
+                        .bold()
+                }
+            }
+    }
+    
     func onLoad(perform action: (() -> Void)? = nil) -> some View {
-        modifier(ViewDidLoadModifier(perform: action))
+        self
+            .modifier(ViewDidLoadModifier(perform: action))
     }
 }

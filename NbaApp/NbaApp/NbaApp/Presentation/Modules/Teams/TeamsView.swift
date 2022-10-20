@@ -12,6 +12,7 @@ struct TeamsView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var didTapNavBarBackButton = false
     @State private var didTapGenericErrorViewLink = false
+    @State private var getNextPage = false
     @State private var didTapTeam = false
     @State private var selectedTeam: Team = .previewInit()
     @StateObject private var viewModel = TeamsViewModel()
@@ -24,9 +25,12 @@ struct TeamsView: View {
             case .error:
                 GenericErrorView(didTapLink: $didTapGenericErrorViewLink)
             case .received(let representable):
-                TeamsListView(representable: .init(pager: representable.pager), didTapTeam: $didTapTeam, selectedTeam: $selectedTeam)
+                TeamsListView(representable: .init(pager: representable.pager),
+                              getNextPage: $getNextPage,
+                              didTapTeam: $didTapTeam,
+                              selectedTeam: $selectedTeam)
             }
-        }.modifier(NavBarConfiguration(representable: .init(title: .teams.title.localized), didTapBackButton: $didTapNavBarBackButton))
+        }.configureNavBar(with: .init(title: .teams.title.localized), and: $didTapNavBarBackButton)
         .onLoad { Task { await viewModel.getTeams() } }
         
         // MARK: - Navigation destinations
@@ -35,6 +39,7 @@ struct TeamsView: View {
         // MARK: - Subviews events listeners
         .onChange(of: didTapNavBarBackButton) { _ in dismiss() }
         .onChange(of: didTapGenericErrorViewLink) { _ in dismiss() }
+        .onChange(of: getNextPage) { _ in Task { await viewModel.getTeams() } }
     }
 }
 

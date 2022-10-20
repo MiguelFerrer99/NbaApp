@@ -29,7 +29,6 @@ enum TeamsViewState {
             do {
                 let paginatedTeams = try await Network.shared.load(endpoint: TeamsEndpoint.getTeams(page: teamsPager.currentPage).endpoint, of: Paginable<TeamDTO>.self)
                 let teams = paginatedTeams.data.compactMap { $0.toBO() }
-                teamsPager.setCurrentPage(paginatedTeams.meta.currentPage)
                 teamsPager.setItems(teams)
                 teamsPager.setNextPage(paginatedTeams.meta.nextPage)
                 let representable = TeamsViewReceivedRepresentable(pager: teamsPager)

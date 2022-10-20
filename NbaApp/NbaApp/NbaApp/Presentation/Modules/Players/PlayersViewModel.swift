@@ -29,7 +29,6 @@ enum PlayersViewState {
             do {
                 let paginatedPlayers = try await Network.shared.load(endpoint: PlayersEndpoint.getPlayers(page: playersPager.currentPage).endpoint, of: Paginable<PlayerDTO>.self)
                 let players = paginatedPlayers.data.compactMap { $0.toBO() }
-                playersPager.setCurrentPage(paginatedPlayers.meta.currentPage)
                 playersPager.setItems(players)
                 playersPager.setNextPage(paginatedPlayers.meta.nextPage)
                 let representable = PlayersViewReceivedRepresentable(pager: playersPager)

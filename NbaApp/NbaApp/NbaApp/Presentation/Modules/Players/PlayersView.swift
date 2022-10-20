@@ -12,6 +12,7 @@ struct PlayersView: View {
     @Environment(\.dismiss) private var dismiss
     @State private var didTapNavBarBackButton = false
     @State private var didTapGenericErrorViewLink = false
+    @State private var getNextPage = false
     @State private var didTapPlayer = false
     @State private var selectedPlayer: Player = .previewInit()
     @StateObject private var viewModel = PlayersViewModel()
@@ -24,9 +25,12 @@ struct PlayersView: View {
             case .error:
                 GenericErrorView(didTapLink: $didTapGenericErrorViewLink)
             case .received(let representable):
-                PlayersListView(representable: .init(pager: representable.pager), didTapPlayer: $didTapPlayer, selectedPlayer: $selectedPlayer)
+                PlayersListView(representable: .init(pager: representable.pager),
+                                getNextPage: $getNextPage,
+                                didTapPlayer: $didTapPlayer,
+                                selectedPlayer: $selectedPlayer)
             }
-        }.modifier(NavBarConfiguration(representable: .init(title: .players.title.localized), didTapBackButton: $didTapNavBarBackButton))
+        }.configureNavBar(with: .init(title: .teams.title.localized), and: $didTapNavBarBackButton)
         .onLoad { Task { await viewModel.getPlayers() } }
         
         // MARK: - Navigation destinations
@@ -35,6 +39,7 @@ struct PlayersView: View {
         // MARK: - Subviews events listeners
         .onChange(of: didTapNavBarBackButton) { _ in dismiss() }
         .onChange(of: didTapGenericErrorViewLink) { _ in dismiss() }
+        .onChange(of: getNextPage) { _ in Task { await viewModel.getPlayers() } }
     }
 }
 

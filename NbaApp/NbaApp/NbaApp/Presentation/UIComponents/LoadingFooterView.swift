@@ -12,7 +12,7 @@ struct LoadingFooterView: View {
     var body: some View {
         LottieView(lottieFile: "Loader")
             .frame(height: 40)
-            .padding(.top)
+            .padding(.vertical)
             .listRowSeparator(.hidden)
     }
 }

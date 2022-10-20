@@ -22,10 +22,7 @@ final class Pagination<T> {
         } else {
             self.items.append(contentsOf: items)
         }
-    }
-    
-    func setCurrentPage(_ currentPage: Int) {
-        self.currentPage = currentPage
+        currentPage += 1
     }
     
     func setNextPage(_ nextPage: Int?) {

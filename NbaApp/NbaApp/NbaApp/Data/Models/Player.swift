@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Player: Identifiable {
+struct Player: Identifiable, Equatable {
     let id: String
     let firstname: String
     let lastname: String
