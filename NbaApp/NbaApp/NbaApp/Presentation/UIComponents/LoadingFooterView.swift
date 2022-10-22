@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-// MARK: - Main view
 struct LoadingFooterView: View {
+    // MARK: - Main view
     var body: some View {
         LottieView(lottieFile: "Loader")
             .frame(height: 40)

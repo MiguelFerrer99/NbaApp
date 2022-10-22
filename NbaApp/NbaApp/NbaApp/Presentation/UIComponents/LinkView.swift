@@ -14,11 +14,12 @@ struct LinkViewRepresentable {
     let style: LayoutDirection
 }
 
-// MARK: - Main view
 struct LinkView: View {
+    // MARK: - Parameters
     let representable: LinkViewRepresentable
     @Binding var isPressed: Bool
     
+    // MARK: - Main view
     var body: some View {
         VStack {
             VStack(spacing: 20) {
@@ -39,8 +40,7 @@ struct LinkView: View {
                     .overlay(representable.color)
             }.contentShape(Rectangle())
             .onTapGesture { isPressed = true }
-        }.padding(.leading, 20)
-        .padding(.trailing, 20)
+        }
     }
 }
 

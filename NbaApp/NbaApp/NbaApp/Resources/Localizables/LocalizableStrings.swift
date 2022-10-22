@@ -40,12 +40,26 @@ extension String {
     
     enum teams: String, Localizable {
         case title = "teams_title"
-        case genericErrorTitle = "teams_genericErrorTitle"
-        case genericError
     }
     
     enum players: String, Localizable {
         case title = "players_title"
+    }
+    
+    enum teamDetail: String, Localizable {
+        case abbreviation = "teamDetail_abbreviation"
+        case city = "teamDetail_city"
+        case conference = "teamDetail_conference"
+        case division = "teamDetail_division"
+        case fullname = "teamDetail_fullname"
+        case name = "teamDetail_name"
+    }
+    
+    enum playerDetail: String, Localizable {
+        case firstname = "playerDetail_firstname"
+        case lastname = "playerDetail_lastname"
+        case position = "playerDetail_position"
+        case team = "playerDetail_team"
     }
     
     enum loading: String, Localizable {

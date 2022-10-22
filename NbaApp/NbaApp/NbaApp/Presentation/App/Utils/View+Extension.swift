@@ -45,4 +45,12 @@ extension View {
         self
             .modifier(ViewDidLoadModifier(perform: action))
     }
+    
+    @ViewBuilder func isHidden(_ isHidden: Bool) -> some View {
+        if isHidden {
+            EmptyView()
+        } else {
+            self
+        }
+    }
 }

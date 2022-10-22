@@ -9,6 +9,7 @@ import SwiftUI
 
 @main
 struct NbaApp: App {
+    // MARK: - Main view
     var body: some Scene {
         WindowGroup {
             HomeView()

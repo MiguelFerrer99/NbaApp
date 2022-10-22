@@ -7,10 +7,11 @@
 
 import SwiftUI
 
-// MARK: - Main view
 struct GenericErrorView: View {
+    // MARK: - Parameters
     @Binding var didTapLink: Bool
     
+    // MARK: - Main view
     var body: some View {
         GeometryReader { _ in
             VStack(spacing: 30) {

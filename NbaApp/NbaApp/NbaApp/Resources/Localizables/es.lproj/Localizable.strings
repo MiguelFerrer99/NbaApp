@@ -17,6 +17,20 @@
 /* Players */
 "players_title" = "Jugadores";
 
+/* Team Detail */
+"teamDetail_abbreviation" = "Abreviación";
+"teamDetail_city" = "Ciudad";
+"teamDetail_conference" = "Conferencia";
+"teamDetail_division" = "División";
+"teamDetail_fullname" = "Nombre completo";
+"teamDetail_name" = "Nombre";
+
+/* Player Detail */
+"playerDetail_firstname" = "Nombre";
+"playerDetail_lastname" = "Apellidos";
+"playerDetail_position" = "Posición";
+"playerDetail_team" = "Equipo";
+
 /* Loading */
 "loading_title" = "Estamos recopilando toda la información";
 "loading_subtitle" = "Estará disponible pronto";

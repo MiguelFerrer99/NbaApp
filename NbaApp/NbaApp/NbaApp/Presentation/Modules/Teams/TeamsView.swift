@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-// MARK: - Main view
 struct TeamsView: View {
+    // MARK: - Parameters
     @Environment(\.dismiss) private var dismiss
     @State private var didTapNavBarBackButton = false
     @State private var didTapGenericErrorViewLink = false
@@ -17,6 +17,7 @@ struct TeamsView: View {
     @State private var selectedTeam: Team = .previewInit()
     @StateObject private var viewModel = TeamsViewModel()
     
+    // MARK: - Main view
     var body: some View {
         VStack {
             switch viewModel.state {
@@ -25,7 +26,7 @@ struct TeamsView: View {
             case .error:
                 GenericErrorView(didTapLink: $didTapGenericErrorViewLink)
             case .received(let representable):
-                TeamsListView(representable: .init(pager: representable.pager),
+                TeamsListView(representable: .init(pager: representable.pager, isLoadingNewPage: representable.isLoadingNewPage),
                               getNextPage: $getNextPage,
                               didTapTeam: $didTapTeam,
                               selectedTeam: $selectedTeam)

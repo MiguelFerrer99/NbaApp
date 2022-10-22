@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-// MARK: - Main view
 struct LoadingView: View {
+    // MARK: - Main view
     var body: some View {
         GeometryReader { proxy in
             VStack(spacing: 15) {

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-// MARK: - Main view
 struct PlayersView: View {
+    // MARK: - Parameters
     @Environment(\.dismiss) private var dismiss
     @State private var didTapNavBarBackButton = false
     @State private var didTapGenericErrorViewLink = false
@@ -17,6 +17,7 @@ struct PlayersView: View {
     @State private var selectedPlayer: Player = .previewInit()
     @StateObject private var viewModel = PlayersViewModel()
     
+    // MARK: - Main view
     var body: some View {
         VStack {
             switch viewModel.state {
@@ -25,12 +26,12 @@ struct PlayersView: View {
             case .error:
                 GenericErrorView(didTapLink: $didTapGenericErrorViewLink)
             case .received(let representable):
-                PlayersListView(representable: .init(pager: representable.pager),
+                PlayersListView(representable: .init(pager: representable.pager, isLoadingNewPage: representable.isLoadingNewPage),
                                 getNextPage: $getNextPage,
                                 didTapPlayer: $didTapPlayer,
                                 selectedPlayer: $selectedPlayer)
             }
-        }.configureNavBar(with: .init(title: .teams.title.localized), and: $didTapNavBarBackButton)
+        }.configureNavBar(with: .init(title: .players.title.localized), and: $didTapNavBarBackButton)
         .onLoad { Task { await viewModel.getPlayers() } }
         
         // MARK: - Navigation destinations

@@ -17,6 +17,20 @@
 /* Players */
 "players_title" = "Players";
 
+/* Team Detail */
+"teamDetail_abbreviation" = "Abbreviation";
+"teamDetail_city" = "City";
+"teamDetail_conference" = "Conference";
+"teamDetail_division" = "Division";
+"teamDetail_fullname" = "Full name";
+"teamDetail_name" = "Name";
+
+/* Player Detail */
+"playerDetail_firstname" = "Firstname";
+"playerDetail_lastname" = "Lastname";
+"playerDetail_position" = "Position";
+"playerDetail_team" = "Team";
+
 /* Loading */
 "loading_title" = "We are collection all the information";
 "loading_subtitle" = "It will be available soon";

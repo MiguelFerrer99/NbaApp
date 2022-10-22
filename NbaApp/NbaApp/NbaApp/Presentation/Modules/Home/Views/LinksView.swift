@@ -14,11 +14,12 @@ enum LinksViewState {
     case didTapBottomLink
 }
 
-// MARK: - Main view
 struct LinksView: View {
+    // MARK: - Paramameters
     @Binding var didTapTopLinkView: Bool
     @Binding var didTapBottomLinkView: Bool
     
+    // MARK: - Main view
     var body: some View {
         VStack {
             LinkView(representable: .init(
@@ -33,7 +34,7 @@ struct LinksView: View {
                 style: .leftToRight
             ), isPressed: $didTapBottomLinkView)
             Spacer()
-        }
+        }.padding(.horizontal, 20)
     }
 }
 

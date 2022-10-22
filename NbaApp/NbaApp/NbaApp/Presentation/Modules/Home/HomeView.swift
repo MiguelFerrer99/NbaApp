@@ -7,12 +7,13 @@
 
 import SwiftUI
 
-// MARK: - Main view
 struct HomeView: View {
+    // MARK: - Paramameters
     @State private var didTapTeamsLink = false
     @State private var didTapPlayersLink = false
     @StateObject private var viewModel = HomeViewModel()
     
+    // MARK: - Main view
     var body: some View {
         VStack {
             switch viewModel.state {

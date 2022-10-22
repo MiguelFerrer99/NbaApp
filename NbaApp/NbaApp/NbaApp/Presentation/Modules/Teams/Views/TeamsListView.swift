@@ -10,15 +10,17 @@ import SwiftUI
 // MARK: - Representable
 struct TeamsListViewRepresentable {
     let pager: Pagination<Team>
+    let isLoadingNewPage: Bool
 }
 
-// MARK: - Main view
 struct TeamsListView: View {
+    // MARK: - Parameters
     let representable: TeamsListViewRepresentable
     @Binding var getNextPage: Bool
     @Binding var didTapTeam: Bool
     @Binding var selectedTeam: Team
     
+    // MARK: - Main view
     var body: some View {
         List {
             ForEach(representable.pager.getItems()) { team in
@@ -27,10 +29,11 @@ struct TeamsListView: View {
                     .onAppear { check(team) }
                     .listRowSeparator(.hidden)
             }
-            LoadingFooterView()
+            LoadingFooterView().isHidden(!representable.isLoadingNewPage)
         }.listStyle(.plain)
     }
     
+    // MARK: - Functions
     func select(_ team: Team) {
         didTapTeam = true
         selectedTeam = team
@@ -47,7 +50,7 @@ struct TeamsListView: View {
 struct TeamsListView_Previews: PreviewProvider {
     static var previews: some View {
         TeamsListView(
-            representable: .init(pager: .init()),
+            representable: .init(pager: .init(), isLoadingNewPage: false),
             getNextPage: .constant(false),
             didTapTeam: .constant(false),
             selectedTeam: .constant(.previewInit())

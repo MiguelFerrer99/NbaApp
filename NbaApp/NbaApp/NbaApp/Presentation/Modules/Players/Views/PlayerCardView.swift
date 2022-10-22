@@ -12,10 +12,11 @@ struct PlayerCardViewRepresentable {
     let title: String
 }
 
-// MARK: - Main view
 struct PlayerCardView: View {
+    // MARK: - Parameters
     let representable: PlayerCardViewRepresentable
     
+    // MARK: - Main view
     var body: some View {
         HStack(spacing: 0) {
             Circle()

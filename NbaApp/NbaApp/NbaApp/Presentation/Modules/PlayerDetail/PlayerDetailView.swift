@@ -12,15 +12,45 @@ struct PlayerDetailViewRepresentable {
     let player: Player
 }
 
-// MARK: - Main view
 struct PlayerDetailView: View {
+    // MARK: - Parameters
+    let representable: PlayerDetailViewRepresentable
     @Environment(\.dismiss) private var dismiss
     @State private var didTapNavBarBackButton = false
-    let representable: PlayerDetailViewRepresentable
+    @State private var didTapTeamLinkView = false
     
+    // MARK: - Main view
     var body: some View {
-        EmptyView()
-            .configureNavBar(with: .init(title: .players.title.localized), and: $didTapNavBarBackButton)
+        VStack(spacing: 40) {
+            Circle()
+                .foregroundColor(.customGray)
+                .frame(width: 150, height: 150)
+                .padding(.horizontal)
+            VStack(spacing: 20) {
+                HorizontalInfoView(representable: .init(
+                    titleLeft: .playerDetail.firstname.localized,
+                    titleRight: representable.player.firstname))
+                HorizontalInfoView(representable: .init(
+                    titleLeft: .playerDetail.lastname.localized,
+                    titleRight: representable.player.lastname))
+                HorizontalInfoView(representable: .init(
+                    titleLeft: .playerDetail.position.localized,
+                    titleRight: representable.player.position.rawValue))
+                HorizontalInfoView(representable: .init(
+                    titleLeft: .playerDetail.team.localized,
+                    titleRight: representable.player.team.name))
+                LinkView(representable: .init(
+                    title: representable.player.team.fullname,
+                    color: .customBlack,
+                    style: .leftToRight), isPressed: $didTapTeamLinkView)
+                .padding(.top, 30)
+            }
+            Spacer()
+        }.padding(30)
+        .configureNavBar(with: .init(title: representable.player.fullname), and: $didTapNavBarBackButton)
+        
+        // MARK: - Navigation destinations
+        .navigationDestination(isPresented: $didTapTeamLinkView, destination: { TeamDetailView(representable: .init(team: representable.player.team)) })
             
         // MARK: - Subviews events listeners
         .onChange(of: didTapNavBarBackButton) { _ in dismiss() }
