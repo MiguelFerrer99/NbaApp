@@ -9,6 +9,7 @@ import SwiftUI
 
 // MARK: - Representable
 struct PlayerCardViewRepresentable {
+    let logo: String
     let title: String
 }
 
@@ -19,9 +20,10 @@ struct PlayerCardView: View {
     // MARK: - Main view
     var body: some View {
         HStack(spacing: 0) {
-            Circle()
-                .foregroundColor(.customGray)
-                .frame(width: 40, height: 40)
+            CustomAsyncImage(representable: .init(
+                fullname: representable.title,
+                urlString: representable.logo,
+                style: .small))
                 .padding(.horizontal)
             Text(verbatim: representable.title)
                 .lineLimit(1)
@@ -42,7 +44,9 @@ struct PlayerCardView: View {
 // MARK: - Canvas preview
 struct PlayerCardView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerCardView(representable: .init(title: "Title"))
-            .previewLayout(.sizeThatFits)
+        PlayerCardView(representable: .init(
+            logo: "https://nba-players.herokuapp.com/players/curry/stephen",
+            title: "Title"
+        )).previewLayout(.sizeThatFits)
     }
 }

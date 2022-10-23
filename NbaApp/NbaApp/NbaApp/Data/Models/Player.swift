@@ -14,6 +14,9 @@ struct Player: Identifiable, Hashable, Equatable {
     let position: PlayerPosition
     let team: Team
     var fullname: String { firstname + " " + lastname }
+    var logo: String {
+        "https://nba-players.herokuapp.com/players/\(lastname.lowercased())/\(firstname.lowercased())"
+    }
     
     static func previewInit() -> Player {
         Player(id: "ID",

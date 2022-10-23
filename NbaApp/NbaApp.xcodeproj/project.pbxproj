@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4100B63728DE5893001328CC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100B63628DE5893001328CC /* Configuration.swift */; };
 		410CD25328E341A60004CD94 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 410CD25228E341A60004CD94 /* Lottie */; };
+		41199E942905C4F100132221 /* CustomAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41199E932905C4F100132221 /* CustomAsyncImage.swift */; };
+		41199E972905DA4400132221 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 41199E962905DA4400132221 /* CachedAsyncImage */; };
 		411CF91728FC89A900F5E92F /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411CF91628FC89A900F5E92F /* ViewModifiers.swift */; };
 		411CF91A28FC8DA600F5E92F /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411CF91928FC8DA600F5E92F /* TeamDetailView.swift */; };
 		4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE528DDE22E00F0C59C /* HomeView.swift */; };
@@ -66,6 +68,7 @@
 
 /* Begin PBXFileReference section */
 		4100B63628DE5893001328CC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		41199E932905C4F100132221 /* CustomAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAsyncImage.swift; sourceTree = "<group>"; };
 		411CF91628FC89A900F5E92F /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		411CF91928FC8DA600F5E92F /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
 		4123CAB028DF3315009FF971 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
@@ -127,6 +130,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41199E972905DA4400132221 /* CachedAsyncImage in Frameworks */,
 				415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */,
 				410CD25328E341A60004CD94 /* Lottie in Frameworks */,
 			);
@@ -171,6 +175,7 @@
 		4123CAAF28DF32E5009FF971 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				41199E932905C4F100132221 /* CustomAsyncImage.swift */,
 				4191C59528F9CD6500E59875 /* GenericErrorView.swift */,
 				419813C929045F6A00CE65C7 /* HorizontalInfoView.swift */,
 				4123CAB028DF3315009FF971 /* LinkView.swift */,
@@ -446,6 +451,7 @@
 			packageProductDependencies = (
 				415B544028DE140000A336A3 /* IQKeyboardManagerSwift */,
 				410CD25228E341A60004CD94 /* Lottie */,
+				41199E962905DA4400132221 /* CachedAsyncImage */,
 			);
 			productName = NbaApp;
 			productReference = 4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */;
@@ -479,6 +485,7 @@
 			packageReferences = (
 				415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				41199E952905DA4400132221 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 4137AAE128DDE22E00F0C59C /* Products */;
 			projectDirPath = "";
@@ -555,6 +562,7 @@
 				4191C5A628FA23BE00E59875 /* Player.swift in Sources */,
 				4187895128F1B7E600974AF5 /* Paginable.swift in Sources */,
 				41E8748028FB78DD00E07DD5 /* Optional+Extension.swift in Sources */,
+				41199E942905C4F100132221 /* CustomAsyncImage.swift in Sources */,
 				419813CA29045F6A00CE65C7 /* HorizontalInfoView.swift in Sources */,
 				41E8748928FB8E7E00E07DD5 /* TeamsListView.swift in Sources */,
 			);
@@ -913,6 +921,14 @@
 				kind = branch;
 			};
 		};
+		41199E952905DA4400132221 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -928,6 +944,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		41199E962905DA4400132221 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41199E952905DA4400132221 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 		415B544028DE140000A336A3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;

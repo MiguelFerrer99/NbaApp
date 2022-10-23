@@ -22,10 +22,10 @@ struct PlayerDetailView: View {
     // MARK: - Main view
     var body: some View {
         VStack(spacing: 40) {
-            Circle()
-                .foregroundColor(.customGray)
-                .frame(width: 150, height: 150)
-                .padding(.horizontal)
+            CustomAsyncImage(representable: .init(
+                fullname: representable.player.fullname,
+                urlString: representable.player.logo,
+                style: .big))
             VStack(spacing: 20) {
                 HorizontalInfoView(representable: .init(
                     titleLeft: .playerDetail.firstname.localized,
@@ -44,6 +44,7 @@ struct PlayerDetailView: View {
                     color: .customBlack,
                     style: .leftToRight), isPressed: $didTapTeamLinkView)
                 .padding(.top, 30)
+                .padding(.horizontal)
             }
             Spacer()
         }.padding(30)

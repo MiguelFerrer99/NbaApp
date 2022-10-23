@@ -21,10 +21,10 @@ struct TeamDetailView: View {
     // MARK: - Main view
     var body: some View {
         VStack(spacing: 40) {
-            Circle()
-                .foregroundColor(.customGray)
+            Image(representable.team.name)
+                .resizable()
+                .scaledToFill()
                 .frame(width: 150, height: 150)
-                .padding(.horizontal)
             VStack(spacing: 20) {
                 HorizontalInfoView(representable: .init(
                     titleLeft: .teamDetail.abbreviation.localized,

@@ -22,15 +22,14 @@ struct TeamsListView: View {
     
     // MARK: - Main view
     var body: some View {
-        List {
+        ScrollView(.vertical, showsIndicators: true) {
             ForEach(representable.pager.getItems()) { team in
-                TeamCardView(representable: .init(title: team.fullname))
+                TeamCardView(representable: .init(logo: team.name, title: team.fullname))
                     .onTapGesture { select(team) }
                     .onAppear { check(team) }
-                    .listRowSeparator(.hidden)
             }
             LoadingFooterView().isHidden(!representable.isLoadingNewPage)
-        }.listStyle(.plain)
+        }
     }
     
     // MARK: - Functions

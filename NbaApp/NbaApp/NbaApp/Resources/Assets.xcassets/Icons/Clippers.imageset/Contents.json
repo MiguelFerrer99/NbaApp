@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "Clippers.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

@@ -22,15 +22,14 @@ struct PlayersListView: View {
     
     // MARK: - Main view
     var body: some View {
-        List {
+        ScrollView(.vertical, showsIndicators: true) {
             ForEach(representable.pager.getItems(), id: \.self) { player in
-                PlayerCardView(representable: .init(title: player.fullname))
+                PlayerCardView(representable: .init(logo: player.logo, title: player.fullname))
                     .onTapGesture { select(player) }
                     .onAppear { check(player) }
-                    .listRowSeparator(.hidden)
             }
             LoadingFooterView().isHidden(!representable.isLoadingNewPage)
-        }.listStyle(.plain)
+        }
     }
     
     // MARK: - Functions
