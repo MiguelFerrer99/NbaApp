@@ -23,12 +23,14 @@ struct TeamsListView: View {
     // MARK: - Main view
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
-            ForEach(representable.pager.getItems()) { team in
-                TeamCardView(representable: .init(logo: team.name, title: team.fullname))
-                    .onTapGesture { select(team) }
-                    .onAppear { check(team) }
+            LazyVStack {
+                ForEach(representable.pager.getItems()) { team in
+                    TeamCardView(representable: .init(logo: team.name, title: team.fullname))
+                        .onTapGesture { select(team) }
+                        .onAppear { check(team) }
+                }
+                LoadingFooterView().isHidden(!representable.isLoadingNewPage)
             }
-            LoadingFooterView().isHidden(!representable.isLoadingNewPage)
         }
     }
     

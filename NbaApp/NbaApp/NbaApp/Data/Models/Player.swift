@@ -15,7 +15,10 @@ struct Player: Identifiable, Hashable, Equatable {
     let team: Team
     var fullname: String { firstname + " " + lastname }
     var logo: String {
-        "https://nba-players.herokuapp.com/players/\(lastname.lowercased())/\(firstname.lowercased())"
+        let safeLastname = (lastname.components(separatedBy: .whitespaces).first ?? "").lowercased()
+        let safeFirstname = (firstname.components(separatedBy: .whitespaces).first ?? "").lowercased()
+        let safeLogo = "https://nba-players.herokuapp.com/players/\(safeLastname)/\(safeFirstname)"
+        return safeLogo
     }
     
     static func previewInit() -> Player {

@@ -10,7 +10,6 @@
 		4100B63728DE5893001328CC /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4100B63628DE5893001328CC /* Configuration.swift */; };
 		410CD25328E341A60004CD94 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 410CD25228E341A60004CD94 /* Lottie */; };
 		41199E942905C4F100132221 /* CustomAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41199E932905C4F100132221 /* CustomAsyncImage.swift */; };
-		41199E972905DA4400132221 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 41199E962905DA4400132221 /* CachedAsyncImage */; };
 		411CF91728FC89A900F5E92F /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411CF91628FC89A900F5E92F /* ViewModifiers.swift */; };
 		411CF91A28FC8DA600F5E92F /* TeamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411CF91928FC8DA600F5E92F /* TeamDetailView.swift */; };
 		4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE528DDE22E00F0C59C /* HomeView.swift */; };
@@ -53,6 +52,8 @@
 		4194C3AC28F11A0B00C0FB06 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AB28F11A0B00C0FB06 /* Teams.swift */; };
 		4194C3AE28F11AB500C0FB06 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AD28F11AB500C0FB06 /* Players.swift */; };
 		4194C3B028F11BE600C0FB06 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AF28F11BE600C0FB06 /* AuthManager.swift */; };
+		41975D4C2906A7EB005A1BD6 /* ChacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41975D4B2906A7EB005A1BD6 /* ChacheManager.swift */; };
+		41975D4E2906B34F005A1BD6 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41975D4D2906B34F005A1BD6 /* CacheAsyncImage.swift */; };
 		419813CA29045F6A00CE65C7 /* HorizontalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419813C929045F6A00CE65C7 /* HorizontalInfoView.swift */; };
 		41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */; };
 		41D73FED28DE6F1800B9BA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D73FEF28DE6F1800B9BA75 /* Localizable.strings */; };
@@ -111,6 +112,8 @@
 		4194C3AB28F11A0B00C0FB06 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		4194C3AD28F11AB500C0FB06 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		4194C3AF28F11BE600C0FB06 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		41975D4B2906A7EB005A1BD6 /* ChacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChacheManager.swift; sourceTree = "<group>"; };
+		41975D4D2906B34F005A1BD6 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		419813C929045F6A00CE65C7 /* HorizontalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalInfoView.swift; sourceTree = "<group>"; };
 		41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		41D73FEE28DE6F1800B9BA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -130,7 +133,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41199E972905DA4400132221 /* CachedAsyncImage in Frameworks */,
 				415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */,
 				410CD25328E341A60004CD94 /* Lottie in Frameworks */,
 			);
@@ -160,6 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				4187893328F1864000974AF5 /* Cache.swift */,
+				41975D4D2906B34F005A1BD6 /* CacheAsyncImage.swift */,
+				41975D4B2906A7EB005A1BD6 /* ChacheManager.swift */,
 				41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */,
 				4191C59728F9CF4A00E59875 /* Color+Extension.swift */,
 				4194C3A728F1187100C0FB06 /* Log.swift */,
@@ -451,7 +455,6 @@
 			packageProductDependencies = (
 				415B544028DE140000A336A3 /* IQKeyboardManagerSwift */,
 				410CD25228E341A60004CD94 /* Lottie */,
-				41199E962905DA4400132221 /* CachedAsyncImage */,
 			);
 			productName = NbaApp;
 			productReference = 4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */;
@@ -485,7 +488,6 @@
 			packageReferences = (
 				415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				41199E952905DA4400132221 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 4137AAE128DDE22E00F0C59C /* Products */;
 			projectDirPath = "";
@@ -517,11 +519,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41975D4E2906B34F005A1BD6 /* CacheAsyncImage.swift in Sources */,
 				4191C5A428FA234400E59875 /* PlayerDTO.swift in Sources */,
 				411CF91A28FC8DA600F5E92F /* TeamDetailView.swift in Sources */,
 				4191C59628F9CD6500E59875 /* GenericErrorView.swift in Sources */,
 				4100B63728DE5893001328CC /* Configuration.swift in Sources */,
 				4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */,
+				41975D4C2906A7EB005A1BD6 /* ChacheManager.swift in Sources */,
 				4187894B28F1B02E00974AF5 /* Team.swift in Sources */,
 				4187894928F1AEA900974AF5 /* TeamDTO.swift in Sources */,
 				418A36E129013D350039CA9E /* PlayersListView.swift in Sources */,
@@ -921,14 +925,6 @@
 				kind = branch;
 			};
 		};
-		41199E952905DA4400132221 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
 		415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -944,11 +940,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
-		};
-		41199E962905DA4400132221 /* CachedAsyncImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 41199E952905DA4400132221 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
-			productName = CachedAsyncImage;
 		};
 		415B544028DE140000A336A3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
