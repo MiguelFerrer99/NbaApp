@@ -7,12 +7,12 @@
 
 import Foundation
 
-//extension Collection {
-//    var isNotEmpty: Bool {
-//        return !isEmpty
-//    }
-//    
-//    subscript (safe index: Index) -> Element? {
-//        return indices.contains(index) ? self[index] : nil
-//    }
-//}
+extension Collection {
+    var isNotEmpty: Bool {
+        return !isEmpty
+    }
+    
+    subscript (safe index: Index) -> Element? {
+        return indices.contains(index) ? self[index] : nil
+    }
+}
