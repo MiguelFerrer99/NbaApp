@@ -17,6 +17,7 @@
 		4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB328DF4985009FF971 /* TeamsView.swift */; };
 		4137AAE428DDE22E00F0C59C /* NbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE328DDE22E00F0C59C /* NbaApp.swift */; };
 		4137AAE828DDE22F00F0C59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4137AAE728DDE22F00F0C59C /* Assets.xcassets */; };
+		414AAEC52906CBBB00853981 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 414AAEC42906CBBB00853981 /* CachedAsyncImage */; };
 		415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 415B544028DE140000A336A3 /* IQKeyboardManagerSwift */; };
 		4187893428F1864000974AF5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893328F1864000974AF5 /* Cache.swift */; };
 		4187893628F1877500974AF5 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893528F1877500974AF5 /* TokenDTO.swift */; };
@@ -53,7 +54,6 @@
 		4194C3AE28F11AB500C0FB06 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AD28F11AB500C0FB06 /* Players.swift */; };
 		4194C3B028F11BE600C0FB06 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AF28F11BE600C0FB06 /* AuthManager.swift */; };
 		41975D4C2906A7EB005A1BD6 /* ChacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41975D4B2906A7EB005A1BD6 /* ChacheManager.swift */; };
-		41975D4E2906B34F005A1BD6 /* CacheAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41975D4D2906B34F005A1BD6 /* CacheAsyncImage.swift */; };
 		419813CA29045F6A00CE65C7 /* HorizontalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419813C929045F6A00CE65C7 /* HorizontalInfoView.swift */; };
 		41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */; };
 		41D73FED28DE6F1800B9BA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D73FEF28DE6F1800B9BA75 /* Localizable.strings */; };
@@ -113,7 +113,6 @@
 		4194C3AD28F11AB500C0FB06 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		4194C3AF28F11BE600C0FB06 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		41975D4B2906A7EB005A1BD6 /* ChacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChacheManager.swift; sourceTree = "<group>"; };
-		41975D4D2906B34F005A1BD6 /* CacheAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheAsyncImage.swift; sourceTree = "<group>"; };
 		419813C929045F6A00CE65C7 /* HorizontalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalInfoView.swift; sourceTree = "<group>"; };
 		41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		41D73FEE28DE6F1800B9BA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -133,6 +132,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				414AAEC52906CBBB00853981 /* CachedAsyncImage in Frameworks */,
 				415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */,
 				410CD25328E341A60004CD94 /* Lottie in Frameworks */,
 			);
@@ -162,7 +162,6 @@
 			isa = PBXGroup;
 			children = (
 				4187893328F1864000974AF5 /* Cache.swift */,
-				41975D4D2906B34F005A1BD6 /* CacheAsyncImage.swift */,
 				41975D4B2906A7EB005A1BD6 /* ChacheManager.swift */,
 				41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */,
 				4191C59728F9CF4A00E59875 /* Color+Extension.swift */,
@@ -455,6 +454,7 @@
 			packageProductDependencies = (
 				415B544028DE140000A336A3 /* IQKeyboardManagerSwift */,
 				410CD25228E341A60004CD94 /* Lottie */,
+				414AAEC42906CBBB00853981 /* CachedAsyncImage */,
 			);
 			productName = NbaApp;
 			productReference = 4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */;
@@ -488,6 +488,7 @@
 			packageReferences = (
 				415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				414AAEC32906CBBB00853981 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 4137AAE128DDE22E00F0C59C /* Products */;
 			projectDirPath = "";
@@ -519,7 +520,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41975D4E2906B34F005A1BD6 /* CacheAsyncImage.swift in Sources */,
 				4191C5A428FA234400E59875 /* PlayerDTO.swift in Sources */,
 				411CF91A28FC8DA600F5E92F /* TeamDetailView.swift in Sources */,
 				4191C59628F9CD6500E59875 /* GenericErrorView.swift in Sources */,
@@ -925,6 +925,14 @@
 				kind = branch;
 			};
 		};
+		414AAEC32906CBBB00853981 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 		415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
@@ -940,6 +948,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		414AAEC42906CBBB00853981 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 414AAEC32906CBBB00853981 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 		415B544028DE140000A336A3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
