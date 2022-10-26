@@ -45,7 +45,7 @@ struct TeamCardView: View {
 struct TeamCardView_Previews: PreviewProvider {
     static var previews: some View {
         TeamCardView(representable: .init(
-            logo: "https://nba-players.herokuapp.com/players/curry/stephen",
+            logo: "Lakers",
             title: "Title"
         )).previewLayout(.sizeThatFits)
     }

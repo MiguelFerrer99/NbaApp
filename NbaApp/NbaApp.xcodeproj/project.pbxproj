@@ -17,8 +17,9 @@
 		4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB328DF4985009FF971 /* TeamsView.swift */; };
 		4137AAE428DDE22E00F0C59C /* NbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE328DDE22E00F0C59C /* NbaApp.swift */; };
 		4137AAE828DDE22F00F0C59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4137AAE728DDE22F00F0C59C /* Assets.xcassets */; };
-		414AAEC52906CBBB00853981 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 414AAEC42906CBBB00853981 /* CachedAsyncImage */; };
 		415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 415B544028DE140000A336A3 /* IQKeyboardManagerSwift */; };
+		4168992D2909A6E0008D1879 /* LetterAvatarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4168992C2909A6E0008D1879 /* LetterAvatarKit */; };
+		416899302909B079008D1879 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 4168992F2909B079008D1879 /* CachedAsyncImage */; };
 		4187893428F1864000974AF5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893328F1864000974AF5 /* Cache.swift */; };
 		4187893628F1877500974AF5 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893528F1877500974AF5 /* TokenDTO.swift */; };
 		4187893828F1881000974AF5 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893728F1881000974AF5 /* Auth.swift */; };
@@ -36,7 +37,7 @@
 		418A36E329013DFE0039CA9E /* PlayerCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A36E229013DFE0039CA9E /* PlayerCardView.swift */; };
 		418A36E529013F2C0039CA9E /* PlayerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418A36E429013F2C0039CA9E /* PlayerDetailView.swift */; };
 		4191C59628F9CD6500E59875 /* GenericErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C59528F9CD6500E59875 /* GenericErrorView.swift */; };
-		4191C59828F9CF4A00E59875 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C59728F9CF4A00E59875 /* Color+Extension.swift */; };
+		4191C59828F9CF4A00E59875 /* ColorUIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C59728F9CF4A00E59875 /* ColorUIColor+Extensions.swift */; };
 		4191C59E28FA11EC00E59875 /* Teams.json in Resources */ = {isa = PBXBuildFile; fileRef = 4191C59D28FA11EC00E59875 /* Teams.json */; };
 		4191C5A228FA232100E59875 /* Players.json in Resources */ = {isa = PBXBuildFile; fileRef = 4191C5A128FA232100E59875 /* Players.json */; };
 		4191C5A428FA234400E59875 /* PlayerDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4191C5A328FA234400E59875 /* PlayerDTO.swift */; };
@@ -53,7 +54,6 @@
 		4194C3AC28F11A0B00C0FB06 /* Teams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AB28F11A0B00C0FB06 /* Teams.swift */; };
 		4194C3AE28F11AB500C0FB06 /* Players.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AD28F11AB500C0FB06 /* Players.swift */; };
 		4194C3B028F11BE600C0FB06 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4194C3AF28F11BE600C0FB06 /* AuthManager.swift */; };
-		41975D4C2906A7EB005A1BD6 /* ChacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41975D4B2906A7EB005A1BD6 /* ChacheManager.swift */; };
 		419813CA29045F6A00CE65C7 /* HorizontalInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419813C929045F6A00CE65C7 /* HorizontalInfoView.swift */; };
 		41D73FEA28DE6E6A00B9BA75 /* LocalizableStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */; };
 		41D73FED28DE6F1800B9BA75 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 41D73FEF28DE6F1800B9BA75 /* Localizable.strings */; };
@@ -95,7 +95,7 @@
 		418A36E229013DFE0039CA9E /* PlayerCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerCardView.swift; sourceTree = "<group>"; };
 		418A36E429013F2C0039CA9E /* PlayerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDetailView.swift; sourceTree = "<group>"; };
 		4191C59528F9CD6500E59875 /* GenericErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericErrorView.swift; sourceTree = "<group>"; };
-		4191C59728F9CF4A00E59875 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		4191C59728F9CF4A00E59875 /* ColorUIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ColorUIColor+Extensions.swift"; sourceTree = "<group>"; };
 		4191C59D28FA11EC00E59875 /* Teams.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Teams.json; sourceTree = "<group>"; };
 		4191C5A128FA232100E59875 /* Players.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Players.json; sourceTree = "<group>"; };
 		4191C5A328FA234400E59875 /* PlayerDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerDTO.swift; sourceTree = "<group>"; };
@@ -112,7 +112,6 @@
 		4194C3AB28F11A0B00C0FB06 /* Teams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Teams.swift; sourceTree = "<group>"; };
 		4194C3AD28F11AB500C0FB06 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		4194C3AF28F11BE600C0FB06 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
-		41975D4B2906A7EB005A1BD6 /* ChacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChacheManager.swift; sourceTree = "<group>"; };
 		419813C929045F6A00CE65C7 /* HorizontalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalInfoView.swift; sourceTree = "<group>"; };
 		41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		41D73FEE28DE6F1800B9BA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -132,8 +131,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				414AAEC52906CBBB00853981 /* CachedAsyncImage in Frameworks */,
 				415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */,
+				416899302909B079008D1879 /* CachedAsyncImage in Frameworks */,
+				4168992D2909A6E0008D1879 /* LetterAvatarKit in Frameworks */,
 				410CD25328E341A60004CD94 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,9 +162,8 @@
 			isa = PBXGroup;
 			children = (
 				4187893328F1864000974AF5 /* Cache.swift */,
-				41975D4B2906A7EB005A1BD6 /* ChacheManager.swift */,
 				41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */,
-				4191C59728F9CF4A00E59875 /* Color+Extension.swift */,
+				4191C59728F9CF4A00E59875 /* ColorUIColor+Extensions.swift */,
 				4194C3A728F1187100C0FB06 /* Log.swift */,
 				4194C39A28F0EFA400C0FB06 /* LottieView.swift */,
 				41E8747F28FB78DD00E07DD5 /* Optional+Extension.swift */,
@@ -454,7 +453,8 @@
 			packageProductDependencies = (
 				415B544028DE140000A336A3 /* IQKeyboardManagerSwift */,
 				410CD25228E341A60004CD94 /* Lottie */,
-				414AAEC42906CBBB00853981 /* CachedAsyncImage */,
+				4168992C2909A6E0008D1879 /* LetterAvatarKit */,
+				4168992F2909B079008D1879 /* CachedAsyncImage */,
 			);
 			productName = NbaApp;
 			productReference = 4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */;
@@ -488,7 +488,8 @@
 			packageReferences = (
 				415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				414AAEC32906CBBB00853981 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				4168992B2909A6E0008D1879 /* XCRemoteSwiftPackageReference "LetterAvatarKit" */,
+				4168992E2909B079008D1879 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
 			);
 			productRefGroup = 4137AAE128DDE22E00F0C59C /* Products */;
 			projectDirPath = "";
@@ -525,7 +526,6 @@
 				4191C59628F9CD6500E59875 /* GenericErrorView.swift in Sources */,
 				4100B63728DE5893001328CC /* Configuration.swift in Sources */,
 				4123CAAB28DF2AE2009FF971 /* HomeView.swift in Sources */,
-				41975D4C2906A7EB005A1BD6 /* ChacheManager.swift in Sources */,
 				4187894B28F1B02E00974AF5 /* Team.swift in Sources */,
 				4187894928F1AEA900974AF5 /* TeamDTO.swift in Sources */,
 				418A36E129013D350039CA9E /* PlayersListView.swift in Sources */,
@@ -549,7 +549,7 @@
 				4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */,
 				418A36E529013F2C0039CA9E /* PlayerDetailView.swift in Sources */,
 				4194C39928F0E95B00C0FB06 /* LoadingView.swift in Sources */,
-				4191C59828F9CF4A00E59875 /* Color+Extension.swift in Sources */,
+				4191C59828F9CF4A00E59875 /* ColorUIColor+Extensions.swift in Sources */,
 				41E8747E28FB78A700E07DD5 /* Collection+Extension.swift in Sources */,
 				41E8748228FB893D00E07DD5 /* LoadingFooterView.swift in Sources */,
 				4187893828F1881000974AF5 /* Auth.swift in Sources */,
@@ -925,19 +925,27 @@
 				kind = branch;
 			};
 		};
-		414AAEC32906CBBB00853981 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
-			requirement = {
-				branch = main;
-				kind = branch;
-			};
-		};
 		415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
 				branch = master;
+				kind = branch;
+			};
+		};
+		4168992B2909A6E0008D1879 /* XCRemoteSwiftPackageReference "LetterAvatarKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/vpeschenkov/LetterAvatarKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		4168992E2909B079008D1879 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image.git";
+			requirement = {
+				branch = main;
 				kind = branch;
 			};
 		};
@@ -949,15 +957,20 @@
 			package = 410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		414AAEC42906CBBB00853981 /* CachedAsyncImage */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 414AAEC32906CBBB00853981 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
-			productName = CachedAsyncImage;
-		};
 		415B544028DE140000A336A3 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		4168992C2909A6E0008D1879 /* LetterAvatarKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4168992B2909A6E0008D1879 /* XCRemoteSwiftPackageReference "LetterAvatarKit" */;
+			productName = LetterAvatarKit;
+		};
+		4168992F2909B079008D1879 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4168992E2909B079008D1879 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

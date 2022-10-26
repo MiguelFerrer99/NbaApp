@@ -42,7 +42,7 @@ struct PlayersListView: View {
 
     func check(_ player: Player) {
         if representable.pager.getItems().last == player && !representable.pager.isLastPage {
-            getNextPage = true
+            getNextPage.toggle()
         }
     }
 }

@@ -13,7 +13,7 @@ struct GenericErrorView: View {
     
     // MARK: - Main view
     var body: some View {
-        GeometryReader { _ in
+        VStack {
             VStack(spacing: 30) {
                 Image("GenericError")
                     .resizable()
@@ -30,8 +30,10 @@ struct GenericErrorView: View {
             .background { Color.customBlack }
             .cornerRadius(15)
             .shadow(color: .customBlack, radius: 15, x: 0, y: 10)
+            .frame(width: 300)
             .padding([.leading, .trailing, .bottom], 40)
             .padding(.top, 10)
+            Spacer()
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import LetterAvatarKit
 import CachedAsyncImage
 
 // MARK: - Representables
@@ -35,13 +36,10 @@ struct CustomAsyncImage: View {
                     .frame(width: representable.style == .big ? 150 : 40, height: representable.style == .big ? 150 : 40)
                     .clipShape(Circle())
             case .failure:
-                let separaredFullname = representable.fullname.components(separatedBy: .whitespaces)
-                let firstInitial = String(separaredFullname[0].first ?? Character(""))
-                let secondInitial = String(separaredFullname[1].first ?? Character(""))
-                Text(firstInitial + secondInitial)
-                    .font(representable.style == .big ? .system(size: 60) : .subheadline)
+                Image(uiImage: getInitialsImage())
+                    .resizable()
+                    .scaledToFill()
                     .frame(width: representable.style == .big ? 150 : 40, height: representable.style == .big ? 150 : 40)
-                    .background { Color.customGray.opacity(0.5) }
                     .clipShape(Circle())
             case .empty:
                 Text("")
@@ -55,6 +53,17 @@ struct CustomAsyncImage: View {
                     .clipShape(Circle())
             }
         }
+    }
+    
+    private func getInitialsImage() -> UIImage {
+        let initialsImage = LetterAvatarMaker()
+            .setCircle(true)
+            .setUsername(representable.fullname)
+            .setLettersColor(.customBlack)
+            .setBackgroundColors([ .customGray.withAlphaComponent(0.5) ])
+            .build()
+        if let initialsImage = initialsImage { return initialsImage }
+        else { return UIImage() }
     }
 }
 
