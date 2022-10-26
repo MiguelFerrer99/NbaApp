@@ -9,3 +9,12 @@ Model-View-ViewModel (MVVM)
 
 ## iOS Frameworks
 SwiftUI with async/await
+
+## Features
+Lists pagination
+MVVM with states
+Image caching
+Clean code with embedded views
+Localizables
+Dev, Pro and Demo environments
+Api calls
