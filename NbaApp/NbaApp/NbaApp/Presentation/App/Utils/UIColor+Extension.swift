@@ -1,17 +1,11 @@
 //
-//  ColorUIColor+Extensions.swift
+//  UIColor+Extension.swift
 //  NbaApp
 //
-//  Created by Miguel Ferrer Fornali on 14/10/22.
+//  Created by Miguel Ferrer Fornali on 27/10/22.
 //
 
-import SwiftUI
-
-extension Color {
-    static let customBlack = Color("CustomBlack")
-    static let customGray = Color("CustomGray")
-    static let customLightGray = Color("CustomLightGray")
-}
+import UIKit
 
 extension UIColor {
     static let customBlack: UIColor = .init(named: "CustomBlack") ?? .black

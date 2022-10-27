@@ -9,7 +9,8 @@ import SwiftUI
 
 // MARK: - Representable
 struct PlayerCardViewRepresentable {
-    let logo: String
+    let playerID: String
+    let logoUrlString: String
     let title: String
 }
 
@@ -21,8 +22,9 @@ struct PlayerCardView: View {
     var body: some View {
         HStack(spacing: 0) {
             CustomAsyncImage(representable: .init(
+                itemID: representable.playerID,
                 fullname: representable.title,
-                urlString: representable.logo,
+                urlString: representable.logoUrlString,
                 style: .small))
                 .padding(.horizontal)
             Text(verbatim: representable.title)
@@ -45,7 +47,8 @@ struct PlayerCardView: View {
 struct PlayerCardView_Previews: PreviewProvider {
     static var previews: some View {
         PlayerCardView(representable: .init(
-            logo: "https://nba-players.herokuapp.com/players/curry/stephen",
+            playerID: "ID",
+            logoUrlString: "https://nba-players.herokuapp.com/players/curry/stephen",
             title: "Title"
         )).previewLayout(.sizeThatFits)
     }

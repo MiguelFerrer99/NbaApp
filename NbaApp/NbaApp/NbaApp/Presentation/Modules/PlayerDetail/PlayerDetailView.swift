@@ -23,8 +23,9 @@ struct PlayerDetailView: View {
     var body: some View {
         VStack(spacing: 40) {
             CustomAsyncImage(representable: .init(
+                itemID: representable.player.id,
                 fullname: representable.player.fullname,
-                urlString: representable.player.logo,
+                urlString: representable.player.logoUrlString,
                 style: .big))
             VStack(spacing: 20) {
                 HorizontalInfoView(representable: .init(
@@ -35,7 +36,7 @@ struct PlayerDetailView: View {
                     titleRight: representable.player.lastname))
                 HorizontalInfoView(representable: .init(
                     titleLeft: .playerDetail.position.localized,
-                    titleRight: representable.player.position.rawValue))
+                    titleRight: representable.player.position.description))
                 HorizontalInfoView(representable: .init(
                     titleLeft: .playerDetail.team.localized,
                     titleRight: representable.player.team.name))

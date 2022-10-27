@@ -14,7 +14,7 @@ struct TeamsView: View {
     @State private var didTapGenericErrorViewLink = false
     @State private var getNextPage = false
     @State private var didTapTeam = false
-    @State private var selectedTeam: Team = .previewInit()
+    @State private var selectedTeam: Team?
     @StateObject private var viewModel = TeamsViewModel()
     
     // MARK: - Main view
@@ -35,7 +35,11 @@ struct TeamsView: View {
         .onLoad { Task { await viewModel.getTeams() } }
         
         // MARK: - Navigation destinations
-        .navigationDestination(isPresented: $didTapTeam, destination: { TeamDetailView(representable: .init(team: selectedTeam)) })
+        .navigationDestination(isPresented: $didTapTeam, destination: {
+            if let selectedTeam = selectedTeam {
+                TeamDetailView(representable: .init(team: selectedTeam))
+            }
+        })
         
         // MARK: - Subviews events listeners
         .onChange(of: didTapNavBarBackButton) { _ in dismiss() }

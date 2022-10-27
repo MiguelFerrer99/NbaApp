@@ -14,7 +14,19 @@ enum PlayerPosition: String, Decodable {
     case cf = "C-F"
     case fc = "F-C"
     case gf = "G-F"
-    case none = ""
+    case unknown = ""
+    
+    var description: String {
+        switch self {
+        case .c: return .playerDetail.positions.c.localized
+        case .g: return .playerDetail.positions.g.localized
+        case .f: return .playerDetail.positions.f.localized
+        case .cf: return .playerDetail.positions.cf.localized
+        case .fc: return .playerDetail.positions.fc.localized
+        case .gf: return .playerDetail.positions.gf.localized
+        case .unknown: return .playerDetail.positions.unknown.localized
+        }
+    }
 }
 
 struct PlayerDTO: Decodable {
@@ -33,10 +45,25 @@ struct PlayerDTO: Decodable {
     }
     
     func toBO() -> Player {
+        let safeLastname = getSafeLastname()
         return Player(id: "\(id)",
+                      logoUrlString: getLogoUrlString(),
                       firstname: first_name,
-                      lastname: last_name,
+                      lastname: safeLastname,
+                      fullname: first_name + " " + safeLastname,
                       position: position,
                       team: teamDTO.toBO())
+    }
+    
+    private func getLogoUrlString() -> String {
+        let safeLastname = (last_name.components(separatedBy: .whitespaces).first ?? "").lowercased()
+        let safeFirstname = (first_name.components(separatedBy: .whitespaces).first ?? "").lowercased()
+        let safeLogoUrlString = "https://nba-players.herokuapp.com/players/\(safeLastname)/\(safeFirstname)"
+        return safeLogoUrlString
+    }
+    
+    private func getSafeLastname() -> String {
+        let safeLastname = (last_name.components(separatedBy: .whitespaces).first ?? last_name)
+        return safeLastname
     }
 }

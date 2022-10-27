@@ -9,22 +9,19 @@ import Foundation
 
 struct Player: Identifiable, Hashable, Equatable {
     let id: String
+    let logoUrlString: String
     let firstname: String
     let lastname: String
+    let fullname: String
     let position: PlayerPosition
     let team: Team
-    var fullname: String { firstname + " " + lastname }
-    var logo: String {
-        let safeLastname = (lastname.components(separatedBy: .whitespaces).first ?? "").lowercased()
-        let safeFirstname = (firstname.components(separatedBy: .whitespaces).first ?? "").lowercased()
-        let safeLogo = "https://nba-players.herokuapp.com/players/\(safeLastname)/\(safeFirstname)"
-        return safeLogo
-    }
     
     static func previewInit() -> Player {
         Player(id: "ID",
+               logoUrlString: "https://nba-players.herokuapp.com/players/lastname/firstname",
                firstname: "Firstname",
                lastname: "Lastname",
+               fullname: "Firstname Lastname",
                position: .c,
                team: .previewInit())
     }

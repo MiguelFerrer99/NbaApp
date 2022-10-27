@@ -9,6 +9,9 @@ import SwiftUI
 
 @main
 struct NbaApp: App {
+    // MARK: - Parameters
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     // MARK: - Main view
     var body: some Scene {
         WindowGroup {

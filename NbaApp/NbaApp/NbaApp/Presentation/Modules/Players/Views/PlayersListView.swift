@@ -18,14 +18,14 @@ struct PlayersListView: View {
     let representable: PlayersListViewRepresentable
     @Binding var getNextPage: Bool
     @Binding var didTapPlayer: Bool
-    @Binding var selectedPlayer: Player
+    @Binding var selectedPlayer: Player?
     
     // MARK: - Main view
     var body: some View {
         ScrollView(.vertical, showsIndicators: true) {
             LazyVStack {
                 ForEach(representable.pager.getItems(), id: \.self) { player in
-                    PlayerCardView(representable: .init(logo: player.logo, title: player.fullname))
+                    PlayerCardView(representable: .init(playerID: player.id, logoUrlString: player.logoUrlString, title: player.fullname))
                         .onTapGesture { select(player) }
                         .onAppear { check(player) }
                 }
@@ -36,8 +36,8 @@ struct PlayersListView: View {
     
     // MARK: - Functions
     func select(_ player: Player) {
-        didTapPlayer = true
         selectedPlayer = player
+        didTapPlayer = true
     }
 
     func check(_ player: Player) {
@@ -54,7 +54,7 @@ struct PlayersListView_Previews: PreviewProvider {
             representable: .init(pager: .init(), isLoadingNewPage: false),
             getNextPage: .constant(false),
             didTapPlayer: .constant(false),
-            selectedPlayer: .constant(.previewInit())
+            selectedPlayer: .constant(nil)
         ).previewLayout(.sizeThatFits)
     }
 }

@@ -31,6 +31,15 @@
 "playerDetail_position" = "Position";
 "playerDetail_team" = "Team";
 
+/* Player Detail Positions */
+"playerDetail_positions_c" = "Center";
+"playerDetail_positions_g" = "Guard";
+"playerDetail_positions_f" = "Forward";
+"playerDetail_positions_c-f" = "Center forward";
+"playerDetail_positions_f-c" = "Forward center";
+"playerDetail_positions_g-f" = "Guard forward";
+"playerDetail_positions_unknown" = "Unknown";
+
 /* Loading */
 "loading_title" = "We are collection all the information";
 "loading_subtitle" = "It will be available soon";

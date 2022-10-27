@@ -14,7 +14,7 @@ struct PlayersView: View {
     @State private var didTapGenericErrorViewLink = false
     @State private var getNextPage = false
     @State private var didTapPlayer = false
-    @State private var selectedPlayer: Player = .previewInit()
+    @State private var selectedPlayer: Player?
     @StateObject private var viewModel = PlayersViewModel()
     
     // MARK: - Main view
@@ -35,7 +35,11 @@ struct PlayersView: View {
         .onLoad { Task { await viewModel.getPlayers() } }
         
         // MARK: - Navigation destinations
-        .navigationDestination(isPresented: $didTapPlayer, destination: { PlayerDetailView(representable: .init(player: selectedPlayer)) })
+        .navigationDestination(isPresented: $didTapPlayer, destination: {
+            if let selectedPlayer = selectedPlayer {
+                PlayerDetailView(representable: .init(player: selectedPlayer))
+            }
+        })
         
         // MARK: - Subviews events listeners
         .onChange(of: didTapNavBarBackButton) { _ in dismiss() }

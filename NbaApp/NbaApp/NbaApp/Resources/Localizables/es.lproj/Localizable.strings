@@ -31,6 +31,15 @@
 "playerDetail_position" = "Posición";
 "playerDetail_team" = "Equipo";
 
+/* Player Detail Positions */
+"playerDetail_positions_c" = "Pívot";
+"playerDetail_positions_g" = "Base o Escolta";
+"playerDetail_positions_f" = "Alero";
+"playerDetail_positions_c-f" = "Ala pívot";
+"playerDetail_positions_f-c" = "Ala pívot";
+"playerDetail_positions_g-f" = "Base o Escolta";
+"playerDetail_positions_unknown" = "Desconocida";
+
 /* Loading */
 "loading_title" = "Estamos recopilando toda la información";
 "loading_subtitle" = "Estará disponible pronto";

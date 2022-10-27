@@ -60,6 +60,16 @@ extension String {
         case lastname = "playerDetail_lastname"
         case position = "playerDetail_position"
         case team = "playerDetail_team"
+        
+        enum positions: String, Localizable {
+            case c = "playerDetail_positions_c"
+            case g = "playerDetail_positions_g"
+            case f = "playerDetail_positions_f"
+            case cf = "playerDetail_positions_c-f"
+            case fc = "playerDetail_positions_f-c"
+            case gf = "playerDetail_positions_g-f"
+            case unknown = "playerDetail_positions_unknown"
+        }
     }
     
     enum loading: String, Localizable {
