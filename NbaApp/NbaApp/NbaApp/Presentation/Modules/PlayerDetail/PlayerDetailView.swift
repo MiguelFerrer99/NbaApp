@@ -15,9 +15,9 @@ struct PlayerDetailViewRepresentable {
 struct PlayerDetailView: View {
     // MARK: - Parameters
     let representable: PlayerDetailViewRepresentable
-    @Environment(\.dismiss) private var dismiss
     @State private var didTapNavBarBackButton = false
     @State private var didTapTeamLinkView = false
+    @Binding var isPresented: Bool
     
     // MARK: - Main view
     var body: some View {
@@ -52,16 +52,19 @@ struct PlayerDetailView: View {
         .configureNavBar(with: .init(title: representable.player.fullname), and: $didTapNavBarBackButton)
         
         // MARK: - Navigation destinations
-        .navigationDestination(isPresented: $didTapTeamLinkView, destination: { TeamDetailView(representable: .init(team: representable.player.team)) })
-            
+        .navigationDestination(isPresented: $didTapTeamLinkView, destination: {
+            TeamDetailView(representable: .init(team: representable.player.team), isPresented: $didTapTeamLinkView)
+        })
+        
         // MARK: - Subviews events listeners
-        .onChange(of: didTapNavBarBackButton) { _ in dismiss() }
+        .onChange(of: didTapNavBarBackButton) { _ in isPresented = false }
     }
 }
 
 // MARK: - Canvas preview
 struct PlayerDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        PlayerDetailView(representable: .init(player: .previewInit()))
+        PlayerDetailView(representable: .init(player: .previewInit()),
+                         isPresented: .constant(true))
     }
 }

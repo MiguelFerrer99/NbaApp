@@ -17,7 +17,6 @@ struct TeamsListView: View {
     // MARK: - Parameters
     let representable: TeamsListViewRepresentable
     @Binding var getNextPage: Bool
-    @Binding var didTapTeam: Bool
     @Binding var selectedTeam: Team?
     
     // MARK: - Main view
@@ -37,7 +36,6 @@ struct TeamsListView: View {
     // MARK: - Functions
     func select(_ team: Team) {
         selectedTeam = team
-        didTapTeam = true
     }
 
     func check(_ team: Team) {
@@ -53,7 +51,6 @@ struct TeamsListView_Previews: PreviewProvider {
         TeamsListView(
             representable: .init(pager: .init(), isLoadingNewPage: false),
             getNextPage: .constant(false),
-            didTapTeam: .constant(false),
             selectedTeam: .constant(nil)
         ).previewLayout(.sizeThatFits)
     }

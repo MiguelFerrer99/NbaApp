@@ -9,13 +9,13 @@ import SwiftUI
 
 struct TeamsView: View {
     // MARK: - Parameters
-    @Environment(\.dismiss) private var dismiss
+    @StateObject private var viewModel = TeamsViewModel()
     @State private var didTapNavBarBackButton = false
     @State private var didTapGenericErrorViewLink = false
     @State private var getNextPage = false
     @State private var didTapTeam = false
     @State private var selectedTeam: Team?
-    @StateObject private var viewModel = TeamsViewModel()
+    @Binding var isPresented: Bool
     
     // MARK: - Main view
     var body: some View {
@@ -28,7 +28,6 @@ struct TeamsView: View {
             case .received(let representable):
                 TeamsListView(representable: .init(pager: representable.pager, isLoadingNewPage: representable.isLoadingNewPage),
                               getNextPage: $getNextPage,
-                              didTapTeam: $didTapTeam,
                               selectedTeam: $selectedTeam)
             }
         }.configureNavBar(with: .init(title: .teams.title.localized), and: $didTapNavBarBackButton)
@@ -37,20 +36,21 @@ struct TeamsView: View {
         // MARK: - Navigation destinations
         .navigationDestination(isPresented: $didTapTeam, destination: {
             if let selectedTeam = selectedTeam {
-                TeamDetailView(representable: .init(team: selectedTeam))
+                TeamDetailView(representable: .init(team: selectedTeam), isPresented: $didTapTeam)
             }
         })
         
         // MARK: - Subviews events listeners
-        .onChange(of: didTapNavBarBackButton) { _ in dismiss() }
-        .onChange(of: didTapGenericErrorViewLink) { _ in dismiss() }
+        .onChange(of: didTapNavBarBackButton) { _ in isPresented = false }
+        .onChange(of: didTapGenericErrorViewLink) { _ in isPresented = false }
         .onChange(of: getNextPage) { _ in Task { await viewModel.getTeams() } }
+        .onChange(of: selectedTeam) { _ in didTapTeam = true }
     }
 }
 
 // MARK: - Canvas preview
 struct TeamsView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamsView()
+        TeamsView(isPresented: .constant(true))
     }
 }

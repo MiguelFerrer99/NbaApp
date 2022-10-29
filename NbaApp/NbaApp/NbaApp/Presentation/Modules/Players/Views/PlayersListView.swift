@@ -17,7 +17,6 @@ struct PlayersListView: View {
     // MARK: - Parameters
     let representable: PlayersListViewRepresentable
     @Binding var getNextPage: Bool
-    @Binding var didTapPlayer: Bool
     @Binding var selectedPlayer: Player?
     
     // MARK: - Main view
@@ -37,7 +36,6 @@ struct PlayersListView: View {
     // MARK: - Functions
     func select(_ player: Player) {
         selectedPlayer = player
-        didTapPlayer = true
     }
 
     func check(_ player: Player) {
@@ -53,7 +51,6 @@ struct PlayersListView_Previews: PreviewProvider {
         PlayersListView(
             representable: .init(pager: .init(), isLoadingNewPage: false),
             getNextPage: .constant(false),
-            didTapPlayer: .constant(false),
             selectedPlayer: .constant(nil)
         ).previewLayout(.sizeThatFits)
     }

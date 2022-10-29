@@ -23,8 +23,8 @@ struct HomeView: View {
         }
         
         // MARK: - Navigation destinations
-        .navigationDestination(isPresented: $didTapTeamsLink, destination: { TeamsView() })
-        .navigationDestination(isPresented: $didTapPlayersLink, destination: { PlayersView() })
+        .navigationDestination(isPresented: $didTapTeamsLink, destination: { TeamsView(isPresented: $didTapTeamsLink) })
+        .navigationDestination(isPresented: $didTapPlayersLink, destination: { PlayersView(isPresented: $didTapPlayersLink) })
         .embedInNavigation(with: .home.title.localized)
     }
 }
