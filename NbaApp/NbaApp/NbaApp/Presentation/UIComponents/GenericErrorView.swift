@@ -9,7 +9,8 @@ import SwiftUI
 
 struct GenericErrorView: View {
     // MARK: - Parameters
-    @Binding var didTapLink: Bool
+    @State private var didTapLink = false
+    @Binding var isPresented: Bool
     
     // MARK: - Main view
     var body: some View {
@@ -35,13 +36,16 @@ struct GenericErrorView: View {
             .padding(.top, 10)
             Spacer()
         }
+        
+        // MARK: - Subviews events listeners
+        .onChange(of: didTapLink) { _ in isPresented = false }
     }
 }
 
 // MARK: - Canvas preview
 struct GenericErrorView_Previews: PreviewProvider {
     static var previews: some View {
-        GenericErrorView(didTapLink: .constant(false))
+        GenericErrorView(isPresented: .constant(true))
             .previewLayout(.sizeThatFits)
     }
 }

@@ -10,8 +10,6 @@ import SwiftUI
 struct TeamsView: View {
     // MARK: - Parameters
     @StateObject private var viewModel = TeamsViewModel()
-    @State private var didTapNavBarBackButton = false
-    @State private var didTapGenericErrorViewLink = false
     @State private var getNextPage = false
     @State private var didTapTeam = false
     @State private var selectedTeam: Team?
@@ -24,25 +22,21 @@ struct TeamsView: View {
             case .loading:
                 LoadingView()
             case .error:
-                GenericErrorView(didTapLink: $didTapGenericErrorViewLink)
+                GenericErrorView(isPresented: $isPresented)
             case .received(let representable):
                 TeamsListView(representable: .init(pager: representable.pager, isLoadingNewPage: representable.isLoadingNewPage),
                               getNextPage: $getNextPage,
                               selectedTeam: $selectedTeam)
             }
-        }.configureNavBar(with: .init(title: .teams.title.localized), and: $didTapNavBarBackButton)
+        }.configureNavBar(with: .init(title: .teams.title.localized))
         .onLoad { Task { await viewModel.getTeams() } }
         
         // MARK: - Navigation destinations
         .navigationDestination(isPresented: $didTapTeam, destination: {
-            if let selectedTeam = selectedTeam {
-                TeamDetailView(representable: .init(team: selectedTeam), isPresented: $didTapTeam)
-            }
+            if let selectedTeam = selectedTeam { TeamDetailView(representable: .init(team: selectedTeam)) }
         })
         
         // MARK: - Subviews events listeners
-        .onChange(of: didTapNavBarBackButton) { _ in isPresented = false }
-        .onChange(of: didTapGenericErrorViewLink) { _ in isPresented = false }
         .onChange(of: getNextPage) { _ in Task { await viewModel.getTeams() } }
         .onChange(of: selectedTeam) { _ in didTapTeam = true }
     }

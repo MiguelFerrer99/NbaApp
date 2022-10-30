@@ -25,7 +25,7 @@ struct TeamsListView: View {
             LazyVStack {
                 ForEach(representable.pager.getItems()) { team in
                     TeamCardView(representable: .init(logo: team.name, title: team.fullname))
-                        .onTapGesture { select(team) }
+                        .onTapGesture { selectedTeam = team }
                         .onAppear { check(team) }
                 }
                 LoadingFooterView().isHidden(!representable.isLoadingNewPage)
@@ -34,10 +34,6 @@ struct TeamsListView: View {
     }
     
     // MARK: - Functions
-    func select(_ team: Team) {
-        selectedTeam = team
-    }
-
     func check(_ team: Team) {
         if representable.pager.getItems().last == team && !representable.pager.isLastPage {
             getNextPage = true

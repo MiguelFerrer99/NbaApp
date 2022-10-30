@@ -10,11 +10,9 @@ import SwiftUI
 struct PlayersView: View {
     // MARK: - Parameters
     @StateObject private var viewModel = PlayersViewModel()
-    @State private var didTapNavBarBackButton = false
-    @State private var didTapGenericErrorViewLink = false
     @State private var getNextPage = false
-    @State private var selectedPlayer: Player?
     @State private var didTapPlayer = false
+    @State private var selectedPlayer: Player?
     @Binding var isPresented: Bool
     
     // MARK: - Main view
@@ -24,25 +22,21 @@ struct PlayersView: View {
             case .loading:
                 LoadingView()
             case .error:
-                GenericErrorView(didTapLink: $didTapGenericErrorViewLink)
+                GenericErrorView(isPresented: $isPresented)
             case .received(let representable):
                 PlayersListView(representable: .init(pager: representable.pager, isLoadingNewPage: representable.isLoadingNewPage),
                                 getNextPage: $getNextPage,
                                 selectedPlayer: $selectedPlayer)
             }
-        }.configureNavBar(with: .init(title: .players.title.localized), and: $didTapNavBarBackButton)
+        }.configureNavBar(with: .init(title: .players.title.localized))
         .onLoad { Task { await viewModel.getPlayers() } }
         
         // MARK: - Navigation destinations
         .navigationDestination(isPresented: $didTapPlayer, destination: {
-            if let selectedPlayer = selectedPlayer {
-                PlayerDetailView(representable: .init(player: selectedPlayer), isPresented: $didTapPlayer)
-            }
+            if let selectedPlayer = selectedPlayer { PlayerDetailView(representable: .init(player: selectedPlayer)) }
         })
         
         // MARK: - Subviews events listeners
-        .onChange(of: didTapNavBarBackButton) { _ in isPresented = false }
-        .onChange(of: didTapGenericErrorViewLink) { _ in isPresented = false }
         .onChange(of: getNextPage) { _ in Task { await viewModel.getPlayers() } }
         .onChange(of: selectedPlayer) { _ in didTapPlayer = true }
     }

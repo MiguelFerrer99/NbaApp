@@ -7,41 +7,25 @@
 
 import SwiftUI
 
-struct NavBarRepresentable {
+struct NavBarConfigRepresentable {
     let title: String
 }
 
 extension View {
-    func embedInNavigation(with title: String) -> some View {
+    func embedInNavigation(with representable: NavBarConfigRepresentable) -> some View {
         NavigationStack {
             self
-                .navigationTitle(title)
-                .navigationBarTitleDisplayMode(.inline)
+                .configureNavBar(with: representable)
         }
     }
     
-    func configureNavBar(with representable: NavBarRepresentable, and didTapBackButton: Binding<Bool>) -> some View {
+    func configureNavBar(with representable: NavBarConfigRepresentable) -> some View {
         self
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
-                ToolbarItem(placement: .navigationBarLeading) {
-                    Button {
-                        didTapBackButton.wrappedValue = true
-                    } label: {
-                        Image(systemName: "arrow.left")
-                            .resizable()
-                            .frame(width: 22, height: 18, alignment: .leading)
-                            .foregroundColor(.black)
-                    }
-                }
-                ToolbarItem(placement: .principal) {
-                    Text(representable.title)
-                        .bold()
-                }
-            }
+            .navigationTitle(representable.title)
+            .navigationBarTitleDisplayMode(.inline)
     }
     
-    func onLoad(perform action: (() -> Void)? = nil) -> some View {
+    func onLoad(perform action: @escaping (() -> Void)) -> some View {
         self
             .modifier(ViewDidLoadModifier(perform: action))
     }

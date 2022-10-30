@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct HomeView: View {
-    // MARK: - Paramameters
+    // MARK: - Parameters
+    @StateObject private var viewModel = HomeViewModel()
     @State private var didTapTeamsLink = false
     @State private var didTapPlayersLink = false
-    @StateObject private var viewModel = HomeViewModel()
     
     // MARK: - Main view
     var body: some View {
@@ -25,7 +25,7 @@ struct HomeView: View {
         // MARK: - Navigation destinations
         .navigationDestination(isPresented: $didTapTeamsLink, destination: { TeamsView(isPresented: $didTapTeamsLink) })
         .navigationDestination(isPresented: $didTapPlayersLink, destination: { PlayersView(isPresented: $didTapPlayersLink) })
-        .embedInNavigation(with: .home.title.localized)
+        .embedInNavigation(with: .init(title: .home.title.localized))
     }
 }
 

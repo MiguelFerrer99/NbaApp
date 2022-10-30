@@ -25,7 +25,7 @@ struct PlayersListView: View {
             LazyVStack {
                 ForEach(representable.pager.getItems(), id: \.self) { player in
                     PlayerCardView(representable: .init(playerID: player.id, logoUrlString: player.logoUrlString, title: player.fullname))
-                        .onTapGesture { select(player) }
+                        .onTapGesture { selectedPlayer = player }
                         .onAppear { check(player) }
                 }
                 LoadingFooterView().isHidden(!representable.isLoadingNewPage)
@@ -34,10 +34,6 @@ struct PlayersListView: View {
     }
     
     // MARK: - Functions
-    func select(_ player: Player) {
-        selectedPlayer = player
-    }
-
     func check(_ player: Player) {
         if representable.pager.getItems().last == player && !representable.pager.isLastPage {
             getNextPage.toggle()

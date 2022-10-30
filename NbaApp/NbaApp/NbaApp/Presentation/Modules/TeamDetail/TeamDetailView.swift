@@ -15,8 +15,6 @@ struct TeamDetailViewRepresentable {
 struct TeamDetailView: View {
     // MARK: - Parameters
     let representable: TeamDetailViewRepresentable
-    @State private var didTapNavBarBackButton = false
-    @Binding var isPresented: Bool
     
     // MARK: - Main view
     var body: some View {
@@ -47,17 +45,13 @@ struct TeamDetailView: View {
             }
             Spacer()
         }.padding(30)
-        .configureNavBar(with: .init(title: representable.team.fullname), and: $didTapNavBarBackButton)
-            
-        // MARK: - Subviews events listeners
-        .onChange(of: didTapNavBarBackButton) { _ in isPresented = false }
+        .configureNavBar(with: .init(title: representable.team.fullname))
     }
 }
 
 // MARK: - Canvas preview
 struct TeamDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        TeamDetailView(representable: .init(team: .previewInit()),
-                       isPresented: .constant(true))
+        TeamDetailView(representable: .init(team: .previewInit()))
     }
 }
