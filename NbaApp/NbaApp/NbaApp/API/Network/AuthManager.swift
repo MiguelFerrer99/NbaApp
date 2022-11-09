@@ -19,7 +19,7 @@ actor AuthManager {
     
     // MARK: Return accessToken or error
     func getAccesToken() async throws -> String? {
-        guard let accessToken = Cache.get(stringFor: .access_token) else {
+        guard let accessToken = AppInfoManager.get(stringFor: .access_token) else {
             throw AuthError.missingToken
         }
         return accessToken
@@ -27,7 +27,7 @@ actor AuthManager {
     
     // MARK: Return if access token is still valid or thrwo an error
     func isValid() async throws -> Bool {
-        guard let expires = Calendar.current.date(byAdding: .second, value: Cache.get(intFor: .expires_in), to: Date()) else {
+        guard let expires = Calendar.current.date(byAdding: .second, value: AppInfoManager.get(intFor: .expires_in), to: Date()) else {
             throw AuthError.missingExpiresIn
         }
         return expires > Date() ? true : false
@@ -55,7 +55,7 @@ actor AuthManager {
         }
         let task = Task { () throws -> String in
             defer { refreshTask = nil }
-            guard let refreshToken = Cache.get(stringFor: .refresh_token) else {
+            guard let refreshToken = AppInfoManager.get(stringFor: .refresh_token) else {
                 throw AuthError.tokenNotFound
             }
             return try await refresh(with: refreshToken)
@@ -78,9 +78,9 @@ actor AuthManager {
     
     // MARK: Save token data
     func save(this token: TokenDTO) {
-        Cache.set(Cache.Key.access_token, token.accessToken)
-        Cache.set(Cache.Key.refresh_token, token.refreshToken)
-        Cache.set(Cache.Key.expires_in, token.expiresIn)
+        AppInfoManager.set(AppInfoManager.Key.access_token, token.accessToken)
+        AppInfoManager.set(AppInfoManager.Key.refresh_token, token.refreshToken)
+        AppInfoManager.set(AppInfoManager.Key.expires_in, token.expiresIn)
     }
     
     // MARK: Call API for refreshToken
@@ -97,7 +97,7 @@ actor AuthManager {
             return token.accessToken
         } catch let error {
             Log.thisError(error)
-            Cache.clear()
+            AppInfoManager.clear()
             throw AuthError.badRequest
         }
     }

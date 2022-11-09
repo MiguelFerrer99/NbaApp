@@ -27,15 +27,15 @@ struct CustomAsyncImage: View {
     // MARK: - Main view
     var body: some View {
         CachedAsyncImage(representable: .init(imageIdForCache: "playerImage_\(representable.itemID)", fullname: representable.fullname, urlString: representable.urlString)) {
-            Text("")
+            Circle()
                 .frame(width: representable.style == .big ? 150 : 40, height: representable.style == .big ? 150 : 40)
                 .background { Color.customGray.opacity(0.5) }
-                .clipShape(Circle())
         } imageLoaded: {
             Image(uiImage: $0)
                 .resizable()
                 .scaledToFill()
                 .frame(width: representable.style == .big ? 150 : 40, height: representable.style == .big ? 150 : 40)
+                .background { Color.customGray.opacity(0.5) }
                 .clipShape(Circle())
         }
     }

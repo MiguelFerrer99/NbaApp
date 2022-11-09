@@ -1,5 +1,5 @@
 //
-//  Cache.swift
+//  AppInfoManager.swift
 //  NbaApp
 //
 //  Created by Miguel Ferrer Fornali on 8/10/22.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Cache {
+struct AppInfoManager {
     enum Key: String {
         case refresh_token,
              access_token,
@@ -88,7 +88,7 @@ struct Cache {
     }
     
     static func logOut() {
-        Cache.set(.logged, false)
-        Cache.set(.userID, nil)
+        AppInfoManager.set(.logged, false)
+        AppInfoManager.set(.userID, nil)
     }
 }

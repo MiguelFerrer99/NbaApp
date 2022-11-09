@@ -17,13 +17,10 @@
 		4123CAB428DF4985009FF971 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4123CAB328DF4985009FF971 /* TeamsView.swift */; };
 		4137AAE428DDE22E00F0C59C /* NbaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4137AAE328DDE22E00F0C59C /* NbaApp.swift */; };
 		4137AAE828DDE22F00F0C59C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4137AAE728DDE22F00F0C59C /* Assets.xcassets */; };
-		41476DD6290B4A2F0081A24E /* ImageCacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41476DD5290B4A2F0081A24E /* ImageCacheManager.swift */; };
 		415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 415B544028DE140000A336A3 /* IQKeyboardManagerSwift */; };
-		4168992D2909A6E0008D1879 /* LetterAvatarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 4168992C2909A6E0008D1879 /* LetterAvatarKit */; };
 		41855778290A764C001DEED3 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41855777290A764C001DEED3 /* UIColor+Extension.swift */; };
-		4185577A290A768A001DEED3 /* CachedAsyncImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41855779290A768A001DEED3 /* CachedAsyncImage.swift */; };
 		4185577C290A7725001DEED3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4185577B290A7725001DEED3 /* AppDelegate.swift */; };
-		4187893428F1864000974AF5 /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893328F1864000974AF5 /* Cache.swift */; };
+		4187893428F1864000974AF5 /* AppInfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893328F1864000974AF5 /* AppInfoManager.swift */; };
 		4187893628F1877500974AF5 /* TokenDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893528F1877500974AF5 /* TokenDTO.swift */; };
 		4187893828F1881000974AF5 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893728F1881000974AF5 /* Auth.swift */; };
 		4187893B28F18A4E00974AF5 /* NoReplyDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4187893A28F18A4E00974AF5 /* NoReplyDTO.swift */; };
@@ -77,15 +74,13 @@
 		411CF91928FC8DA600F5E92F /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
 		4123CAB028DF3315009FF971 /* LinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkView.swift; sourceTree = "<group>"; };
 		4123CAB328DF4985009FF971 /* TeamsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamsView.swift; sourceTree = "<group>"; };
-		4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NbaApp Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4137AAE028DDE22E00F0C59C /* NbaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NbaApp.app; path = "/Users/mferrerf/Desktop/MIGUEL/DOCUMENTOS/MIS_COSAS/IOS/ARQUITECTURAS/MVVMSwiftUI/NbaApp/NbaApp/build/Develop-iphoneos/NbaApp.app"; sourceTree = "<absolute>"; };
 		4137AAE328DDE22E00F0C59C /* NbaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NbaApp.swift; sourceTree = "<group>"; };
 		4137AAE528DDE22E00F0C59C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		4137AAE728DDE22F00F0C59C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		41476DD5290B4A2F0081A24E /* ImageCacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCacheManager.swift; sourceTree = "<group>"; };
 		41855777290A764C001DEED3 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		41855779290A768A001DEED3 /* CachedAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedAsyncImage.swift; sourceTree = "<group>"; };
 		4185577B290A7725001DEED3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4187893328F1864000974AF5 /* Cache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
+		4187893328F1864000974AF5 /* AppInfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppInfoManager.swift; sourceTree = "<group>"; };
 		4187893528F1877500974AF5 /* TokenDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenDTO.swift; sourceTree = "<group>"; };
 		4187893728F1881000974AF5 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
 		4187893A28F18A4E00974AF5 /* NoReplyDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoReplyDTO.swift; sourceTree = "<group>"; };
@@ -139,7 +134,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				415B544128DE140000A336A3 /* IQKeyboardManagerSwift in Frameworks */,
-				4168992D2909A6E0008D1879 /* LetterAvatarKit in Frameworks */,
 				410CD25328E341A60004CD94 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,11 +161,9 @@
 		4123CAAC28DF2CCC009FF971 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				4187893328F1864000974AF5 /* Cache.swift */,
-				41855779290A768A001DEED3 /* CachedAsyncImage.swift */,
+				4187893328F1864000974AF5 /* AppInfoManager.swift */,
 				41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */,
 				4191C59728F9CF4A00E59875 /* Color+Extension.swift */,
-				41476DD5290B4A2F0081A24E /* ImageCacheManager.swift */,
 				4194C3A728F1187100C0FB06 /* Log.swift */,
 				4194C39A28F0EFA400C0FB06 /* LottieView.swift */,
 				41E8747F28FB78DD00E07DD5 /* Optional+Extension.swift */,
@@ -210,16 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				4137AAE228DDE22E00F0C59C /* NbaApp */,
-				4137AAE128DDE22E00F0C59C /* Products */,
 			);
-			sourceTree = "<group>";
-		};
-		4137AAE128DDE22E00F0C59C /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		4137AAE228DDE22E00F0C59C /* NbaApp */ = {
@@ -463,10 +446,9 @@
 			packageProductDependencies = (
 				415B544028DE140000A336A3 /* IQKeyboardManagerSwift */,
 				410CD25228E341A60004CD94 /* Lottie */,
-				4168992C2909A6E0008D1879 /* LetterAvatarKit */,
 			);
 			productName = NbaApp;
-			productReference = 4137AAE028DDE22E00F0C59C /* NbaApp Dev.app */;
+			productReference = 4137AAE028DDE22E00F0C59C /* NbaApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -497,9 +479,8 @@
 			packageReferences = (
 				415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				410CD25128E341A60004CD94 /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				4168992B2909A6E0008D1879 /* XCRemoteSwiftPackageReference "LetterAvatarKit" */,
 			);
-			productRefGroup = 4137AAE128DDE22E00F0C59C /* Products */;
+			productRefGroup = 4137AAD728DDE22E00F0C59C;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -552,7 +533,7 @@
 				4187893B28F18A4E00974AF5 /* NoReplyDTO.swift in Sources */,
 				41E8747C28FB77AA00E07DD5 /* Pagination.swift in Sources */,
 				4194C3AE28F11AB500C0FB06 /* Players.swift in Sources */,
-				4187893428F1864000974AF5 /* Cache.swift in Sources */,
+				4187893428F1864000974AF5 /* AppInfoManager.swift in Sources */,
 				4187893628F1877500974AF5 /* TokenDTO.swift in Sources */,
 				418A36DE29013C6E0039CA9E /* PlayersView.swift in Sources */,
 				418A36DC29013BB00039CA9E /* PlayersViewModel.swift in Sources */,
@@ -568,12 +549,10 @@
 				41E8749228FB92CE00E07DD5 /* LinksView.swift in Sources */,
 				4187894128F18B3C00974AF5 /* User.swift in Sources */,
 				4191C5C128FA541E00E59875 /* TeamCardView.swift in Sources */,
-				4185577A290A768A001DEED3 /* CachedAsyncImage.swift in Sources */,
 				4194C3A528F117C500C0FB06 /* Endpoint.swift in Sources */,
 				411CF91728FC89A900F5E92F /* ViewModifiers.swift in Sources */,
 				4194C3AA28F118B000C0FB06 /* Network.swift in Sources */,
 				4123CAB128DF3315009FF971 /* LinkView.swift in Sources */,
-				41476DD6290B4A2F0081A24E /* ImageCacheManager.swift in Sources */,
 				41E8748F28FB90C600E07DD5 /* HomeViewModel.swift in Sources */,
 				4191C5A628FA23BE00E59875 /* Player.swift in Sources */,
 				4187895128F1B7E600974AF5 /* Paginable.swift in Sources */,
@@ -969,14 +948,6 @@
 				kind = branch;
 			};
 		};
-		4168992B2909A6E0008D1879 /* XCRemoteSwiftPackageReference "LetterAvatarKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/vpeschenkov/LetterAvatarKit.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -989,11 +960,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 415B543F28DE140000A336A3 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
-		};
-		4168992C2909A6E0008D1879 /* LetterAvatarKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 4168992B2909A6E0008D1879 /* XCRemoteSwiftPackageReference "LetterAvatarKit" */;
-			productName = LetterAvatarKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
