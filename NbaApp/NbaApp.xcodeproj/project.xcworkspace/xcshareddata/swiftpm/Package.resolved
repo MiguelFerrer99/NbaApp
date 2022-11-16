@@ -1,12 +1,30 @@
 {
   "pins" : [
     {
+      "identity" : "cachedasyncimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/MiguelFerrer99/CachedAsyncImage",
+      "state" : {
+        "branch" : "master",
+        "revision" : "e1f4e18a02da11b3f98ed281b5bc03708a95b8ac"
+      }
+    },
+    {
       "identity" : "iqkeyboardmanager",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/hackiftekhar/IQKeyboardManager.git",
       "state" : {
         "branch" : "master",
         "revision" : "7399efb730eea084571b45a1a9b36a3a3c54c44f"
+      }
+    },
+    {
+      "identity" : "letteravatarkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/vpeschenkov/LetterAvatarKit.git",
+      "state" : {
+        "revision" : "fe5af34383384668dcd28525bd62934eab229d4a",
+        "version" : "1.2.5"
       }
     },
     {
