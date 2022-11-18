@@ -70,6 +70,7 @@
 
 /* Begin PBXFileReference section */
 		4100B63628DE5893001328CC /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		410DB72D29282D4700176DE9 /* NbaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NbaApp.app; path = "/Users/mferrerf/Desktop/MIGUEL/DOCUMENTOS/MIS_COSAS/IOS/ARQUITECTURAS/MVVM_AsyncAwait_SwiftUI/NbaApp/NbaApp/build/Develop-iphoneos/NbaApp.app"; sourceTree = "<absolute>"; };
 		41199E932905C4F100132221 /* CustomAsyncImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAsyncImage.swift; sourceTree = "<group>"; };
 		411CF91628FC89A900F5E92F /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		411CF91928FC8DA600F5E92F /* TeamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDetailView.swift; sourceTree = "<group>"; };
@@ -115,7 +116,6 @@
 		4194C3AD28F11AB500C0FB06 /* Players.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Players.swift; sourceTree = "<group>"; };
 		4194C3AF28F11BE600C0FB06 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		419813C929045F6A00CE65C7 /* HorizontalInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizontalInfoView.swift; sourceTree = "<group>"; };
-		41CC8ED12925A35A00D048FA /* NbaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NbaApp.app; path = "/Users/mferrerf/Desktop/MIGUEL/DOCUMENTOS/MIS_COSAS/IOS/ARQUITECTURAS/MVVMSwiftUI/NbaApp/NbaApp/build/Develop-iphoneos/NbaApp.app"; sourceTree = "<absolute>"; };
 		41D73FE928DE6E6A00B9BA75 /* LocalizableStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableStrings.swift; sourceTree = "<group>"; };
 		41D73FEE28DE6F1800B9BA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41D73FF228DE6FB000B9BA75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -451,7 +451,7 @@
 				41CC8ED32925A3A700D048FA /* CachedAsyncImage */,
 			);
 			productName = NbaApp;
-			productReference = 41CC8ED12925A35A00D048FA /* NbaApp.app */;
+			productReference = 410DB72D29282D4700176DE9 /* NbaApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
