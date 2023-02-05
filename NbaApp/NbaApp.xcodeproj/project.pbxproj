@@ -91,7 +91,6 @@
 		4187894828F1AEA900974AF5 /* TeamDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamDTO.swift; sourceTree = "<group>"; };
 		4187894A28F1B02E00974AF5 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		4187895028F1B7E600974AF5 /* Paginable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paginable.swift; sourceTree = "<group>"; };
-		41882BCC292981140044E186 /* NbaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NbaApp.app; path = "/Users/mferrerf/Desktop/MIGUEL/DOCUMENTOS/MIS_COSAS/IOS/ARQUITECTURAS/MVVM_AsyncAwait_SwiftUI/NbaApp/NbaApp/build/Develop-iphoneos/NbaApp.app"; sourceTree = "<absolute>"; };
 		418A36DB29013BB00039CA9E /* PlayersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersViewModel.swift; sourceTree = "<group>"; };
 		418A36DD29013C6E0039CA9E /* PlayersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersView.swift; sourceTree = "<group>"; };
 		418A36E029013D350039CA9E /* PlayersListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayersListView.swift; sourceTree = "<group>"; };
@@ -120,6 +119,7 @@
 		41D73FEE28DE6F1800B9BA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41D73FF228DE6FB000B9BA75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41D73FF528DE711700B9BA75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		41E7B7B029903C6D00DE8650 /* NbaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NbaApp.app; path = "/Users/mferrerf/Desktop/MIGUEL/DOCUMENTOS/MIS_COSAS/IOS/ARQUITECTURAS/MVVM-SwiftUI/NbaApp/NbaApp/build/Develop-iphoneos/NbaApp.app"; sourceTree = "<absolute>"; };
 		41E8747B28FB77AA00E07DD5 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		41E8747F28FB78DD00E07DD5 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
@@ -451,7 +451,7 @@
 				41CC8ED32925A3A700D048FA /* CachedAsyncImage */,
 			);
 			productName = NbaApp;
-			productReference = 41882BCC292981140044E186 /* NbaApp.app */;
+			productReference = 41E7B7B029903C6D00DE8650 /* NbaApp.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
