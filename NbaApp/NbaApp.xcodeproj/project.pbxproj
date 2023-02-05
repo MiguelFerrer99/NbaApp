@@ -119,7 +119,7 @@
 		41D73FEE28DE6F1800B9BA75 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41D73FF228DE6FB000B9BA75 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41D73FF528DE711700B9BA75 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		41E7B7B029903C6D00DE8650 /* NbaApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = NbaApp.app; path = "/Users/mferrerf/Desktop/MIGUEL/DOCUMENTOS/MIS_COSAS/IOS/ARQUITECTURAS/MVVM-SwiftUI/NbaApp/NbaApp/build/Develop-iphoneos/NbaApp.app"; sourceTree = "<absolute>"; };
+		41E7B7B129903EA200DE8650 /* NbaApp Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NbaApp Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41E8747B28FB77AA00E07DD5 /* Pagination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pagination.swift; sourceTree = "<group>"; };
 		41E8747D28FB78A700E07DD5 /* Collection+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extension.swift"; sourceTree = "<group>"; };
 		41E8747F28FB78DD00E07DD5 /* Optional+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extension.swift"; sourceTree = "<group>"; };
@@ -204,6 +204,7 @@
 			isa = PBXGroup;
 			children = (
 				4137AAE228DDE22E00F0C59C /* NbaApp */,
+				41E7B7B129903EA200DE8650 /* NbaApp Dev.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -451,7 +452,7 @@
 				41CC8ED32925A3A700D048FA /* CachedAsyncImage */,
 			);
 			productName = NbaApp;
-			productReference = 41E7B7B029903C6D00DE8650 /* NbaApp.app */;
+			productReference = 41E7B7B129903EA200DE8650 /* NbaApp Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -726,6 +727,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NbaApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "NbaApp Dev";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -769,6 +771,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NbaApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = NbaApp;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -881,6 +884,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NbaApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "NbaApp Demo";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
